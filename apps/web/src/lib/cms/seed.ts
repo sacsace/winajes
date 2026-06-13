@@ -1,6 +1,8 @@
 import { clientEntities, clientLogos, newsArticles, projects, services } from '@/lib/data';
 import { projectImages } from '@/lib/images';
 import { CONSTRUCTION_RECORDS_SEED } from '@/lib/cms/seeds/construction-records';
+import { initDb, isDbEnabled } from '@/lib/cms/db';
+import { migrateJsonToDbIfNeeded } from '@/lib/cms/migrate-json-to-db';
 import { newId, nowIso, readCollection, writeCollection } from '@/lib/cms/store';
 import type { ApiProject } from '@/lib/projects';
 import {
@@ -46,6 +48,11 @@ export type CmsInquiry = {
 type Timed = { createdAt: string; updatedAt: string };
 
 export async function ensureCmsSeeded() {
+  if (isDbEnabled()) {
+    await initDb();
+    await migrateJsonToDbIfNeeded();
+  }
+
   await Promise.all([
     seedProjectsIfEmpty(),
     seedClientsIfEmpty(),

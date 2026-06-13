@@ -7,7 +7,7 @@ Premium multilingual corporate website for **WINAJES Constructions India Pvt. Lt
 | Layer | Technology |
 |-------|-----------|
 | Frontend | Next.js 16, TypeScript, Tailwind CSS, next-intl |
-| CMS | Next.js API Routes + local JSON store (`apps/web/data/cms/`) |
+| CMS | Next.js API Routes + **PostgreSQL** (`DATABASE_URL`) or local JSON fallback |
 | Backend (optional) | NestJS + PostgreSQL (`apps/api/`) |
 
 ## Quick Start (Web only — no separate API server)
@@ -36,7 +36,21 @@ npm run dev
 - Email: `admin@winajes.com`
 - Password: `admin123`
 
-CMS 데이터는 `apps/web/data/cms/*.json`에 저장됩니다. 별도 DB나 `:3001` API 서버 없이 개발할 수 있습니다.
+CMS 데이터는 **PostgreSQL**에 저장됩니다 (`DATABASE_URL` 설정 시). 로컬에서 DB 없이 개발하려면 `DATABASE_URL`을 비워 두면 JSON 파일(`apps/web/data/cms/`)로 fallback 됩니다.
+
+### PostgreSQL (로컬)
+
+```bash
+npm run db:up
+```
+
+`apps/web/.env.local` 파일:
+
+```
+DATABASE_URL=postgresql://winajes:winajes_dev_password@localhost:5432/winajes
+```
+
+연결 확인: `http://localhost:3000/api/health` → `{ "ok": true, "storage": "postgres" }`
 
 ### Optional: NestJS API + PostgreSQL
 
@@ -85,16 +99,19 @@ winajes/
 
 ## Deploy (Railway)
 
-Deploy the **web app only** from `apps/web` (no monorepo workspace required).
+Deploy the **web app** from `apps/web`.
 
-1. Railway → Service → **Settings**
-2. **Root Directory**: `apps/web`
-3. **Builder**: Dockerfile (uses `apps/web/Dockerfile`)
-4. Redeploy
+1. Railway → **Postgres** 서비스 생성 (이미 있으면 생략)
+2. **winajes** 웹 서비스 → **Variables** → **Add Variable**
+   - Name: `DATABASE_URL`
+   - Value: `${{ Postgres.DATABASE_URL }}`  
+     (Postgres 서비스 이름이 다르면 Railway Variables UI에서 **Reference**로 연결)
+3. **Settings** → **Root Directory**: `apps/web`
+4. **Redeploy**
 
-The web app no longer depends on `@winajes/shared` from npm — shared types live in `apps/web/src/lib/shared/`.
+배포 후 `https://your-app.up.railway.app/api/health` 에서 `"storage": "postgres"` 확인.
 
-> CMS JSON and uploaded files are stored on the local filesystem. Attach a Railway volume for persistent admin edits in production.
+> `DATABASE_URL` 없으면 JSON fallback으로 동작하지만, **운영 환경에서는 Postgres 연결을 권장**합니다.
 
 ## License
 
