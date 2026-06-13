@@ -154,6 +154,7 @@ async function ensureSchemaAndSeed(config) {
       'news',
       'services',
       'team',
+      'timeline',
     ];
 
     let total = 0;

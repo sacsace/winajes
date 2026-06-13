@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { getPool, initDb, isDbEnabled } from '@/lib/cms/db';
 
-export type CmsCollection = 'projects' | 'clients' | 'construction-records' | 'inquiries' | 'analytics' | 'news' | 'services' | 'team';
+export type CmsCollection = 'projects' | 'clients' | 'construction-records' | 'inquiries' | 'analytics' | 'news' | 'services' | 'team' | 'timeline';
 
 const DATA_DIR = path.join(process.cwd(), 'data', 'cms');
 

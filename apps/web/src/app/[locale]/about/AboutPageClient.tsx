@@ -1,7 +1,8 @@
 'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
-import { timeline, offices, companyStats } from '@/lib/data';
+import { offices, companyStats } from '@/lib/data';
+import type { ApiTimelineEvent } from '@/lib/timeline';
 import { PageHero } from '@/components/ui/PageHero';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { Section } from '@/components/ui/Section';
@@ -19,7 +20,9 @@ import {
   MapPin, ExternalLink,
 } from 'lucide-react';
 
-export default function AboutPageClient() {
+type Props = { timeline: ApiTimelineEvent[] };
+
+export default function AboutPageClient({ timeline }: Props) {
   const t = useTranslations('about');
   const tHome = useTranslations('home.stats');
   const locale = useLocale() as 'ko' | 'en';
@@ -69,7 +72,7 @@ export default function AboutPageClient() {
           <div className="space-y-6">
             {timeline.map((item, i) => (
               <div
-                key={item.year}
+                key={item.id}
                 className={cn(
                   'relative flex gap-6 md:gap-0',
                   i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse',

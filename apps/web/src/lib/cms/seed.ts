@@ -1,4 +1,4 @@
-import { clientEntities, clientLogos, newsArticles, projects, services } from '@/lib/data';
+import { clientEntities, clientLogos, newsArticles, projects, services, timeline } from '@/lib/data';
 import { projectImages } from '@/lib/images';
 import { CONSTRUCTION_RECORDS_SEED } from '@/lib/cms/seeds/construction-records';
 import { initDb, isDbEnabled } from '@/lib/cms/db';
@@ -11,6 +11,7 @@ import {
   type ApiService,
 } from '@/lib/services';
 import { DEFAULT_TEAM_SEED, type ApiTeamMember } from '@/lib/team';
+import type { ApiTimelineEvent } from '@/lib/timeline';
 import type { NewsArticle } from '@/lib/shared';
 
 export type CmsClient = {
@@ -60,6 +61,7 @@ export async function ensureCmsSeeded() {
     seedNewsIfEmpty(),
     seedServicesIfEmpty(),
     seedTeamIfEmpty(),
+    seedTimelineIfEmpty(),
   ]);
 }
 
@@ -185,4 +187,21 @@ async function seedTeamIfEmpty() {
   }));
 
   await writeCollection('team', seeded);
+}
+
+async function seedTimelineIfEmpty() {
+  const existing = await readCollection<ApiTimelineEvent & Timed>('timeline');
+  if (existing.length > 0) return;
+
+  const seeded = timeline.map((item) => ({
+    id: newId('timeline'),
+    year: item.year,
+    title: item.title,
+    description: item.description,
+    order: item.year,
+    createdAt: nowIso(),
+    updatedAt: nowIso(),
+  }));
+
+  await writeCollection('timeline', seeded);
 }

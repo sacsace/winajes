@@ -35,6 +35,7 @@ export async function migrateJsonToDbIfNeeded() {
     'news',
     'services',
     'team',
+    'timeline',
   ];
 
   for (const name of collections) {

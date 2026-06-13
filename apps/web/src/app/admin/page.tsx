@@ -3,12 +3,13 @@
 import { useState, useEffect } from 'react';
 import {
   LayoutDashboard, FolderKanban, Users, Newspaper,
-  MessageSquare, Settings, ClipboardList, Wrench, UserCircle,
+  MessageSquare, Settings, ClipboardList, Wrench, UserCircle, History,
 } from 'lucide-react';
 import { ConstructionRecordsAdmin } from '@/components/admin/ConstructionRecordsAdmin';
 import { ClientsAdmin } from '@/components/admin/ClientsAdmin';
 import { ServicesAdmin } from '@/components/admin/ServicesAdmin';
 import { TeamAdmin } from '@/components/admin/TeamAdmin';
+import { HistoryAdmin } from '@/components/admin/HistoryAdmin';
 import { ProjectsAdmin } from '@/components/admin/ProjectsAdmin';
 import { NewsAdmin } from '@/components/admin/NewsAdmin';
 import { AdminLogin } from '@/components/admin/AdminLogin';
@@ -80,6 +81,7 @@ export default function AdminPage() {
     { key: 'clients' as const, icon: Users },
     { key: 'services' as const, icon: Wrench },
     { key: 'team' as const, icon: UserCircle },
+    { key: 'history' as const, icon: History },
     { key: 'news' as const, icon: Newspaper },
     { key: 'inquiries' as const, icon: MessageSquare },
     { key: 'settings' as const, icon: Settings },
@@ -145,6 +147,7 @@ export default function AdminPage() {
       {tab === 'clients' && <ClientsAdmin />}
       {tab === 'services' && <ServicesAdmin />}
       {tab === 'team' && <TeamAdmin />}
+      {tab === 'history' && <HistoryAdmin />}
       {tab === 'news' && <NewsAdmin />}
 
       {tab === 'settings' && (

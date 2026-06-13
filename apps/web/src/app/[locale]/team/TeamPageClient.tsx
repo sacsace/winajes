@@ -8,6 +8,7 @@ import { PageHero } from '@/components/ui/PageHero';
 import { Section } from '@/components/ui/Section';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { TeamMemberCard } from '@/components/team/TeamMemberCard';
+import { teamHeroImage } from '@/lib/images';
 import { API_URL } from '@/lib/utils';
 import { Users } from 'lucide-react';
 
@@ -54,10 +55,11 @@ export default function TeamPageClient() {
   return (
     <>
       <PageHero
+        label="Team WINAJES"
         title={t('title')}
         subtitle={t('subtitle')}
         description={t('description')}
-        image="/images/hero/hero-2.jpg"
+        image={teamHeroImage}
       />
 
       <Section className="bg-background">

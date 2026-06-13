@@ -23,6 +23,8 @@ export const heroImages = {
 
 export const aboutHeroImage = '/images/about/about-hero.jpg';
 
+export const teamHeroImage = '/images/team/team-hero.jpg';
+
 export const galleryImages = [
   {
     src: '/images/gallery/mechanical-1.jpg',

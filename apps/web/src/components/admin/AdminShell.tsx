@@ -14,6 +14,7 @@ export type AdminTab =
   | 'clients'
   | 'services'
   | 'team'
+  | 'history'
   | 'news'
   | 'inquiries'
   | 'settings';
