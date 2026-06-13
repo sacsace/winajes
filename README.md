@@ -88,12 +88,13 @@ winajes/
 This repo is an **npm workspace monorepo**. Deploy from the **repository root**, not `apps/web`.
 
 1. Railway → Service → **Settings**
-2. **Root Directory**: leave **empty** (do not set `apps/web`)
-3. **Build Command**: `npm ci && npm run build:web` (or use root `railway.toml`)
-4. **Start Command**: `npm run start:web`
-5. Redeploy
+2. **Root Directory**: leave **empty** (delete `apps/web` if set)
+3. **Builder**: Dockerfile (auto-detected from repo `Dockerfile` / `railway.toml`)
+4. Redeploy
 
-`@winajes/shared` lives in `packages/shared` and is linked only when `npm ci` runs at the monorepo root.
+The root `Dockerfile` runs `npm ci` at the monorepo root so `packages/shared` (`@winajes/shared`) is linked locally — it is **not** published to npm.
+
+If you use Nixpacks instead of Docker: build `npm ci && npm run build:web`, start `npm run start:web` (see `nixpacks.toml`).
 
 > CMS JSON and uploaded files are stored on the local filesystem. For production, attach a Railway volume or migrate to external storage if you need persistent admin edits.
 

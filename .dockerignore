@@ -1,0 +1,12 @@
+node_modules
+.next
+.git
+.gitignore
+**/.env
+**/.env.local
+apps/api/.env
+postgres_data
+*.log
+.DS_Store
+eng.traineddata
+kor.traineddata
