@@ -16,6 +16,8 @@
     "build:web": "npm run build --workspace=apps/web",
     "build:api": "npm run build --workspace=apps/api",
     "start:web": "npm run start --workspace=apps/web",
+    "db:init": "node scripts/init-db.mjs",
+    "db:migrate": "node scripts/init-db.mjs --migrate-only",
     "db:up": "docker compose up -d postgres",
     "db:down": "docker compose down"
   },

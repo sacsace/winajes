@@ -36,44 +36,39 @@ npm run dev
 - Email: `admin@winajes.com`
 - Password: `admin123`
 
-CMS 데이터는 **PostgreSQL**에 저장됩니다 (`DATABASE_URL` 설정 시). 로컬에서 DB 없이 개발하려면 `DATABASE_URL`을 비워 두면 JSON 파일(`apps/web/data/cms/`)로 fallback 됩니다.
+CMS 데이터는 **PostgreSQL**에 저장합니다.
 
-### PostgreSQL (로컬)
+### 로컬 실행 (3단계)
 
-```bash
-npm run db:up
+**1. `.env` 확인** — 프로젝트 루트에 이미 있습니다. `POSTGRES_ADMIN_PASSWORD`에 PostgreSQL **postgres** 비밀번호를 넣으세요.
+
+**2. DB 생성 + 시드 (최초 1회)**
+
+```powershell
+npm run db:init
 ```
 
-`apps/web/.env.local` 파일:
+`winajes` DB·계정 생성, `cms_items` 테이블 생성, JSON 시드 데이터 import까지 자동 처리합니다.
 
-```
-DATABASE_URL=postgresql://winajes:winajes_dev_password@localhost:5432/winajes
-```
+**3. 개발 서버 실행**
 
-연결 확인: `http://localhost:3000/api/health` → `{ "ok": true, "storage": "postgres" }`
-
-### Optional: NestJS API + PostgreSQL
-
-레거시 NestJS 백엔드를 함께 실행하려면:
-
-```bash
-npm run db:up
-npm run dev:all
+```powershell
+npm run dev
 ```
 
-NestJS API: http://localhost:3001 — `NEXT_PUBLIC_API_URL=http://localhost:3001` 설정 시 외부 API를 사용합니다.
+- 사이트: http://localhost:3000/ko/
+- DB 확인: http://localhost:3000/api/health → `"storage": "postgres"`
 
-**Docker Desktop**이 설치·실행되어 있어야 `npm run db:up`이 동작합니다. Docker 없이는 NestJS API를 켜지 마세요.
+> PC PostgreSQL 포트: **5432** (PostgreSQL 17). Docker 불필요.
 
-### PostgreSQL 인증 오류 (`password authentication failed for user "postgres"`)
+| 환경 | 설정 |
+|------|------|
+| **로컬** | 루트 `.env` → `DATABASE_URL` |
+| **Railway** | `DATABASE_URL=${{ Postgres.DATABASE_URL }}` |
 
-`npm run dev:all` 또는 `dev:api` 실행 시 나는 오류입니다. **Web/CMS만 쓰면 무시하고 `npm run dev`만 사용**하세요.
+### Optional: NestJS API + PostgreSQL (Docker 사용 시에만)
 
-NestJS API가 필요할 때:
-
-1. PC에 **Docker Desktop** 설치 후 `npm run db:up` (DB: 사용자 `winajes` / 비밀번호 `winajes_dev_password`)
-2. `apps/api/.env`가 `.env.example`과 같은지 확인
-3. 로컬 PostgreSQL(5432)을 쓰는 경우 — Windows 기본 `postgres` 계정과 충돌할 수 있음. Docker DB를 쓰거나 `.env`의 `DB_USER`/`DB_PASSWORD`를 로컬 DB에 맞게 수정
+레거시 NestJS 백엔드는 Docker로 Postgres를 띄울 때만 함께 사용합니다. **Web/CMS만 쓰면 `npm run dev`만 사용**하세요.
 
 ## Project Structure
 

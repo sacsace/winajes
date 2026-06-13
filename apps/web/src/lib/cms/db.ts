@@ -3,17 +3,21 @@ import { Pool } from 'pg';
 let pool: Pool | null = null;
 let schemaReady = false;
 
+export function resolveDatabaseUrl(): string | undefined {
+  return process.env.DATABASE_URL?.trim() || undefined;
+}
+
 export function isDbEnabled() {
-  return Boolean(process.env.DATABASE_URL?.trim());
+  return Boolean(resolveDatabaseUrl());
 }
 
 export function getPool() {
-  if (!isDbEnabled()) {
-    throw new Error('DATABASE_URL is not configured');
+  const connectionString = resolveDatabaseUrl();
+  if (!connectionString) {
+    throw new Error('DATABASE_URL is not configured — copy .env.example to .env and run npm run db:init');
   }
 
   if (!pool) {
-    const connectionString = process.env.DATABASE_URL!;
     const useSsl =
       process.env.PGSSLMODE === 'require' ||
       process.env.NODE_ENV === 'production' ||
