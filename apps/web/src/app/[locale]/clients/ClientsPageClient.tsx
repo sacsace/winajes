@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import type { Client } from '@winajes/shared';
+import type { Client } from '@/lib/shared';
 import { clientLogos, clientEntities } from '@/lib/data';
 import { PageHero } from '@/components/ui/PageHero';
 import { Section } from '@/components/ui/Section';

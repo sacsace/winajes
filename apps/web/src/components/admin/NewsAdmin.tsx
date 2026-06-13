@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
 import { Plus, Trash2, Search, ArrowLeft, Upload, X } from 'lucide-react';
-import type { NewsArticle } from '@winajes/shared';
+import type { NewsArticle } from '@/lib/shared';
 import { API_URL } from '@/lib/utils';
 import { useAdminT } from '@/lib/admin/AdminLocaleProvider';
 import { useConfirm } from '@/components/admin/ConfirmDialogProvider';

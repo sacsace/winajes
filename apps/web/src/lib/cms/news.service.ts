@@ -1,6 +1,6 @@
 import { ensureCmsSeeded } from '@/lib/cms/seed';
 import { newId, nowIso, readCollection, slugify, writeCollection } from '@/lib/cms/store';
-import type { NewsArticle } from '@winajes/shared';
+import type { NewsArticle } from '@/lib/shared';
 
 type NewsRecord = NewsArticle & { createdAt: string; updatedAt: string };
 

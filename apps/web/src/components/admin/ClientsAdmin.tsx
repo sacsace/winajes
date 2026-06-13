@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
 import { Plus, Trash2, Search, Upload, ArrowLeft } from 'lucide-react';
-import type { Client } from '@winajes/shared';
+import type { Client } from '@/lib/shared';
 import { API_URL } from '@/lib/utils';
 import { formatClientName } from '@/lib/format-client-name';
 import { useAdminT } from '@/lib/admin/AdminLocaleProvider';

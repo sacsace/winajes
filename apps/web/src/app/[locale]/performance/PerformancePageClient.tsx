@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import type { ConstructionRecord, ConstructionRecordsPage } from '@winajes/shared';
+import type { ConstructionRecord, ConstructionRecordsPage } from '@/lib/shared';
 import { PageHero } from '@/components/ui/PageHero';
 import { Section } from '@/components/ui/Section';
 import { Select } from '@/components/ui/Input';

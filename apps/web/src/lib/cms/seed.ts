@@ -9,7 +9,7 @@ import {
   type ApiService,
 } from '@/lib/services';
 import { DEFAULT_TEAM_SEED, type ApiTeamMember } from '@/lib/team';
-import type { NewsArticle } from '@winajes/shared';
+import type { NewsArticle } from '@/lib/shared';
 
 export type CmsClient = {
   id: string;

@@ -1,4 +1,4 @@
-import type { ProjectCategory } from '@winajes/shared';
+import type { ProjectCategory } from '@/lib/shared';
 
 export const companyInfo = {
   website: 'www.winajes.com',

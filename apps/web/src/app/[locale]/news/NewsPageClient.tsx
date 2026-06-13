@@ -5,7 +5,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { newsArticles as fallbackNews } from '@/lib/data';
 import { API_URL } from '@/lib/utils';
-import type { NewsArticle } from '@winajes/shared';
+import type { NewsArticle } from '@/lib/shared';
 import { PageHero } from '@/components/ui/PageHero';
 import { Section } from '@/components/ui/Section';
 import { Card } from '@/components/ui/Card';

@@ -10,7 +10,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@winajes/shared": "*",
     "clsx": "^2.1.1",
     "framer-motion": "^12.40.0",
     "lucide-react": "^0.469.0",

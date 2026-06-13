@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { Plus, Trash2, Upload, ArrowLeft } from 'lucide-react';
-import type { ConstructionRecord, ConstructionRecordsPage } from '@winajes/shared';
+import type { ConstructionRecord, ConstructionRecordsPage } from '@/lib/shared';
 import { formatInr, parseAmountInput } from '@/lib/format';
 import { API_URL } from '@/lib/utils';
 import { useAdminT } from '@/lib/admin/AdminLocaleProvider';

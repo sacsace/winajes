@@ -11,7 +11,7 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Container } from '@/components/ui/Container';
 import { API_URL } from '@/lib/utils';
-import type { NewsArticle } from '@winajes/shared';
+import type { NewsArticle } from '@/lib/shared';
 
 interface Props {
   slug: string;
