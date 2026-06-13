@@ -1,5 +1,5 @@
 /**
- * Downloads main hero slide images (engineering / MEP themed).
+ * Downloads main hero slide images (engineering / MEP / electrical / piping).
  * Source: Unsplash (free to use). Run: node scripts/fetch-hero-images.mjs
  */
 import fs from 'fs/promises';
@@ -18,18 +18,18 @@ const slides = [
   },
   {
     file: 'hero-slide-2.jpg',
-    url: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920&q=85',
-    credit: 'Unsplash — MEP / plant engineering',
+    url: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1920&q=85',
+    credit: 'Unsplash — manufacturing plant piping / mechanical',
   },
   {
     file: 'hero-slide-3.jpg',
-    url: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1920&q=85',
-    credit: 'Unsplash — manufacturing plant',
+    url: 'https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1920&q=85',
+    credit: 'Unsplash — MEP HVAC ductwork',
   },
   {
     file: 'hero-slide-4.jpg',
-    url: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=85',
-    credit: 'Unsplash — construction site',
+    url: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1920&q=85',
+    credit: 'Unsplash — electrical engineering / panel',
   },
 ];
 

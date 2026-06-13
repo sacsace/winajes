@@ -5,21 +5,23 @@ export const heroSlides = [
   },
   {
     src: '/images/hero/hero-slide-2.jpg',
-    alt: { ko: '플랜트 MEP 엔지니어링', en: 'Plant MEP engineering' },
+    alt: { ko: '산업 배관·기계 설비 공사', en: 'Industrial piping and mechanical systems' },
   },
   {
     src: '/images/hero/hero-slide-3.jpg',
-    alt: { ko: '제조 플랜트 설비 공사', en: 'Manufacturing plant MEP works' },
+    alt: { ko: 'MEP 공조·덕트 설비', en: 'MEP HVAC ductwork installation' },
   },
   {
     src: '/images/hero/hero-slide-4.jpg',
-    alt: { ko: '건설·시공 엔지니어링', en: 'Construction engineering on site' },
+    alt: { ko: '전기·분전반 엔지니어링', en: 'Electrical panel engineering' },
   },
 ];
 export const heroImages = {
   main: heroSlides[0].src,
   alt: '/images/gallery/hvac-1.jpg',
 };
+
+export const aboutHeroImage = '/images/about/about-hero.jpg';
 
 export const galleryImages = [
   {

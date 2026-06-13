@@ -13,6 +13,7 @@ import { VisionMission } from '@/components/about/VisionMission';
 import { CeoMessage } from '@/components/about/CeoMessage';
 import { OfficeLocationCard } from '@/components/offices/OfficeLocationCard';
 import { googleMapsAllOfficesUrl } from '@/lib/maps';
+import { aboutHeroImage } from '@/lib/images';
 import { cn } from '@/lib/utils';
 import {
   MapPin, ExternalLink,
@@ -37,7 +38,7 @@ export default function AboutPageClient() {
         title={t('title')}
         subtitle={t('subtitle')}
         description={t('description')}
-        image="/images/gallery/mechanical-1.jpg"
+        image={aboutHeroImage}
       />
 
       {/* 핵심 수치 */}

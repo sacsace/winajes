@@ -3,8 +3,13 @@ import { loadEnvConfig } from '@next/env';
 import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
-// Load .env from repo root (Winajes/)
-loadEnvConfig(path.join(__dirname, '..', '..'));
+// Local monorepo: ../../.env — Railway/Docker: /app only
+const repoRoot = path.join(__dirname, '..', '..');
+loadEnvConfig(
+  path.basename(repoRoot) === 'Winajes' || path.basename(repoRoot) === 'winajes'
+    ? repoRoot
+    : __dirname,
+);
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 

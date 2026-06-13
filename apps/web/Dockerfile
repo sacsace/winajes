@@ -13,7 +13,6 @@ RUN npm run build
 
 FROM base AS runner
 ENV NODE_ENV=production
-ENV PORT=3000
 ENV HOSTNAME=0.0.0.0
 
 COPY --from=deps /app/node_modules ./node_modules
