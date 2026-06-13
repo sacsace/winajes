@@ -83,6 +83,20 @@ winajes/
 | Projects | `/ko/projects` | `/en/projects` |
 | Contact | `/ko/contact` | `/en/contact` |
 
+## Deploy (Railway)
+
+This repo is an **npm workspace monorepo**. Deploy from the **repository root**, not `apps/web`.
+
+1. Railway → Service → **Settings**
+2. **Root Directory**: leave **empty** (do not set `apps/web`)
+3. **Build Command**: `npm ci && npm run build:web` (or use root `railway.toml`)
+4. **Start Command**: `npm run start:web`
+5. Redeploy
+
+`@winajes/shared` lives in `packages/shared` and is linked only when `npm ci` runs at the monorepo root.
+
+> CMS JSON and uploaded files are stored on the local filesystem. For production, attach a Railway volume or migrate to external storage if you need persistent admin edits.
+
 ## License
 
 Proprietary — WINAJES Constructions India Pvt. Ltd.

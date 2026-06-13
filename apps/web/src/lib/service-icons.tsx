@@ -1,5 +1,6 @@
 'use client';
 
+import type { ComponentType, SVGProps } from 'react';
 import {
   Droplets,
   Flame,
@@ -8,10 +9,11 @@ import {
   Wind,
   Wrench,
   Zap,
-  type LucideIcon,
 } from 'lucide-react';
 
-const iconMap: Record<string, LucideIcon> = {
+type ServiceIcon = ComponentType<SVGProps<SVGSVGElement> & { strokeWidth?: number }>;
+
+const iconMap: Record<string, ServiceIcon> = {
   Wrench,
   Wind,
   Zap,
@@ -21,6 +23,6 @@ const iconMap: Record<string, LucideIcon> = {
   PenTool,
 };
 
-export function getServiceIcon(name: string): LucideIcon {
+export function getServiceIcon(name: string): ServiceIcon {
   return iconMap[name] ?? Wrench;
 }

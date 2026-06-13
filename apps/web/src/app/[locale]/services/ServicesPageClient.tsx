@@ -9,6 +9,7 @@ import { Section } from '@/components/ui/Section';
 import { Card } from '@/components/ui/Card';
 import { ArrowRight } from 'lucide-react';
 import type { ApiService } from '@/lib/services';
+import { DEFAULT_SERVICE_CAPABILITIES, DEFAULT_SERVICE_PROCESS } from '@/lib/services';
 import { getServiceIcon } from '@/lib/service-icons';
 import { API_URL } from '@/lib/utils';
 
@@ -30,6 +31,8 @@ export default function ServicesPageClient() {
             icon: s.icon,
             title: s.title,
             overview: s.overview,
+            process: DEFAULT_SERVICE_PROCESS,
+            capabilities: DEFAULT_SERVICE_CAPABILITIES,
             order: i,
           })),
         );

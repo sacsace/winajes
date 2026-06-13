@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
-import type { LucideIcon } from 'lucide-react';
+import type { ComponentType, SVGProps } from 'react';
 import { LogOut } from 'lucide-react';
 import { useAdminT } from '@/lib/admin/AdminLocaleProvider';
 import { AdminLangSwitcher } from '@/components/admin/AdminLangSwitcher';
@@ -18,7 +18,9 @@ export type AdminTab =
   | 'inquiries'
   | 'settings';
 
-type NavItem = { key: AdminTab; icon: LucideIcon };
+type NavIcon = ComponentType<SVGProps<SVGSVGElement> & { strokeWidth?: number }>;
+
+type NavItem = { key: AdminTab; icon: NavIcon };
 
 type Props = {
   tab: AdminTab;
