@@ -1,0 +1,330 @@
+{
+  "meta": {
+    "siteName": "WINAJES Constructions India",
+    "siteDescription": "Established 2014. MEP, utility, electrical, fire protection and IT infrastructure specialist in India. Partner to 26 global clients including Samsung, Kia, and Hyosung."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "team": "Our Team",
+    "services": "Services",
+    "projects": "Projects",
+    "performance": "Performance",
+    "clients": "Clients",
+    "news": "News",
+    "contact": "Contact"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "readMore": "Read More",
+    "apply": "Apply",
+    "submit": "Submit",
+    "download": "Download",
+    "search": "Search",
+    "filter": "Filter",
+    "all": "All",
+    "loading": "Loading...",
+    "noResults": "No results found",
+    "requestConsultation": "Request Consultation",
+    "viewProjects": "View Projects",
+    "getInTouch": "Get in Touch",
+    "whatsapp": "WhatsApp Consultation"
+  },
+  "home": {
+    "hero": {
+      "cta1": "Request Consultation",
+      "cta2": "View Projects",
+      "slides": [
+        {
+          "label": "WINAJES · Since 2014",
+          "headline": "WE ARE YOUR BEST PARTNER",
+          "subheadline": "Creating value beyond construction as a comprehensive engineering partner in India since 2014",
+          "quote": "Our greatest competitor is ourselves.",
+          "quoteBy": "Lee Sung-Kwang · CEO"
+        },
+        {
+          "label": "MEP · HVAC · Utility",
+          "headline": "Precision Engineering,\nBuilt on Site",
+          "subheadline": "One-stop industrial MEP engineering from mechanical piping to HVAC & utility",
+          "quote": "Site-level detail defines project quality.",
+          "quoteBy": "WINAJES Engineering Team"
+        },
+        {
+          "label": "Trusted by Global Leaders",
+          "headline": "Samsung · Kia · Hyosung\n& 26 Clients",
+          "subheadline": "On-ground MEP and plant engineering partner for global manufacturers in India",
+          "quote": "Trust begins with keeping every small promise.",
+          "quoteBy": "WINAJES Constructions India"
+        },
+        {
+          "label": "Korea Quality · India Execution",
+          "headline": "Korean Quality,\nLocal Execution",
+          "subheadline": "Korean management standards with Indian engineering and site teams",
+          "quote": "Safe, precise construction is our strongest competitive edge.",
+          "quoteBy": "WINAJES Site Operations"
+        }
+      ]
+    },
+    "overview": {
+      "title": "Company Overview",
+      "subtitle": "WINAJES Constructions India Pvt. Ltd.",
+      "established": "Founded 2014",
+      "offices": "Korea HQ · Chennai · Penukonda · Pune",
+      "specialist": "MEP · Utility · Electrical · Fire · IT Infrastructure",
+      "team": "Korean Management + Local Indian Engineering Team"
+    },
+    "stats": {
+      "years": "Years Experience",
+      "projects": "Projects Completed",
+      "clients": "Clients Served",
+      "engineers": "Engineers & Technical Staff"
+    },
+    "businessAreas": {
+      "title": "Business Areas",
+      "subtitle": "Comprehensive Industrial Construction & Engineering Solutions",
+      "mechanical": {
+        "title": "Mechanical Engineering",
+        "items": ["Mechanical & Plumbing Piping", "Coolant & Compressed Air Systems", "Steam Piping", "LPG/N2/Argon/CO2 Gas Lines", "Sewer & Chiller Lines"]
+      },
+      "hvac": {
+        "title": "HVAC & Sheet Metal",
+        "items": ["Chillers & Boilers", "AHU, FCU & MAU", "Ductwork (SS, Galvanized, Plastic)", "Ventilation & Supply Fans", "VRF Multi-Type AC"]
+      },
+      "electrical": {
+        "title": "Electrical Engineering",
+        "items": ["Power Supply & Cable Trays", "Panel Boards, MCC & Bus Ducts", "Transformer Installation", "Earthing & Lightning Protection", "Emergency Power & Generators"]
+      },
+      "fire": {
+        "title": "Fire Protection",
+        "items": ["Fire Protection Design & Engineering", "Yard & Internal Hydrant Lines", "Sprinkler Systems", "Fire Alarm & Suppression", "Inspection & Certification"]
+      },
+      "water": {
+        "title": "Water Treatment",
+        "items": ["WTP (Water Treatment Plant)", "STP (Sewage Treatment)", "ETP (Effluent Treatment)"]
+      },
+      "it": {
+        "title": "IT Networks",
+        "items": ["Server Room Setup", "LAN & Intranet", "NAS & File Server", "CCTV Design, Install & Maintenance", "Video Conferencing"]
+      },
+      "design": {
+        "title": "Drawing & Design",
+        "items": ["Mechanical & Electrical Design", "Fire Fighting & Plumbing Design", "IT/CCTV Design", "BOQ & Construction Drawings"]
+      }
+    },
+    "featuredProjects": {
+      "title": "Featured Projects",
+      "subtitle": "Industrial construction achievements across India"
+    },
+    "clients": {
+      "title": "Major Clients",
+      "subtitle": "Global companies trust WINAJES"
+    },
+    "gallery": {
+      "title": "Construction Site Photos",
+      "subtitle": "Real project documentation across India — MEP, utility, electrical and fire protection",
+      "viewAllHint": "Click any photo to browse all project construction images",
+      "viewProject": "View project details",
+      "close": "Close"
+    },
+    "whyWinajes": {
+      "title": "Why WINAJES",
+      "subtitle": "Delivering customer dreams with superior technology and quality",
+      "items": {
+        "qualityManagement": "Quality Management System (QMS)",
+        "challengePassion": "Challenge & Passion",
+        "trustCooperation": "Trust & Cooperation",
+        "autonomyResponsibility": "Autonomy & Responsibility",
+        "koreanManagement": "Korean Management & Quality Control",
+        "industrialExpertise": "10+ Years MEP Experience",
+        "endToEnd": "Design to Handover End-to-End"
+      }
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Founded 2014 · Comprehensive engineering partner in India",
+    "description": "With advanced technology and Korean quality management, we deliver MEP, utility, electrical, fire protection, and IT infrastructure works as a trusted partner for global companies including Samsung, Kia, and Hyosung across India.",
+    "intro": "Since our founding in 2014, we have been realizing our customers' dreams with advanced technology, relentless challenge, and responsible management in India.",
+    "ceoMessage": {
+      "label": "CEO Message",
+      "title": "CEO Statement",
+      "message": "WINAJES Construction, a leader in India's construction history, realizes our customers' dreams with the highest technology and quality through relentless challenge and passion, change and innovation, trust and cooperation. WINAJES has always been there during the rapid economic growth of Korean companies in India over the past decade. We have contributed to company stability through factory construction, achieved sustainable growth based on dozens of design and construction experiences, and led with integrity and superior technology. Going forward, WINAJES will thoroughly prepare to create environments and spaces of value beyond construction, for the highest corporate value and a better life.",
+      "name": "Sungkwang Lee",
+      "role": "CEO"
+    },
+    "history": {
+      "title": "Company History",
+      "subtitle": "2014 — 2025"
+    },
+    "visionMission": {
+      "visionTitle": "Vision",
+      "vision": "A Company That Realizes Dreams",
+      "visionDescription": "Growing together with our clients, we strive to become a global engineering partner that creates value beyond construction through technological innovation and quality management at industrial sites across India.",
+      "missionTitle": "Mission",
+      "missionIntro": "WINAJES is guided by three core values in every project we deliver.",
+      "missionItems": [
+        {
+          "title": "Challenge & Passion",
+          "description": "We pursue new possibilities through continuous technical development and field execution, bringing our best passion to every project."
+        },
+        {
+          "title": "Autonomy & Responsibility",
+          "description": "Every team member works with ownership and autonomy, taking clear responsibility for safety, quality, and schedule."
+        },
+        {
+          "title": "Trust & Cooperation",
+          "description": "We build long-term trusted relationships through transparent communication and mutual respect with clients, partners, and local teams."
+        }
+      ]
+    },
+    "organization": {
+      "title": "Organization",
+      "departments": {
+        "engineering": "Engineering",
+        "mechanical": "Mechanical / Piping",
+        "electrical": "Electrical",
+        "design": "Design",
+        "administration": "General Administration",
+        "hr": "HR / General Affairs",
+        "purchasing": "Purchasing / Accounting",
+        "itNetwork": "IT & Network (Intranet · Server Room · CCTV)"
+      }
+    },
+    "locations": {
+      "title": "Global Locations",
+      "subtitle": "Offices across Korea and India"
+    }
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Comprehensive Industrial Construction & MEP Solutions",
+    "description": "From mechanical piping and HVAC to electrical, fire protection, water treatment, IT networks, and design — we provide end-to-end delivery for factory and industrial facilities.",
+    "overview": "Overview",
+    "process": "Process",
+    "capabilities": "Capabilities",
+    "gallery": "Gallery",
+    "relatedProjects": "Related Projects",
+    "inquiry": "Service Inquiry"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Industrial construction portfolio across India",
+    "description": "Explore representative projects across automotive, electronics, chemical, and steel industries — including client, scope of work, and on-site construction photos.",
+    "performanceLink": {
+      "title": "Construction Performance Records",
+      "subtitle": "Full list of dates, clients, scope and amounts since 2014",
+      "cta": "View Performance"
+    },
+    "filters": {
+      "year": "Year",
+      "industry": "Industry",
+      "category": "Service Category",
+      "location": "Location"
+    },
+    "categories": {
+      "mechanical": "Mechanical",
+      "electrical": "Electrical",
+      "fire-fighting": "Fire Fighting",
+      "utility": "Utility",
+      "it-infrastructure": "IT Infrastructure",
+      "industrial-construction": "Industrial Construction"
+    },
+    "detail": {
+      "scope": "Scope",
+      "technicalDetails": "Technical Details",
+      "photos": "Construction Photos",
+      "status": "Completion Status",
+      "related": "Related Projects"
+    }
+  },
+  "clients": {
+    "title": "Clients",
+    "subtitle": "Partnering with global industry leaders",
+    "description": "We maintain long-term partnerships with global manufacturers and India-based entities including Samsung, Kia, Hyosung, and POSCO — supporting production stability and quality on every site.",
+    "totalLabel": "Total partners",
+    "gridTitle": "Our Clients",
+    "gridSubtitle": "Global manufacturers and India-based partners including Samsung, Kia, Hyosung, and POSCO"
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "Korean management with local Indian engineering",
+    "description": "Meet the leadership and specialists who drive WINAJES. Korea HQ and our India teams work as one unit to deliver quality and schedule on every project.",
+    "totalLabel": "Team members",
+    "gridTitle": "Our Team",
+    "gridSubtitle": "Key people across management, engineering, and site operations"
+  },
+  "performance": {
+    "title": "Construction Performance",
+    "subtitle": "MEP, utility, electrical and fire protection works delivered across India since 2014",
+    "description": "Browse the full record of construction dates, clients, scope, and amounts. Filter by year or client to find the performance data you need.",
+    "total": "{count} records total",
+    "empty": "No construction records to display.",
+    "filters": {
+      "allYears": "All years",
+      "client": "Search client"
+    },
+    "columns": {
+      "date": "Date",
+      "client": "Client",
+      "description": "Scope of Work",
+      "amount": "Amount (INR)"
+    },
+    "pagination": {
+      "prev": "Previous",
+      "next": "Next"
+    }
+  },
+  "news": {
+    "title": "News & Media",
+    "subtitle": "Latest updates and industry insights",
+    "description": "Stay informed on WINAJES project deliveries, site updates, company announcements, and trends in the construction and industrial sectors.",
+    "categories": {
+      "company": "Company News",
+      "project": "Project Updates",
+      "press": "Press Releases",
+      "industry": "Industry Insights"
+    },
+    "detail": {
+      "backToList": "Back to news",
+      "related": "Related articles",
+      "notFound": "Article not found."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Request a project consultation",
+    "description": "We welcome inquiries for MEP, utility, electrical, fire protection, and IT infrastructure projects — including estimates, technical consultation, and partnership proposals. Our team will respond promptly.",
+    "form": {
+      "name": "Name",
+      "company": "Company",
+      "country": "Country",
+      "email": "Email",
+      "phone": "Phone",
+      "projectType": "Project Type",
+      "message": "Message",
+      "submit": "Submit Inquiry",
+      "success": "Your inquiry has been submitted successfully.",
+      "error": "An error occurred while submitting your inquiry."
+    },
+    "offices": "Office Information"
+  },
+  "footer": {
+    "description": "Founded 2014. MEP, utility, electrical, fire protection & IT infrastructure specialist in India. www.winajes.com",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "downloadProfile": "Download Company Profile",
+    "admin": "Admin",
+    "copyright": "© {year} WINAJES Constructions India Pvt. Ltd. All rights reserved."
+  },
+  "inquiry": {
+    "title": "Quick Inquiry",
+    "placeholder": "Ask about your project..."
+  },
+  "search": {
+    "title": "Search",
+    "placeholder": "Search projects, services, news...",
+    "noResults": "No search results found"
+  }
+}

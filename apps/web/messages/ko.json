@@ -1,0 +1,330 @@
+{
+  "meta": {
+    "siteName": "WINAJES Constructions India",
+    "siteDescription": "2014년 창립, 인도에서 MEP·유틸리티·전기·소방·IT 인프라 전문 시공. 삼성, 기아, 효성, 만도 등 26개 글로벌 고객사 파트너."
+  },
+  "nav": {
+    "home": "홈",
+    "about": "회사소개",
+    "team": "직원 소개",
+    "services": "서비스",
+    "projects": "프로젝트",
+    "performance": "공사 실적",
+    "clients": "고객사",
+    "news": "소식",
+    "contact": "문의"
+  },
+  "common": {
+    "learnMore": "자세히 보기",
+    "viewAll": "전체 보기",
+    "readMore": "더 읽기",
+    "apply": "지원하기",
+    "submit": "제출하기",
+    "download": "다운로드",
+    "search": "검색",
+    "filter": "필터",
+    "all": "전체",
+    "loading": "로딩 중...",
+    "noResults": "결과가 없습니다",
+    "requestConsultation": "상담 요청",
+    "viewProjects": "프로젝트 보기",
+    "getInTouch": "문의하기",
+    "whatsapp": "WhatsApp 상담"
+  },
+  "home": {
+    "hero": {
+      "cta1": "상담 요청",
+      "cta2": "프로젝트 보기",
+      "slides": [
+        {
+          "label": "WINAJES · Since 2014",
+          "headline": "WE ARE YOUR BEST PARTNER",
+          "subheadline": "2014년부터 인도에서 건설을 넘어 가치를 창출하는 종합 엔지니어링 파트너",
+          "quote": "우리의 경쟁자는 바로 우리 자신입니다.",
+          "quoteBy": "이성광 · CEO"
+        },
+        {
+          "label": "MEP · HVAC · Utility",
+          "headline": "Precision Engineering,\nBuilt on Site",
+          "subheadline": "기계·배관·공조·유틸리티까지 원스톱 산업 엔지니어링 시공",
+          "quote": "현장의 디테일이 프로젝트의 품질을 결정합니다.",
+          "quoteBy": "WINAJES Engineering Team"
+        },
+        {
+          "label": "Trusted by Global Leaders",
+          "headline": "Samsung · Kia · Hyosung\n& 26 Clients",
+          "subheadline": "글로벌 제조 플랜트를 위한 인도 현지 MEP·설비 엔지니어링 파트너",
+          "quote": "신뢰는 약속을 지키는 작은 습관에서 시작됩니다.",
+          "quoteBy": "WINAJES Constructions India"
+        },
+        {
+          "label": "Korea Quality · India Execution",
+          "headline": "한국식 품질,\n인도 현지 실행력",
+          "subheadline": "한국 경영 체계와 현지 엔지니어링·시공 팀의 결합",
+          "quote": "안전하고 정확한 시공이 최고의 경쟁력입니다.",
+          "quoteBy": "WINAJES Site Operations"
+        }
+      ]
+    },
+    "overview": {
+      "title": "회사 개요",
+      "subtitle": "WINAJES Constructions India Pvt. Ltd.",
+      "established": "2014년 창립",
+      "offices": "한국 본사 · 첸나이 · 페누콘다 · 푸네",
+      "specialist": "MEP·유틸리티·전기·소방·IT 인프라 전문",
+      "team": "한국 경영 + 인도 현지 엔지니어링 팀"
+    },
+    "stats": {
+      "years": "년 경험",
+      "projects": "완료 프로젝트",
+      "clients": "고객사",
+      "engineers": "엔지니어 & 기술 인력"
+    },
+    "businessAreas": {
+      "title": "사업 영역",
+      "subtitle": "종합 산업 건설 및 엔지니어링 솔루션",
+      "mechanical": {
+        "title": "기계 설비",
+        "items": ["기계·배관 공사", "쿨런트·압축공기·스팀 배관", "LPG/N2/아르곤/CO2 가스 라인", "하수·칠러 라인", "급수·냉각수 시스템"]
+      },
+      "hvac": {
+        "title": "공조·냉동 (HVAC)",
+        "items": ["칠러·보일러", "AHU·FCU·MAU", "덕트워크 (SUS·아연·플라스틱)", "환기·급기 팬", "VRF 멀티형 에어컨"]
+      },
+      "electrical": {
+        "title": "전기 공사",
+        "items": ["전력 공급·케이블 트레이", "배전반·MCC·버스덕트", "변압기 설치", "접지·낙뢰 보호", "비상전력·발전기"]
+      },
+      "fire": {
+        "title": "소방 설비",
+        "items": ["소방 설계·시공", "옥내·옥외 소화전", "스프링클러", "화재경보·소화설비", "검사·인증"]
+      },
+      "water": {
+        "title": "수처리",
+        "items": ["WTP (정수)", "STP (하수)", "ETP (폐수)"]
+      },
+      "it": {
+        "title": "IT·네트워크",
+        "items": ["서버룸 구축", "LAN·인트라넷", "NAS·파일 서버", "CCTV 설계·설치·유지보수", "화상회의 시스템"]
+      },
+      "design": {
+        "title": "도면·설계",
+        "items": ["기계·전기 설계", "소방·배관 설계", "IT/CCTV 설계", "BOQ·시공 도면"]
+      }
+    },
+    "featuredProjects": {
+      "title": "주요 프로젝트",
+      "subtitle": "인도 전역의 산업 건설 실적"
+    },
+    "clients": {
+      "title": "주요 고객사",
+      "subtitle": "글로벌 기업들이 WINAJES를 신뢰합니다"
+    },
+    "gallery": {
+      "title": "현장 시공 사진",
+      "subtitle": "인도 전역 MEP·유틸리티·전기·소방 현장의 생생한 기록",
+      "viewAllHint": "사진을 클릭하면 프로젝트 시공 사진 전체를 볼 수 있습니다",
+      "viewProject": "프로젝트 상세 보기",
+      "close": "닫기"
+    },
+    "whyWinajes": {
+      "title": "WINAJES를 선택하는 이유",
+      "subtitle": "최고의 기술력과 품질로 고객의 꿈을 가치있게 실현합니다",
+      "items": {
+        "qualityManagement": "품질경영시스템 (QMS)",
+        "challengePassion": "도전과 열정",
+        "trustCooperation": "신뢰와 협력",
+        "autonomyResponsibility": "자율과 책임",
+        "koreanManagement": "한국식 경영·품질관리",
+        "industrialExpertise": "10년+ MEP 시공 경험",
+        "endToEnd": "설계·시공·시운전·인도 End-to-End"
+      }
+    }
+  },
+  "about": {
+    "title": "회사소개",
+    "subtitle": "2014년 설립 · 인도 종합 엔지니어링 파트너",
+    "description": "앞선 기술력과 한국식 품질 관리로 MEP·유틸리티·전기·소방·IT 인프라 시공을 수행하며, 삼성·기아·효성 등 글로벌 기업의 인도 현장에서 신뢰받는 파트너로 성장해 왔습니다.",
+    "intro": "2014년 창립 이후 인도에서 앞선 기술, 끊임없는 도전, 책임 있는 경영으로 고객의 꿈을 가치있게 실현하고 있습니다.",
+    "ceoMessage": {
+      "label": "CEO 메시지",
+      "title": "CEO 인사말",
+      "message": "인도 건설의 역사를 이끌어온 위너지스 건설은 최고의 기술력과 품질을 바탕으로, 끊임없는 도전과 열정, 변화와 혁신, 신뢰와 협력을 통해 고객의 꿈을 가치있게 실현하고 있습니다. 지난 십년 인도의 한인기업이 이룩한 빠른 경제 성장의 순간에는 언제나 위너지스 건설이 함께 했습니다. 공장 건축을 비롯하여 회사의 안정에 기여하는 한편 수십의 설계 및 시공 경험을 바탕으로 지속 가능한 성장을 함께 하였으며, 성실한 자세와 우위의 기술력으로 앞장서고 있습니다. 앞으로도 위너지스 건설은 최고의 기업가치 창출과 보다 나은 삶을 위해 철저히 준비하여 건설 그 이상의 가치 있는 환경과 공간을 창조할 것입니다.",
+      "name": "이성광",
+      "role": "대표이사"
+    },
+    "history": {
+      "title": "회사 연혁",
+      "subtitle": "2014 — 2025"
+    },
+    "visionMission": {
+      "visionTitle": "비전",
+      "vision": "꿈을 실현하는 기업",
+      "visionDescription": "고객과 함께 성장하며, 인도 산업 현장에서 기술 혁신과 품질 경영을 통해 건설을 넘어선 가치를 창출하는 글로벌 엔지니어링 파트너가 되겠습니다.",
+      "missionTitle": "미션",
+      "missionIntro": "WINAJES는 다음 세 가지 핵심 가치를 바탕으로 모든 프로젝트에 임합니다.",
+      "missionItems": [
+        {
+          "title": "도전과 열정",
+          "description": "끊임없는 기술 개발과 현장 실행력으로 새로운 가능성에 도전하고, 모든 프로젝트에 최선의 열정을 다합니다."
+        },
+        {
+          "title": "자율과 책임",
+          "description": "각 구성원이 주인의식을 가지고 자율적으로 일하며, 안전·품질·일정에 대한 명확한 책임을 집니다."
+        },
+        {
+          "title": "신뢰와 협력",
+          "description": "고객, 협력사, 현지 인력과의 투명한 소통과 상호 존중을 바탕으로 장기적인 신뢰 관계를 구축합니다."
+        }
+      ]
+    },
+    "organization": {
+      "title": "조직도",
+      "departments": {
+        "engineering": "엔지니어링",
+        "mechanical": "기계 / 배관",
+        "electrical": "전기",
+        "design": "설계",
+        "administration": "일반관리",
+        "hr": "인사 / 총무",
+        "purchasing": "구매 / 회계",
+        "itNetwork": "IT·네트워크 (인트라넷·서버룸·CCTV)"
+      }
+    },
+    "locations": {
+      "title": "글로벌 거점",
+      "subtitle": "한국과 인도 전역의 사무소"
+    }
+  },
+  "services": {
+    "title": "서비스",
+    "subtitle": "종합 산업 건설 및 MEP 솔루션",
+    "description": "기계·배관, HVAC, 전기, 소방, 수처리, IT 네트워크, 도면·설계까지 공장 및 산업 시설의 설계·시공·시운전·인도를 End-to-End로 제공합니다.",
+    "overview": "개요",
+    "process": "프로세스",
+    "capabilities": "역량",
+    "gallery": "갤러리",
+    "relatedProjects": "관련 프로젝트",
+    "inquiry": "서비스 문의"
+  },
+  "projects": {
+    "title": "프로젝트",
+    "subtitle": "인도 전역의 산업 건설 포트폴리오",
+    "description": "자동차·전자·화학·철강 등 다양한 산업 분야에서 MEP 및 유틸리티 공사를 수행한 대표 프로젝트를 소개합니다. 발주처, 공사 범위, 시공 사진을 확인할 수 있습니다.",
+    "performanceLink": {
+      "title": "공사 실적 조회",
+      "subtitle": "2014년부터의 공사일자·발주처·공사내용·금액 전체 목록",
+      "cta": "공사 실적 보기"
+    },
+    "filters": {
+      "year": "연도",
+      "industry": "산업",
+      "category": "서비스 분류",
+      "location": "위치"
+    },
+    "categories": {
+      "mechanical": "기계",
+      "electrical": "전기",
+      "fire-fighting": "소방",
+      "utility": "유틸리티",
+      "it-infrastructure": "IT 인프라",
+      "industrial-construction": "산업 건설"
+    },
+    "detail": {
+      "scope": "공사 범위",
+      "technicalDetails": "기술 상세",
+      "photos": "시공 사진",
+      "status": "완료 상태",
+      "related": "관련 프로젝트"
+    }
+  },
+  "clients": {
+    "title": "고객사",
+    "subtitle": "글로벌 선도 기업들과 함께합니다",
+    "description": "삼성, 기아, 효성, POSCO 등 글로벌 제조·자동차 브랜드와 인도 현지 법인·거래처와 장기 협력 관계를 유지하며, 고객의 생산 현장 안정성과 품질 향상에 기여하고 있습니다.",
+    "totalLabel": "총 고객사",
+    "gridTitle": "고객사",
+    "gridSubtitle": "삼성, 기아, 효성, POSCO 등 글로벌 기업 및 인도 현지 거래처와 협력합니다"
+  },
+  "team": {
+    "title": "직원 소개",
+    "subtitle": "한국 경영과 인도 현지 엔지니어링 팀",
+    "description": "WINAJES를 이끄는 경영진과 각 부서 전문가를 소개합니다. 한국 본사와 인도 현장이 하나의 팀으로 협력하여 프로젝트 품질과 일정을 책임집니다.",
+    "totalLabel": "총 인원",
+    "gridTitle": "Our Team",
+    "gridSubtitle": "경영·기술·현장 운영을 담당하는 WINAJES 핵심 멤버"
+  },
+  "performance": {
+    "title": "공사 실적",
+    "subtitle": "2014년부터 인도 현장에서 수행한 MEP·유틸리티·전기·소방 공사 실적",
+    "description": "공사일자, 발주처, 공사 내용, 금액별로 정리된 전체 실적 목록입니다. 연도·발주처 검색으로 원하는 실적을 빠르게 찾아볼 수 있습니다.",
+    "total": "총 {count}건",
+    "empty": "표시할 공사 실적이 없습니다.",
+    "filters": {
+      "allYears": "전체 연도",
+      "client": "발주처 검색"
+    },
+    "columns": {
+      "date": "공사일자",
+      "client": "발주처",
+      "description": "공사내용",
+      "amount": "공사금액(₹)"
+    },
+    "pagination": {
+      "prev": "이전",
+      "next": "다음"
+    }
+  },
+  "news": {
+    "title": "뉴스 & 미디어",
+    "subtitle": "최신 소식과 업계 인사이트",
+    "description": "WINAJES의 프로젝트 수행, 현장 소식, 회사 공지 및 산업·건설 분야의 최신 동향을 전해 드립니다.",
+    "categories": {
+      "company": "회사 소식",
+      "project": "프로젝트 업데이트",
+      "press": "보도자료",
+      "industry": "업계 인사이트"
+    },
+    "detail": {
+      "backToList": "뉴스 목록으로",
+      "related": "관련 소식",
+      "notFound": "게시글을 찾을 수 없습니다."
+    }
+  },
+  "contact": {
+    "title": "문의하기",
+    "subtitle": "프로젝트 상담을 요청해 주세요",
+    "description": "MEP·유틸리티·전기·소방·IT 인프라 공사에 대한 견적, 기술 상담, 협력 제안을 환영합니다. 담당자가 확인 후 신속히 연락드리겠습니다.",
+    "form": {
+      "name": "이름",
+      "company": "회사명",
+      "country": "국가",
+      "email": "이메일",
+      "phone": "전화번호",
+      "projectType": "프로젝트 유형",
+      "message": "메시지",
+      "submit": "문의 제출",
+      "success": "문의가 성공적으로 접수되었습니다.",
+      "error": "문의 접수 중 오류가 발생했습니다."
+    },
+    "offices": "사무소 정보"
+  },
+  "footer": {
+    "description": "2014년 창립. 인도 MEP·유틸리티·전기·소방·IT 인프라 전문 시공사. www.winajes.com",
+    "quickLinks": "바로가기",
+    "services": "서비스",
+    "contact": "연락처",
+    "downloadProfile": "회사 소개서 다운로드",
+    "admin": "관리자",
+    "copyright": "© {year} WINAJES Constructions India Pvt. Ltd. All rights reserved."
+  },
+  "inquiry": {
+    "title": "빠른 문의",
+    "placeholder": "프로젝트에 대해 문의하세요..."
+  },
+  "search": {
+    "title": "검색",
+    "placeholder": "프로젝트, 서비스, 뉴스 검색...",
+    "noResults": "검색 결과가 없습니다"
+  }
+}

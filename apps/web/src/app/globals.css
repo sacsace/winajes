@@ -1,0 +1,193 @@
+@import "tailwindcss";
+@import "pretendard/dist/web/variable/pretendardvariable.css";
+
+:root {
+  --primary: #0b2d5e;
+  --primary-light: #153e7e;
+  --secondary: #3e8ed0;
+  --accent: #5ba8e0;
+  --background: #f7f9fc;
+  --foreground: #0f172a;
+  --muted: #eef2f7;
+  --muted-foreground: #64748b;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --ring: #3e8ed0;
+  --font-sans-stack: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Segoe UI", "Noto Sans KR", sans-serif;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-sans-stack);
+  --font-display: var(--font-sans-stack);
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --shadow-soft: 0 4px 24px -4px rgb(11 45 94 / 0.08);
+  --shadow-card: 0 8px 32px -8px rgb(11 45 94 / 0.12);
+  --shadow-elevated: 0 20px 48px -12px rgb(11 45 94 / 0.16);
+  --tracking-tight: -0.025em;
+  --tracking-normal: -0.011em;
+  --leading-body: 1.58824;
+  --leading-relaxed: 1.64706;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-normal);
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html:lang(ko) body {
+  letter-spacing: -0.022em;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+html:lang(en) body {
+  letter-spacing: -0.011em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.028em;
+  line-height: 1.125;
+  font-weight: 600;
+}
+
+html:lang(ko) h1,
+html:lang(ko) h2,
+html:lang(ko) h3 {
+  letter-spacing: -0.032em;
+}
+
+p {
+  line-height: var(--leading-relaxed);
+}
+
+::selection {
+  background: rgb(62 142 208 / 0.22);
+  color: var(--primary);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-marquee {
+  animation: marquee 45s linear infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+}
+
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.img-zoom:hover img {
+  transform: scale(1.05);
+}
+
+.glass {
+  background: rgb(255 255 255 / 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-dark {
+  background: rgb(11 45 94 / 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dot-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgb(255 255 255 / 0.07) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-bg img {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media (max-aspect-ratio: 4/3) {
+  .hero-bg img {
+    object-position: center 28%;
+  }
+}
+
+@media (min-aspect-ratio: 21/9) {
+  .hero-bg img {
+    object-position: center center;
+    transform: scale(1.02);
+  }
+}
+
+@media (max-height: 640px) {
+  .hero-content {
+    padding-top: 5.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.shadow-soft { box-shadow: 0 4px 24px -4px rgb(11 45 94 / 0.08); }
+.shadow-card { box-shadow: 0 8px 32px -8px rgb(11 45 94 / 0.12); }
+.shadow-elevated { box-shadow: 0 20px 48px -12px rgb(11 45 94 / 0.16); }
