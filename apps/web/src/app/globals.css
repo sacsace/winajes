@@ -191,3 +191,27 @@ p {
 .shadow-soft { box-shadow: 0 4px 24px -4px rgb(11 45 94 / 0.08); }
 .shadow-card { box-shadow: 0 8px 32px -8px rgb(11 45 94 / 0.12); }
 .shadow-elevated { box-shadow: 0 20px 48px -12px rgb(11 45 94 / 0.16); }
+
+/* Mobile: safe area & touch targets */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .mobile-scroll-x {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: rgb(62 142 208 / 0.15);
+  }
+}

@@ -3,6 +3,53 @@
     "siteName": "WINAJES Constructions India",
     "siteDescription": "2014년 창립, 인도에서 MEP·유틸리티·전기·소방·IT 인프라 전문 시공. 삼성, 기아, 효성, 만도 등 26개 글로벌 고객사 파트너."
   },
+  "seo": {
+    "home": {
+      "title": "WINAJES Constructions India | MEP·유틸리티·전기·소방 전문",
+      "description": "2014년 창립, 인도 MEP·HVAC·기계·배관·전기·소방·IT 인프라 전문 시공. 삼성·기아·효성 등 26개 글로벌 고객사 파트너.",
+      "keywords": "WINAJES, 인도 MEP, HVAC, 기계배관, 전기공사, 소방, 유틸리티, 산업설비, 첸나이, 페누콘다, 푸네"
+    },
+    "about": {
+      "title": "회사소개 | WINAJES Constructions India",
+      "description": "2014년 설립 인도 종합 엔지니어링 파트너. MEP·유틸리티·전기·소방·IT 인프라 시공, CEO 인사말, 연혁, 비전·미션.",
+      "keywords": "WINAJES 회사소개, 인도 건설, MEP 시공, 엔지니어링 파트너"
+    },
+    "team": {
+      "title": "직원 소개 | WINAJES Constructions India",
+      "description": "한국 경영과 인도 현지 엔지니어링 팀. WINAJES 경영진 및 각 부서 전문가 소개.",
+      "keywords": "WINAJES 팀, 인도 엔지니어, MEP 전문가"
+    },
+    "services": {
+      "title": "서비스 | MEP·HVAC·전기·소방·IT 인프라",
+      "description": "기계·배관, HVAC, 전기, 소방, 수처리, IT 네트워크, 도면·설계까지 End-to-End 산업 시설 솔루션.",
+      "keywords": "MEP 서비스, HVAC, 기계배관, 전기공사, 소방설비, 수처리, IT 인프라, 설계"
+    },
+    "projects": {
+      "title": "프로젝트 | 인도 산업 건설 포트폴리오",
+      "description": "삼성·기아·효성·샤에플러 등 글로벌 제조 플랜트 MEP·유틸리티 공사 대표 프로젝트.",
+      "keywords": "WINAJES 프로젝트, 인도 공장 건설, MEP 프로젝트, 삼성 인도, 기아 인도"
+    },
+    "performance": {
+      "title": "공사 실적 | WINAJES Constructions India",
+      "description": "2014년부터 인도 현장 MEP·유틸리티·전기·소방 공사 실적. 연도·발주처별 조회.",
+      "keywords": "공사 실적, MEP 실적, 인도 시공 실적"
+    },
+    "clients": {
+      "title": "고객사 | WINAJES Constructions India",
+      "description": "삼성, 기아, 효성, POSCO 등 26개 글로벌·인도 현지 고객사와의 장기 협력.",
+      "keywords": "WINAJES 고객사, 삼성, 기아, 효성, 글로벌 제조"
+    },
+    "news": {
+      "title": "소식 | WINAJES News & Media",
+      "description": "WINAJES 프로젝트 소식, 현장 뉴스, 회사 공지 및 건설·산업 동향.",
+      "keywords": "WINAJES 뉴스, MEP 소식, 인도 건설 뉴스"
+    },
+    "contact": {
+      "title": "문의하기 | WINAJES Constructions India",
+      "description": "MEP·유틸리티·전기·소방·IT 인프라 견적 및 기술 상담. 인도·한국 사무소 연락처.",
+      "keywords": "WINAJES 문의, MEP 견적, 인도 건설 상담"
+    }
+  },
   "nav": {
     "home": "홈",
     "about": "회사소개",

@@ -88,8 +88,8 @@ export default function PerformancePageClient() {
         </div>
 
         <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-soft">
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[900px]">
+          <div className="mobile-scroll-x overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
+            <table className="w-full min-w-[640px] sm:min-w-[900px]">
               <thead>
                 <tr className="bg-primary text-white">
                   <th className="px-5 py-3.5 text-left text-sm font-bold">{t('columns.date')}</th>

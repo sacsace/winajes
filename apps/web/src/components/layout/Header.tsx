@@ -63,12 +63,13 @@ export function Header() {
     <header
       className={cn(
         'fixed top-0 right-0 left-0 z-50 transition-all duration-500',
+        'pt-[env(safe-area-inset-top)]',
         isSolid && 'glass border-b border-border/60 shadow-soft',
         isHeroHeader && 'border-b border-white/10 bg-primary/40 backdrop-blur-md',
         !isSolid && !isHeroHeader && 'bg-transparent',
       )}
     >
-      <Container className="flex h-[72px] items-center justify-between">
+      <Container className="flex h-14 items-center justify-between sm:h-[72px]">
         <Link href="/" className="shrink-0" onClick={() => setMobileOpen(false)}>
           <BrandLogo variant={isSolid ? 'onLight' : 'onDark'} showTagline />
         </Link>
@@ -118,15 +119,15 @@ export function Header() {
       </Container>
 
       {mobileOpen && (
-        <div className="border-t border-border bg-surface lg:hidden">
-          <nav className="flex flex-col px-5 py-3">
+        <div className="border-t border-border bg-surface lg:hidden max-h-[calc(100dvh-3.5rem-env(safe-area-inset-top))] overflow-y-auto">
+          <nav className="flex flex-col px-4 py-3 sm:px-5">
             {navItems.map((item) => (
               <Link
                 key={item.key}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
                 className={cn(
-                  'rounded-lg px-3 py-3.5 text-sm font-semibold transition-colors',
+                  'min-h-[44px] rounded-lg px-3 py-3 text-sm font-semibold transition-colors flex items-center',
                   isActive(item.href)
                     ? 'bg-primary/8 text-primary'
                     : 'text-muted-foreground hover:bg-muted',
@@ -138,7 +139,7 @@ export function Header() {
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
-              className="mt-2 rounded-lg bg-primary px-3 py-3.5 text-center text-sm font-semibold text-white"
+              className="mt-2 flex min-h-[44px] items-center justify-center rounded-lg bg-primary px-3 py-3 text-center text-sm font-semibold text-white"
             >
               {t('contact')}
             </Link>

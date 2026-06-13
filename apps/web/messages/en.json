@@ -3,6 +3,53 @@
     "siteName": "WINAJES Constructions India",
     "siteDescription": "Established 2014. MEP, utility, electrical, fire protection and IT infrastructure specialist in India. Partner to 26 global clients including Samsung, Kia, and Hyosung."
   },
+  "seo": {
+    "home": {
+      "title": "WINAJES Constructions India | MEP, HVAC & Utility Engineering",
+      "description": "Established 2014. Specialist in MEP, HVAC, mechanical, piping, electrical, fire protection and IT infrastructure in India. Partner to Samsung, Kia, Hyosung and 26 global clients.",
+      "keywords": "WINAJES, India MEP, HVAC, mechanical piping, electrical, fire protection, utility, industrial construction, Chennai, Pune"
+    },
+    "about": {
+      "title": "About Us | WINAJES Constructions India",
+      "description": "India engineering partner since 2014. MEP, utility, electrical, fire and IT infrastructure. CEO message, history, vision and mission.",
+      "keywords": "WINAJES about, India construction, MEP contractor"
+    },
+    "team": {
+      "title": "Our Team | WINAJES Constructions India",
+      "description": "Korean management and India engineering teams delivering MEP and utility projects across India.",
+      "keywords": "WINAJES team, India engineers, MEP specialists"
+    },
+    "services": {
+      "title": "Services | MEP, HVAC, Electrical & Fire Protection",
+      "description": "End-to-end industrial solutions: mechanical, piping, HVAC, electrical, fire protection, water treatment, IT network and design engineering.",
+      "keywords": "MEP services, HVAC, piping, electrical, fire protection, water treatment, IT infrastructure"
+    },
+    "projects": {
+      "title": "Projects | Industrial Construction Portfolio in India",
+      "description": "Representative MEP and utility projects for Samsung, Kia, Hyosung, Schaeffler and global manufacturers in India.",
+      "keywords": "WINAJES projects, India factory construction, MEP projects"
+    },
+    "performance": {
+      "title": "Performance Records | WINAJES Constructions India",
+      "description": "MEP, utility, electrical and fire protection construction records in India since 2014. Search by year and client.",
+      "keywords": "construction records, MEP performance, India projects"
+    },
+    "clients": {
+      "title": "Clients | WINAJES Constructions India",
+      "description": "Long-term partnerships with Samsung, Kia, Hyosung, POSCO and 26 global and local clients.",
+      "keywords": "WINAJES clients, Samsung, Kia, Hyosung, global manufacturing"
+    },
+    "news": {
+      "title": "News & Media | WINAJES Constructions India",
+      "description": "Project updates, site news, company announcements and construction industry insights from WINAJES.",
+      "keywords": "WINAJES news, MEP news, India construction"
+    },
+    "contact": {
+      "title": "Contact | WINAJES Constructions India",
+      "description": "Request a quote or technical consultation for MEP, utility, electrical, fire and IT infrastructure projects in India and Korea.",
+      "keywords": "WINAJES contact, MEP quote, India construction inquiry"
+    }
+  },
   "nav": {
     "home": "Home",
     "about": "About Us",

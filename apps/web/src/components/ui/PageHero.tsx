@@ -26,30 +26,30 @@ export function PageHero({
   return (
     <section
       className={cn(
-        'relative flex items-end overflow-hidden pt-[72px]',
-        size === 'default' ? 'min-h-[260px] md:min-h-[32vh]' : 'min-h-[220px] md:min-h-[24vh]',
+        'relative flex items-end overflow-hidden pt-14 sm:pt-[72px]',
+        size === 'default' ? 'min-h-[220px] sm:min-h-[260px] md:min-h-[32vh]' : 'min-h-[200px] sm:min-h-[220px] md:min-h-[24vh]',
         className,
       )}
     >
-      <Image src={image} alt="" fill className="object-cover" priority sizes="100vw" />
+      <Image src={image} alt={title} fill className="object-cover" priority sizes="100vw" />
       <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/80 to-primary/55" />
       <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent" />
       <div className="absolute inset-0 dot-grid opacity-40" />
 
-      <Container className="relative z-10 py-10 md:py-12">
+      <Container className="relative z-10 px-4 py-8 sm:px-5 sm:py-10 md:py-12">
         {label && (
-          <p className="mb-2 text-[11px] font-semibold tracking-[0.18em] text-accent uppercase">{label}</p>
+          <p className="mb-2 text-[10px] font-semibold tracking-[0.18em] text-accent uppercase sm:text-[11px]">{label}</p>
         )}
-        <h1 className="max-w-3xl text-3xl font-bold tracking-[-0.035em] text-white md:text-4xl lg:text-[2.75rem] lg:leading-[1.08]">
+        <h1 className="max-w-3xl text-2xl font-bold tracking-[-0.035em] text-white sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.08]">
           {title}
         </h1>
         {subtitle && (
-          <p className="mt-3 max-w-2xl text-base leading-relaxed tracking-[-0.02em] text-white/85 md:text-[1.0625rem]">
+          <p className="mt-2 max-w-2xl text-sm leading-relaxed tracking-[-0.02em] text-white/85 sm:mt-3 sm:text-base md:text-[1.0625rem]">
             {subtitle}
           </p>
         )}
         {description && (
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed tracking-[-0.015em] text-white/65 md:text-[0.9375rem] md:leading-[1.65]">
+          <p className="mt-2 max-w-2xl text-xs leading-relaxed tracking-[-0.015em] text-white/65 sm:mt-3 sm:text-sm md:text-[0.9375rem] md:leading-[1.65]">
             {description}
           </p>
         )}
