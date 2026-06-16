@@ -36,14 +36,5 @@ export async function createInquiry(data: InquiryInput) {
 }
 
 export const ADMIN_EMAIL = 'admin@winajes.com';
-export const ADMIN_PASSWORD = 'admin123';
 
-export function loginAdmin(email: string, password: string) {
-  if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
-    return {
-      access_token: 'local-cms-token',
-      user: { id: 'admin', email: ADMIN_EMAIL, role: 'admin', name: 'Admin' },
-    };
-  }
-  return null;
-}
+export { loginAdmin } from '@/lib/cms/admin-auth.service';

@@ -10,6 +10,7 @@ import { ClientsAdmin } from '@/components/admin/ClientsAdmin';
 import { ServicesAdmin } from '@/components/admin/ServicesAdmin';
 import { TeamAdmin } from '@/components/admin/TeamAdmin';
 import { HistoryAdmin } from '@/components/admin/HistoryAdmin';
+import { SettingsAdmin } from '@/components/admin/SettingsAdmin';
 import { ProjectsAdmin } from '@/components/admin/ProjectsAdmin';
 import { NewsAdmin } from '@/components/admin/NewsAdmin';
 import { AdminLogin } from '@/components/admin/AdminLogin';
@@ -150,21 +151,7 @@ export default function AdminPage() {
       {tab === 'history' && <HistoryAdmin />}
       {tab === 'news' && <NewsAdmin />}
 
-      {tab === 'settings' && (
-        <div>
-          <h1 className="mb-4 text-[28px] font-semibold tracking-[-0.03em] text-[#1D1D1F]">
-            {t('nav.settings')}
-          </h1>
-          <div className="rounded-[14px] border border-black/[0.04] bg-white p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-            <p className="text-[14px] text-[#636366]">
-              {t('placeholder.moduleDesc', { name: t('nav.settings') })}
-            </p>
-            <ul className="mt-4 space-y-2 text-[13px] text-[#86868B]">
-              <li>• {t('placeholder.settings')}</li>
-            </ul>
-          </div>
-        </div>
-      )}
+      {tab === 'settings' && <SettingsAdmin />}
     </AdminShell>
   );
 }
