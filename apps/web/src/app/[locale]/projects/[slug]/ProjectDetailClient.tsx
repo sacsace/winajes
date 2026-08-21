@@ -73,13 +73,12 @@ export default function ProjectDetailClient({ slug }: Props) {
           sizes="100vw"
           unoptimized={isApiImage(heroImage)}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/75 to-primary/40" />
-        <div className="absolute inset-0 dot-grid opacity-30" />
+        <div className="absolute inset-0 bg-primary/75" />
         <Container className="relative z-10 py-16">
-          <p className="mb-2 text-sm font-semibold text-accent">
+          <p className="mb-2 text-sm font-medium text-white/70">
             {project.client} · {project.location} · {project.completionYear}
           </p>
-          <h1 className="max-w-3xl text-4xl font-extrabold text-white md:text-5xl">{project.name[locale]}</h1>
+          <h1 className="max-w-3xl text-4xl font-bold text-white md:text-5xl">{project.name[locale]}</h1>
         </Container>
       </section>
 

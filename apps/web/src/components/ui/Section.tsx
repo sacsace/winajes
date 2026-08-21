@@ -10,10 +10,10 @@ interface SectionProps {
 }
 
 const variants = {
-  default: 'bg-background',
-  muted: 'bg-muted',
+  default: 'bg-transparent',
+  muted: 'bg-muted/70',
   dark: 'bg-primary text-white',
-  surface: 'bg-surface',
+  surface: 'bg-surface/80',
 };
 
 export function Section({
@@ -24,7 +24,7 @@ export function Section({
   id,
 }: SectionProps) {
   return (
-    <section id={id} className={cn('py-20 md:py-28', variants[variant], className)}>
+    <section id={id} className={cn('py-16 md:py-24', variants[variant], className)}>
       <Container className={containerClassName}>{children}</Container>
     </section>
   );

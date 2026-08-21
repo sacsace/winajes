@@ -24,7 +24,7 @@ export function OfficeLocationCard({ office, locale, mapsLabel }: OfficeLocation
       )}
     >
       {office.isHeadquarters && (
-        <span className="mb-3 inline-block w-fit rounded-md bg-secondary/10 px-2 py-0.5 text-[10px] font-bold tracking-wider text-secondary uppercase">
+        <span className="mb-3 inline-block w-fit border border-secondary/30 bg-secondary/10 px-2 py-0.5 text-[11px] font-semibold text-secondary">
           HQ
         </span>
       )}

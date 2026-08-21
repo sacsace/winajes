@@ -24,8 +24,8 @@ export function Card({
   return (
     <div
       className={cn(
-        'rounded-xl border border-border bg-surface shadow-soft',
-        hover && 'transition-all duration-300 hover:-translate-y-0.5 hover:border-secondary/40 hover:shadow-card cursor-pointer',
+        'rounded-md border border-border bg-surface',
+        hover && 'transition-colors duration-200 hover:border-secondary/50 cursor-pointer',
         paddings[padding],
         className,
       )}

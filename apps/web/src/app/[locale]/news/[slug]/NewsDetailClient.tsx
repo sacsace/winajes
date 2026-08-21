@@ -115,9 +115,9 @@ export default function NewsDetailClient({ slug }: Props) {
             unoptimized
           />
         ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/20" />
+          <div className="absolute inset-0 bg-primary" />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/70 to-primary/30" />
+        <div className="absolute inset-0 bg-primary/70" />
         <Container className="relative z-10 py-14 md:py-16">
           <Link
             href="/news"
@@ -130,7 +130,7 @@ export default function NewsDetailClient({ slug }: Props) {
             <Badge variant="secondary">{t(`categories.${article.category}`)}</Badge>
             <time className="text-sm text-white/75">{article.publishedAt.slice(0, 10)}</time>
           </div>
-          <h1 className="mt-4 max-w-4xl text-3xl font-extrabold tracking-tight text-white md:text-4xl lg:text-5xl">
+          <h1 className="mt-4 max-w-4xl text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
             {article.title[locale]}
           </h1>
         </Container>
@@ -149,7 +149,7 @@ export default function NewsDetailClient({ slug }: Props) {
               {article.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full bg-muted px-3 py-1 text-xs font-medium text-muted-foreground"
+                  className="border border-border bg-muted px-3 py-1 text-xs font-medium text-muted-foreground"
                 >
                   #{tag}
                 </span>

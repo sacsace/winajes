@@ -1,23 +1,18 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { Section } from '@/components/ui/Section';
-import { Card } from '@/components/ui/Card';
 import { companyStats } from '@/lib/data';
-import { Building2, MapPin, Users, Award } from 'lucide-react';
-
-const icons = [Award, MapPin, Building2, Users];
 
 export function CompanyOverview() {
   const t = useTranslations('home');
 
   const highlights = [
-    { text: t('overview.established') },
-    { text: t('overview.offices') },
-    { text: t('overview.specialist') },
-    { text: t('overview.team') },
+    t('overview.established'),
+    t('overview.offices'),
+    t('overview.specialist'),
+    t('overview.team'),
   ];
 
   const stats = [
@@ -29,37 +24,40 @@ export function CompanyOverview() {
 
   return (
     <Section variant="surface">
-      <SectionHeader
-        label="About"
-        title={t('overview.title')}
-        subtitle={t('overview.subtitle')}
-        className="mb-14"
-      />
+      <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="lg:col-span-5">
+          <SectionHeader
+            label="About"
+            title={t('overview.title')}
+            subtitle={t('overview.subtitle')}
+            align="left"
+            className="mb-0"
+          />
+        </div>
 
-      <div className="mb-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {highlights.map(({ text }, i) => {
-          const Icon = icons[i];
-          return (
-            <Card key={i} hover padding="md" className="group">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white transition-colors group-hover:bg-secondary">
-                <Icon className="h-5 w-5" />
+        <div className="lg:col-span-7">
+          <ul className="space-y-4 border-t border-border pt-6">
+            {highlights.map((text) => (
+              <li
+                key={text}
+                className="border-b border-border pb-4 text-[15px] leading-relaxed text-foreground"
+              >
+                {text}
+              </li>
+            ))}
+          </ul>
+
+          <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-4">
+            {stats.map((stat) => (
+              <div key={stat.label}>
+                <dt className="text-[12px] font-medium text-muted-foreground">{stat.label}</dt>
+                <dd className="mt-1 text-3xl font-bold tracking-tight text-primary md:text-4xl">
+                  {stat.value}
+                  {stat.suffix}
+                </dd>
               </div>
-              <p className="text-sm leading-relaxed font-medium text-foreground">{text}</p>
-            </Card>
-          );
-        })}
-      </div>
-
-      <div className="overflow-hidden rounded-xl border border-border bg-primary shadow-card">
-        <div className="grid divide-y divide-white/10 sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 lg:divide-x">
-          {stats.map((stat, i) => (
-            <div key={i} className="px-6 py-9 text-center md:px-8 md:py-10">
-              <AnimatedCounter end={stat.value} suffix={stat.suffix} />
-              <p className="mt-2 text-xs font-semibold tracking-wider text-white/60 uppercase">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+            ))}
+          </dl>
         </div>
       </div>
     </Section>

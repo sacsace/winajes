@@ -3,11 +3,11 @@ import { cn } from '@/lib/utils';
 type BadgeVariant = 'default' | 'secondary' | 'success' | 'warning' | 'muted';
 
 const variants: Record<BadgeVariant, string> = {
-  default: 'bg-primary/10 text-primary',
-  secondary: 'bg-secondary/10 text-secondary',
-  success: 'bg-emerald-500/10 text-emerald-700',
-  warning: 'bg-amber-500/10 text-amber-700',
-  muted: 'bg-muted text-muted-foreground',
+  default: 'border-primary/25 bg-primary/8 text-primary',
+  secondary: 'border-secondary/25 bg-secondary/8 text-secondary',
+  success: 'border-emerald-600/25 bg-emerald-500/8 text-emerald-800',
+  warning: 'border-amber-600/25 bg-amber-500/8 text-amber-800',
+  muted: 'border-border bg-muted text-muted-foreground',
 };
 
 interface BadgeProps {
@@ -20,7 +20,7 @@ export function Badge({ children, variant = 'default', className }: BadgeProps) 
   return (
     <span
       className={cn(
-        'inline-flex items-center rounded-md px-2.5 py-1 text-xs font-semibold tracking-wide uppercase',
+        'inline-flex items-center border px-2 py-0.5 text-[11px] font-semibold',
         variants[variant],
         className,
       )}

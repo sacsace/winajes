@@ -16,8 +16,6 @@ export function Footer() {
 
   return (
     <footer className="relative bg-primary text-white">
-      <div className="absolute top-0 right-0 left-0 h-1 bg-gradient-to-r from-secondary via-accent to-secondary" />
-
       <Container className="py-16 md:py-20">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
@@ -25,7 +23,7 @@ export function Footer() {
             <p className="max-w-sm text-sm leading-relaxed text-white/65">{t('description')}</p>
             <a
               href="/downloads/winajes-company-profile.pdf"
-              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-secondary px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-accent"
+              className="mt-6 inline-flex items-center gap-2 border border-white/25 bg-secondary px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-light"
             >
               <Download className="h-4 w-4" />
               {t('downloadProfile')}
@@ -34,7 +32,7 @@ export function Footer() {
 
           <div className="grid gap-10 sm:grid-cols-3 lg:col-span-8">
             <div>
-              <h3 className="mb-5 text-xs font-bold tracking-[0.2em] text-accent uppercase">
+              <h3 className="mb-5 text-[13px] font-semibold text-white/50">
                 {t('quickLinks')}
               </h3>
               <ul className="space-y-3">
@@ -53,7 +51,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="mb-5 text-xs font-bold tracking-[0.2em] text-accent uppercase">
+              <h3 className="mb-5 text-[13px] font-semibold text-white/50">
                 {t('services')}
               </h3>
               <ul className="space-y-3 text-sm text-white/65">
@@ -66,7 +64,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="mb-5 text-xs font-bold tracking-[0.2em] text-accent uppercase">
+              <h3 className="mb-5 text-[13px] font-semibold text-white/50">
                 {t('contact')}
               </h3>
               <ul className="space-y-4 text-sm text-white/65">

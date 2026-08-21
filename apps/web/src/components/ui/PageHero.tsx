@@ -32,13 +32,11 @@ export function PageHero({
       )}
     >
       <Image src={image} alt={title} fill className="object-cover" priority sizes="100vw" />
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/80 to-primary/55" />
-      <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent" />
-      <div className="absolute inset-0 dot-grid opacity-40" />
+      <div className="absolute inset-0 bg-primary/78" />
 
       <Container className="relative z-10 px-4 py-8 sm:px-5 sm:py-10 md:py-12">
         {label && (
-          <p className="mb-2 text-[10px] font-semibold tracking-[0.18em] text-accent uppercase sm:text-[11px]">{label}</p>
+          <p className="mb-2 text-[13px] font-medium text-white/70">{label}</p>
         )}
         <h1 className="max-w-3xl text-2xl font-bold tracking-[-0.035em] text-white sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.08]">
           {title}
@@ -53,7 +51,7 @@ export function PageHero({
             {description}
           </p>
         )}
-        <div className="mt-6 h-1 w-14 rounded-full bg-gradient-to-r from-secondary to-accent" />
+        <div className="section-rule mt-6" />
       </Container>
     </section>
   );

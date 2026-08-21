@@ -28,13 +28,12 @@ export function TeamMemberCard({ member, locale, className }: Props) {
   return (
     <article
       className={cn(
-        'group flex h-full flex-col overflow-hidden rounded-[18px] border border-black/[0.05] bg-white',
-        'shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(11,45,94,0.08)]',
+        'group flex h-full flex-col overflow-hidden border border-border bg-surface',
         className,
       )}
     >
-      <div className="flex flex-col items-center bg-[#F7F9FC] px-6 pb-6 pt-8">
-        <div className="relative h-28 w-28 overflow-hidden rounded-full border-4 border-white shadow-[0_8px_24px_rgba(11,45,94,0.12)] sm:h-32 sm:w-32">
+      <div className="flex flex-col items-center bg-muted/50 px-6 pb-6 pt-8">
+        <div className="relative h-28 w-28 overflow-hidden border border-border bg-surface sm:h-32 sm:w-32">
           {member.photo ? (
             <Image
               src={member.photo}
@@ -44,7 +43,7 @@ export function TeamMemberCard({ member, locale, className }: Props) {
               sizes="128px"
             />
           ) : (
-            <div className="flex h-full w-full items-center justify-center bg-primary/[0.08] text-primary">
+            <div className="flex h-full w-full items-center justify-center bg-primary/[0.06] text-primary">
               {member.name ? (
                 <span className="text-xl font-bold tracking-tight">{initials(member.name)}</span>
               ) : (
@@ -68,7 +67,7 @@ export function TeamMemberCard({ member, locale, className }: Props) {
         )}
 
         {(member.phone || member.email) && (
-          <div className="mt-4 space-y-2 border-t border-black/[0.05] pt-4">
+          <div className="mt-4 space-y-2 border-t border-border pt-4">
             {member.phone ? (
               <a
                 href={`tel:${member.phone.replace(/\s/g, '')}`}

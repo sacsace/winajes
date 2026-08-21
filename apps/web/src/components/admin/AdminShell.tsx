@@ -44,18 +44,16 @@ export function AdminShell({ tab, navItems, onTabChange, onLogout, children }: P
       >
         <div className="px-5 py-5">
           <div className="flex items-center gap-2.5">
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-[9px] ring-1 ring-black/[0.06]">
-              <Image
-                src="/images/brand/logo-icon.png"
-                alt="WINAJES"
-                width={32}
-                height={32}
-                className="h-full w-full object-cover"
-              />
-            </div>
+            <Image
+              src="/images/brand/logo-icon.png"
+              alt="WINAJES"
+              width={28}
+              height={28}
+              className="h-7 w-7 object-contain"
+            />
             <div className="leading-tight">
-              <p className="text-[13px] font-semibold tracking-[-0.02em] text-[#1D1D1F]">WINAJES</p>
-              <p className="text-[10px] font-medium text-[#86868B]">CMS</p>
+              <p className="text-[13px] font-bold tracking-[0.02em] text-[#0B2D5E]">WINAJES</p>
+              <p className="text-[10px] font-medium text-[#5a6573]">CMS</p>
             </div>
           </div>
           <AdminLangSwitcher className="mt-3 w-full" />

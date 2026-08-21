@@ -56,7 +56,7 @@ export default function ProjectsPageClient() {
       />
 
       <Section>
-        <div className="mb-8 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-border bg-muted/50 p-5">
+        <div className="mb-8 flex flex-wrap items-center justify-between gap-4 border border-border bg-muted/50 p-5">
           <div>
             <p className="font-bold text-primary">{t('performanceLink.title')}</p>
             <p className="text-sm text-muted-foreground">{t('performanceLink.subtitle')}</p>
@@ -86,7 +86,7 @@ export default function ProjectsPageClient() {
               <Link
                 key={project.id}
                 href={`/projects/${project.slug}`}
-                className="group img-zoom overflow-hidden rounded-xl border border-border bg-surface shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-card"
+                className="group img-zoom overflow-hidden border border-border bg-surface"
               >
                 <div className="relative h-48">
                   <Image
@@ -97,19 +97,20 @@ export default function ProjectsPageClient() {
                     sizes="33vw"
                     unoptimized={isApiImage(img)}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/65 to-transparent" />
-                  <Badge variant={statusVariant(project.status)} className="absolute top-4 right-4">
-                    {project.status}
-                  </Badge>
                 </div>
-                <div className="p-6">
-                  <span className="text-xs font-bold tracking-wide text-secondary uppercase">
-                    {t(`categories.${project.category}` as 'categories.mechanical')}
-                  </span>
-                  <h3 className="mt-1 text-lg font-bold transition-colors group-hover:text-primary">
+                <div className="border-t border-border p-5">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-[12px] font-medium text-secondary">
+                      {t(`categories.${project.category}` as 'categories.mechanical')}
+                    </span>
+                    <Badge variant={statusVariant(project.status)}>
+                      {project.status}
+                    </Badge>
+                  </div>
+                  <h3 className="mt-2 text-lg font-bold transition-colors group-hover:text-primary">
                     {project.name[locale]}
                   </h3>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="mt-1 text-sm text-muted-foreground">
                     {project.client} · {project.location} · {project.completionYear}
                   </p>
                 </div>

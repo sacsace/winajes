@@ -42,7 +42,7 @@ export default function NewsPageClient() {
           {articles.map((article) => (
             <Link key={article.id} href={`/news/${article.slug}`} className="group">
               <Card hover padding="sm" className="overflow-hidden p-0">
-                <div className="relative h-48 bg-gradient-to-br from-primary/8 to-secondary/15">
+                <div className="relative h-48 bg-muted">
                   {article.image ? (
                     <Image
                       src={article.image}

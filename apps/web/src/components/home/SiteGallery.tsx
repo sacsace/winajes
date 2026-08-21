@@ -55,14 +55,14 @@ export function SiteGallery() {
   return (
     <>
       <Section variant="dark" className="relative overflow-hidden">
-        <div className="absolute inset-0 dot-grid" />
         <div className="relative">
           <SectionHeader
             label={locale === 'ko' ? '시공 사진' : 'Site Photos'}
             title={t('title')}
             subtitle={t('subtitle')}
             light
-            className="mb-12"
+            align="left"
+            className="mb-10"
           />
 
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -71,7 +71,7 @@ export function SiteGallery() {
                   <div
                     key={i}
                     className={cn(
-                      'animate-pulse rounded-lg bg-white/10',
+                      'animate-pulse bg-white/10',
                       i === 0 ? 'sm:col-span-2 sm:row-span-2 sm:min-h-[400px]' : 'aspect-[4/3]',
                     )}
                   />
@@ -82,7 +82,7 @@ export function SiteGallery() {
                     type="button"
                     onClick={() => openLightbox(item)}
                     className={cn(
-                      'img-zoom group relative overflow-hidden rounded-lg text-left',
+                      'img-zoom group relative overflow-hidden text-left',
                       i === 0 ? 'sm:col-span-2 sm:row-span-2' : '',
                     )}
                   >
@@ -96,16 +96,16 @@ export function SiteGallery() {
                         src={item.src}
                         alt={item.projectName[locale]}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover"
                         sizes={i === 0 ? '(max-width: 640px) 100vw, 50vw' : '25vw'}
                         unoptimized={isApiImage(item.src)}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/75 via-transparent to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
                       <div className="absolute right-0 bottom-0 left-0 p-4">
-                        <p className="text-xs font-bold tracking-wider text-secondary uppercase">
+                        <p className="text-[12px] font-medium text-white/65">
                           {categoryLabel(item.category)}
                         </p>
-                        <p className="mt-1 truncate text-sm font-medium text-white/90">
+                        <p className="mt-1 truncate text-sm font-medium text-white">
                           {item.projectName[locale]}
                         </p>
                       </div>

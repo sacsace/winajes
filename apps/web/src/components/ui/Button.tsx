@@ -5,11 +5,11 @@ type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'white';
 type ButtonSize = 'sm' | 'md' | 'lg';
 
 const variants: Record<ButtonVariant, string> = {
-  primary: 'bg-primary text-white hover:bg-secondary shadow-soft hover:shadow-card',
-  secondary: 'bg-secondary text-white hover:bg-accent shadow-soft',
-  outline: 'border border-white/30 text-white hover:bg-white/10 backdrop-blur-sm',
+  primary: 'bg-primary text-white hover:bg-primary-light',
+  secondary: 'bg-secondary text-white hover:bg-primary',
+  outline: 'border border-white/40 text-white hover:bg-white/10',
   ghost: 'text-secondary hover:text-primary hover:bg-muted',
-  white: 'bg-white text-primary hover:bg-secondary hover:text-white shadow-soft',
+  white: 'bg-surface text-primary hover:bg-white',
 };
 
 const sizes: Record<ButtonSize, string> = {
@@ -42,7 +42,7 @@ interface ButtonAsLink extends ButtonBaseProps {
 type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const baseClass =
-  'inline-flex items-center justify-center gap-2 rounded-lg font-semibold tracking-wide transition-all duration-300 disabled:opacity-50 disabled:pointer-events-none';
+  'inline-flex items-center justify-center gap-2 rounded-sm font-semibold tracking-wide transition-colors duration-200 disabled:opacity-50 disabled:pointer-events-none';
 
 export function Button(props: ButtonProps) {
   const { variant = 'primary', size = 'md', className, children } = props;

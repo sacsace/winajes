@@ -62,10 +62,10 @@ export function Header() {
   return (
     <header
       className={cn(
-        'fixed top-0 right-0 left-0 z-50 transition-all duration-500',
+        'fixed top-0 right-0 left-0 z-50 transition-colors duration-300',
         'pt-[env(safe-area-inset-top)]',
-        isSolid && 'glass border-b border-border/60 shadow-soft',
-        isHeroHeader && 'border-b border-white/10 bg-primary/40 backdrop-blur-md',
+        isSolid && 'border-b border-border bg-surface',
+        isHeroHeader && 'border-b border-white/10 bg-primary/50',
         !isSolid && !isHeroHeader && 'bg-transparent',
       )}
     >

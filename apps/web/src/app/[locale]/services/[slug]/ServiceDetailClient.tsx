@@ -101,26 +101,27 @@ export default function ServiceDetailClient({ slug }: Props) {
         <div className="grid gap-16 lg:grid-cols-3">
           <div className="space-y-12 lg:col-span-2">
             <div>
-              <h2 className="mb-4 text-2xl font-extrabold text-primary">{t('overview')}</h2>
+              <h2 className="mb-4 text-2xl font-bold text-primary">{t('overview')}</h2>
               <p className="leading-relaxed text-muted-foreground">{service.overview[locale]}</p>
             </div>
             <div>
-              <h2 className="mb-6 text-2xl font-extrabold text-primary">{t('process')}</h2>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <h2 className="mb-6 text-2xl font-bold text-primary">{t('process')}</h2>
+              <ol className="space-y-0 border-t border-border">
                 {processSteps.map((step, i) => (
-                  <Card key={`${step}-${i}`} padding="sm">
-                    <span className="text-sm font-extrabold text-secondary">0{i + 1}</span>
-                    <p className="mt-1 font-semibold text-foreground">{step}</p>
-                  </Card>
+                  <li key={`${step}-${i}`} className="flex gap-4 border-b border-border py-4">
+                    <span className="w-8 shrink-0 text-[13px] font-semibold tabular-nums text-secondary">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <p className="font-semibold text-foreground">{step}</p>
+                  </li>
                 ))}
-              </div>
+              </ol>
             </div>
             <div>
-              <h2 className="mb-6 text-2xl font-extrabold text-primary">{t('capabilities')}</h2>
+              <h2 className="mb-6 text-2xl font-bold text-primary">{t('capabilities')}</h2>
               <ul className="space-y-3">
                 {capabilities.map((cap, i) => (
-                  <li key={`${cap}-${i}`} className="flex items-center gap-3 text-foreground">
-                    <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
+                  <li key={`${cap}-${i}`} className="border-b border-border pb-3 text-foreground">
                     {cap}
                   </li>
                 ))}
@@ -129,7 +130,7 @@ export default function ServiceDetailClient({ slug }: Props) {
           </div>
           <div>
             <Card className="sticky top-24">
-              <h3 className="mb-4 text-lg font-extrabold text-primary">{t('inquiry')}</h3>
+              <h3 className="mb-4 text-lg font-bold text-primary">{t('inquiry')}</h3>
               <ContactForm compact />
             </Card>
           </div>
@@ -138,7 +139,7 @@ export default function ServiceDetailClient({ slug }: Props) {
 
       {related.length > 0 && (
         <Section variant="muted">
-          <h2 className="mb-8 text-2xl font-extrabold text-primary">{t('relatedProjects')}</h2>
+          <h2 className="mb-8 text-2xl font-bold text-primary">{t('relatedProjects')}</h2>
           <div className="grid gap-6 md:grid-cols-3">
             {related.map((p) => (
               <Link key={p.id} href={`/projects/${p.slug}`}>

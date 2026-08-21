@@ -10,7 +10,6 @@ import { Card } from '@/components/ui/Card';
 import { ArrowRight } from 'lucide-react';
 import type { ApiService } from '@/lib/services';
 import { DEFAULT_SERVICE_CAPABILITIES, DEFAULT_SERVICE_PROCESS } from '@/lib/services';
-import { getServiceIcon } from '@/lib/service-icons';
 import { API_URL } from '@/lib/utils';
 
 export default function ServicesPageClient() {
@@ -50,13 +49,9 @@ export default function ServicesPageClient() {
       <Section>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {items.map((service) => {
-            const Icon = getServiceIcon(service.icon);
             return (
               <Link key={service.id} href={`/services/${service.slug}`}>
                 <Card hover padding="lg" className="group h-full">
-                  <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-primary transition-colors group-hover:bg-secondary">
-                    <Icon className="h-6 w-6 text-white" />
-                  </div>
                   <h2 className="mb-3 text-xl font-bold text-foreground transition-colors group-hover:text-primary">
                     {service.title[locale]}
                   </h2>

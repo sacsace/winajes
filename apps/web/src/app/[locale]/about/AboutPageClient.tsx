@@ -7,7 +7,6 @@ import { PageHero } from '@/components/ui/PageHero';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { Section } from '@/components/ui/Section';
 import { Card } from '@/components/ui/Card';
-import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
 import { Button } from '@/components/ui/Button';
 import { OrgChart } from '@/components/about/OrgChart';
 import { VisionMission } from '@/components/about/VisionMission';
@@ -46,20 +45,17 @@ export default function AboutPageClient({ timeline }: Props) {
 
       {/* 핵심 수치 */}
       <Section variant="muted" className="!py-12 md:!py-14">
-        <div className="grid divide-y divide-border rounded-xl border border-border bg-surface shadow-soft sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
+        <dl className="grid grid-cols-2 gap-8 border-y border-border py-8 sm:grid-cols-4">
           {stats.map((stat) => (
-            <div key={stat.label} className="px-6 py-8 text-center">
-              <AnimatedCounter
-                end={stat.value}
-                suffix={stat.suffix}
-                className="text-3xl text-primary md:text-4xl"
-              />
-              <p className="mt-2 text-xs font-semibold tracking-wider text-muted-foreground uppercase">
-                {stat.label}
-              </p>
+            <div key={stat.label}>
+              <dt className="text-[12px] font-medium text-muted-foreground">{stat.label}</dt>
+              <dd className="mt-1 text-3xl font-bold tracking-tight text-primary md:text-4xl">
+                {stat.value}
+                {stat.suffix}
+              </dd>
             </div>
           ))}
-        </div>
+        </dl>
       </Section>
 
       <CeoMessage />
@@ -84,7 +80,7 @@ export default function AboutPageClient({ timeline }: Props) {
                 </div>
                 <div className="ml-10 flex-1 md:ml-0 md:px-10">
                   <Card padding="md" className="md:max-w-md">
-                    <span className="text-sm font-bold tracking-wider text-secondary uppercase">
+                    <span className="text-[13px] font-semibold text-secondary">
                       {item.year}
                     </span>
                     <h3 className="mt-1 text-lg font-bold text-primary">{item.title[locale]}</h3>

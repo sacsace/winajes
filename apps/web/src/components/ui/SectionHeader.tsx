@@ -22,8 +22,8 @@ export function SectionHeader({
       {label && (
         <p
           className={cn(
-            'mb-3 text-[11px] font-semibold tracking-[0.18em] uppercase',
-            light ? 'text-accent' : 'text-secondary',
+            'mb-2 text-[13px] font-medium',
+            light ? 'text-white/60' : 'text-secondary',
           )}
         >
           {label}
@@ -33,6 +33,7 @@ export function SectionHeader({
         className={cn(
           'text-3xl font-bold tracking-[-0.03em] md:text-4xl lg:text-[2.5rem] lg:leading-[1.08]',
           light ? 'text-white' : 'text-primary',
+          align === 'left' && 'border-l-[3px] border-secondary pl-4',
         )}
       >
         {title}
@@ -42,6 +43,7 @@ export function SectionHeader({
           className={cn(
             'mt-4 max-w-2xl text-[1.0625rem] leading-[1.647] tracking-[-0.022em] md:text-lg',
             align === 'center' && 'mx-auto',
+            align === 'left' && 'pl-4',
             light ? 'text-white/70' : 'text-muted-foreground',
           )}
         >

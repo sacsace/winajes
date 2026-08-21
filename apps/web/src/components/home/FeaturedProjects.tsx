@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { Section } from '@/components/ui/Section';
-import { Badge } from '@/components/ui/Badge';
 import { projects as staticProjects } from '@/lib/data';
 import { API_URL } from '@/lib/utils';
 import type { ApiProject } from '@/lib/projects';
@@ -39,26 +38,26 @@ export function FeaturedProjects() {
 
   return (
     <Section variant="muted">
-      <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <div className="mb-10 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <SectionHeader title={t('title')} subtitle={t('subtitle')} align="left" className="mb-0" />
         <Link
           href="/projects"
-          className="inline-flex shrink-0 items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold text-secondary transition-colors hover:bg-surface hover:text-primary"
+          className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-secondary transition-colors hover:text-primary"
         >
           {tCommon('viewAll')} <ArrowRight className="h-4 w-4" />
         </Link>
       </div>
 
-      <div className="mb-8 flex flex-wrap gap-2">
+      <div className="mb-8 flex flex-wrap gap-x-1 gap-y-2 border-b border-border pb-3">
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setFilter(cat)}
             className={cn(
-              'rounded-lg px-4 py-2 text-xs font-bold tracking-wide uppercase transition-all',
+              'px-3 py-1.5 text-[13px] font-medium transition-colors',
               filter === cat
-                ? 'bg-primary text-white shadow-soft'
-                : 'bg-surface text-muted-foreground hover:text-primary',
+                ? 'text-primary'
+                : 'text-muted-foreground hover:text-foreground',
             )}
           >
             {cat === 'all' ? (locale === 'ko' ? '전체' : 'All') : tCat(cat)}
@@ -73,7 +72,7 @@ export function FeaturedProjects() {
             <Link
               key={project.id}
               href={`/projects/${project.slug}`}
-              className="group img-zoom overflow-hidden rounded-xl border border-border bg-surface shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-card"
+              className="group img-zoom overflow-hidden border border-border bg-surface"
             >
               <div className="relative h-52">
                 <Image
@@ -84,16 +83,15 @@ export function FeaturedProjects() {
                   sizes="(max-width:768px) 100vw, 33vw"
                   unoptimized={isApiImage(img)}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/75 to-transparent" />
-                <Badge className="absolute top-4 left-4 bg-white/95 text-primary backdrop-blur-sm">
-                  {project.completionYear}
-                </Badge>
               </div>
-              <div className="border-t-4 border-secondary p-6">
-                <h3 className="text-lg font-bold text-foreground transition-colors group-hover:text-primary">
+              <div className="border-t border-border p-5">
+                <p className="text-[12px] font-medium text-muted-foreground">
+                  {project.completionYear} · {project.location}
+                </p>
+                <h3 className="mt-1.5 text-lg font-bold text-foreground transition-colors group-hover:text-primary">
                   {project.name[locale]}
                 </h3>
-                <p className="mt-1 text-sm text-muted-foreground">{project.client} · {project.location}</p>
+                <p className="mt-1 text-sm text-muted-foreground">{project.client}</p>
                 <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{project.scope[locale]}</p>
               </div>
             </Link>

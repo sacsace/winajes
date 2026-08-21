@@ -12,7 +12,7 @@ type Props = {
 function BrandMonogram({ name }: { name: string }) {
   const letter = name.charAt(0).toUpperCase();
   return (
-    <div className="flex h-10 w-10 items-center justify-center rounded-[10px] bg-primary/[0.06] text-[15px] font-semibold text-primary">
+    <div className="flex h-9 w-9 items-center justify-center border border-border bg-muted text-[14px] font-semibold text-primary">
       {letter}
     </div>
   );
@@ -25,13 +25,11 @@ export function ClientBox({ name, logo, variant = 'brand', className }: Props) {
     return (
       <div
         className={cn(
-          'group flex min-h-[52px] items-center rounded-[12px]',
-          'border border-black/[0.05] bg-white px-4 py-3',
-          'transition-colors duration-200 hover:border-secondary/25 hover:bg-[#FAFBFC]',
+          'group flex min-h-[52px] items-center border-b border-border bg-surface px-4 py-3',
+          'transition-colors duration-200 hover:bg-muted/40',
           className,
         )}
       >
-        <span className="mr-3 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary/60 transition-colors group-hover:bg-secondary" />
         <span className="text-[13px] leading-snug font-medium tracking-[-0.01em] text-foreground/85">
           {displayName}
         </span>
@@ -42,9 +40,8 @@ export function ClientBox({ name, logo, variant = 'brand', className }: Props) {
   return (
     <div
       className={cn(
-        'group flex flex-col items-center justify-center gap-3 rounded-[16px]',
-        'border border-black/[0.05] bg-white px-4 py-6',
-        'transition-all duration-200 hover:border-secondary/20 hover:shadow-[0_4px_20px_rgba(11,45,94,0.06)]',
+        'group flex flex-col items-center justify-center gap-3 bg-surface px-4 py-6',
+        'transition-colors duration-200 hover:bg-muted/40',
         'min-h-[112px]',
         className,
       )}
@@ -60,7 +57,7 @@ export function ClientBox({ name, logo, variant = 'brand', className }: Props) {
       ) : (
         <BrandMonogram name={displayName} />
       )}
-      <span className="text-center text-[14px] font-semibold tracking-[-0.02em] text-foreground/75 transition-colors group-hover:text-primary">
+      <span className="text-center text-[13px] font-semibold tracking-[-0.02em] text-foreground/75 transition-colors group-hover:text-primary">
         {displayName}
       </span>
     </div>

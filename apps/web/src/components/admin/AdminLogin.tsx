@@ -52,27 +52,18 @@ export function AdminLogin({
           )}
         >
           <div className="mb-10 flex flex-col items-center text-center">
-            <div
-              className={cn(
-                'mb-5 flex h-[80px] w-[80px] items-center justify-center',
-                'rounded-[18px] bg-white shadow-[0_4px_20px_rgba(11,45,94,0.12)]',
-                'ring-1 ring-black/[0.06]',
-              )}
-            >
-              <Image
-                src="/images/brand/logo-icon.png"
-                alt="WINAJES"
-                width={56}
-                height={56}
-                className="h-14 w-14 object-contain"
-                priority
-              />
-            </div>
-
-            <h1 className="text-[22px] font-semibold tracking-[-0.028em] text-[#0B2D5E]">
+            <Image
+              src="/images/brand/logo-icon.png"
+              alt="WINAJES"
+              width={56}
+              height={56}
+              className="mb-4 h-14 w-14 object-contain"
+              priority
+            />
+            <h1 className="text-[20px] font-bold tracking-[0.02em] text-[#0B2D5E]">
               WINAJES CMS
             </h1>
-            <p className="mt-1.5 text-[13px] font-medium tracking-[-0.01em] text-[#86868B]">
+            <p className="mt-1.5 text-[13px] font-medium text-[#5a6573]">
               {t('login.subtitle')}
             </p>
           </div>

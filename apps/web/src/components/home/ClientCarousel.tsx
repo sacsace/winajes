@@ -19,28 +19,22 @@ export function ClientCarousel() {
       .catch(() => setNames(clientLogos.map((c) => formatClientName(c.name))));
   }, []);
 
-  const doubled = [...names, ...names];
-
   return (
     <Section variant="surface">
-      <SectionHeader title={t('title')} subtitle={t('subtitle')} className="mb-14" />
+      <SectionHeader title={t('title')} subtitle={t('subtitle')} align="left" className="mb-10" />
 
-      <div className="relative overflow-hidden rounded-2xl border border-border bg-muted py-8">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-muted to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-muted to-transparent" />
-        <div className="flex animate-marquee gap-6">
-          {doubled.map((name, i) => (
-            <div
-              key={`${name}-${i}`}
-              className="flex h-[72px] w-44 shrink-0 items-center justify-center rounded-xl border border-border bg-surface px-6 shadow-soft"
-            >
-              <span className="text-lg font-extrabold tracking-tight text-muted-foreground/60">
-                {name}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
+      <ul className="grid grid-cols-2 gap-px border border-border bg-border sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+        {names.map((name) => (
+          <li
+            key={name}
+            className="flex min-h-[72px] items-center justify-center bg-surface px-4 py-5 text-center"
+          >
+            <span className="text-[13px] font-semibold tracking-tight text-foreground/70">
+              {name}
+            </span>
+          </li>
+        ))}
+      </ul>
     </Section>
   );
 }
