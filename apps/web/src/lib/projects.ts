@@ -27,5 +27,11 @@ export function projectImageOrPlaceholder(project: Pick<ApiProject, 'images'>): 
 }
 
 export function isApiImage(url: string): boolean {
-  return url.startsWith('http://') || url.startsWith('https://') || url.startsWith('/uploads/');
+  return (
+    url.startsWith('http://') ||
+    url.startsWith('https://') ||
+    url.startsWith('/uploads/') ||
+    url.startsWith('/api/media/') ||
+    url.startsWith('/api/files/')
+  );
 }

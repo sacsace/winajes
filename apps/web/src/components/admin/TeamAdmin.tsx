@@ -153,7 +153,7 @@ export function TeamAdmin() {
     try {
       const body = new FormData();
       body.append('file', file);
-      const res = await fetch(`${API_URL}/api/uploads/team-photo`, { method: 'POST', body });
+      const res = await fetch(`${API_URL}/api/files/upload?folder=team`, { method: 'POST', body });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) {
         throw new Error(typeof data.message === 'string' ? data.message : 'Upload failed');

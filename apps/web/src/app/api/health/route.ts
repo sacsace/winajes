@@ -8,6 +8,7 @@ export async function GET() {
     return NextResponse.json({
       ok: health.ok,
       storage: health.mode ?? storageMode(),
+      uploads: '/api/files/upload',
     });
   } catch (error) {
     return NextResponse.json(

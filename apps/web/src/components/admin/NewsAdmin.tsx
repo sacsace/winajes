@@ -143,7 +143,7 @@ export function NewsAdmin() {
     try {
       const body = new FormData();
       body.append('file', file);
-      const res = await fetch(`${API_URL}/api/uploads/news-image`, { method: 'POST', body });
+      const res = await fetch(`${API_URL}/api/files/upload?folder=news`, { method: 'POST', body });
       if (!res.ok) throw new Error('Upload failed');
       const data = await res.json();
       setForm((f) => ({ ...f, image: data.url }));

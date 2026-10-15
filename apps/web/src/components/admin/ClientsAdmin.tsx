@@ -204,7 +204,7 @@ export function ClientsAdmin() {
     try {
       const body = new FormData();
       body.append('file', file);
-      const res = await fetch(`${API_URL}/api/uploads/client-logo`, { method: 'POST', body });
+      const res = await fetch(`${API_URL}/api/files/upload?folder=clients`, { method: 'POST', body });
       if (!res.ok) throw new Error('Upload failed');
       const data = await res.json();
       const client = clients.find((c) => c.id === clientId);

@@ -24,6 +24,10 @@ COPY --from=builder /app/messages ./messages
 COPY --from=builder /app/src ./src
 
 RUN mkdir -p data/cms \
+  data/uploads/team \
+  data/uploads/projects \
+  data/uploads/clients \
+  data/uploads/news \
   public/uploads/team \
   public/uploads/projects \
   public/uploads/clients \

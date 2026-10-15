@@ -178,14 +178,17 @@ export function ProjectsAdmin() {
       for (const file of list) {
         const body = new FormData();
         body.append('file', file);
-        const res = await fetch(`${API_URL}/api/uploads/project-image`, { method: 'POST', body });
-        if (!res.ok) throw new Error('Upload failed');
-        const data = await res.json();
+        const res = await fetch(`${API_URL}/api/files/upload?folder=projects`, { method: 'POST', body });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok) {
+          throw new Error(typeof data.message === 'string' ? data.message : 'Upload failed');
+        }
+        if (!data.url) throw new Error('Upload failed');
         uploaded.push(data.url);
       }
       setForm((f) => ({ ...f, images: [...f.images, ...uploaded] }));
-    } catch {
-      setError(t('common.errorUpload'));
+    } catch (err) {
+      setError(err instanceof Error && err.message !== 'Upload failed' ? err.message : t('common.errorUpload'));
     } finally {
       setUploading(false);
       if (fileRef.current) fileRef.current.value = '';
