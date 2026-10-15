@@ -27,8 +27,18 @@ function resolveExtension(file: UploadBlob): string {
   return '.jpg';
 }
 
-/** Writable uploads root — prefer data/ (Railway-safe) over public/. */
+/**
+ * Writable uploads root.
+ * On Railway, mount a Volume at `/data` (or set UPLOAD_DIR).
+ * Locally falls back to `data/uploads` under the app cwd.
+ */
 export function getUploadsRoot() {
+  const fromEnv = process.env.UPLOAD_DIR?.trim();
+  if (fromEnv) return fromEnv;
+  // Railway volume default mount path
+  if (process.env.RAILWAY_VOLUME_MOUNT_PATH?.trim()) {
+    return path.join(process.env.RAILWAY_VOLUME_MOUNT_PATH.trim(), 'uploads');
+  }
   return path.join(process.cwd(), 'data', 'uploads');
 }
 

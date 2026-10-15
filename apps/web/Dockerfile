@@ -3,7 +3,7 @@ WORKDIR /app
 
 FROM base AS deps
 COPY package.json ./
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
@@ -23,15 +23,22 @@ COPY --from=builder /app/next.config.ts ./next.config.ts
 COPY --from=builder /app/messages ./messages
 COPY --from=builder /app/src ./src
 
+# Local/ephemeral dirs; Railway Volume at /data persists uploads across deploys
 RUN mkdir -p data/cms \
   data/uploads/team \
   data/uploads/projects \
   data/uploads/clients \
   data/uploads/news \
+  /data/uploads/team \
+  /data/uploads/projects \
+  /data/uploads/clients \
+  /data/uploads/news \
   public/uploads/team \
   public/uploads/projects \
   public/uploads/clients \
   public/uploads/news
+
+ENV UPLOAD_DIR=/data/uploads
 
 EXPOSE 3000
 CMD ["npm", "start"]

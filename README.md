@@ -102,11 +102,13 @@ Deploy the **web app** from `apps/web`.
    - Value: `${{ Postgres.DATABASE_URL }}`  
      (Postgres 서비스 이름이 다르면 Railway Variables UI에서 **Reference**로 연결)
 3. **Settings** → **Root Directory**: `apps/web`
-4. **Redeploy**
+4. **Volume** (업로드 영속화): mount path `/data` → 앱이 `UPLOAD_DIR=/data/uploads` 사용
+5. **Redeploy**
 
-배포 후 `https://your-app.up.railway.app/api/health` 에서 `"storage": "postgres"` 확인.
+배포 후 `https://www.winajes.com/api/health` 에서 `"storage": "postgres"` 확인.
 
-> `DATABASE_URL` 없으면 JSON fallback으로 동작하지만, **운영 환경에서는 Postgres 연결을 권장**합니다.
+> `DATABASE_URL` 없으면 JSON fallback으로 동작하지만, **운영 환경에서는 Postgres 연결을 권장**합니다.  
+> CMS 이미지 업로드는 Volume(`/data`)에 저장됩니다. Volume이 없으면 재배포 시 파일이 사라질 수 있습니다.
 
 ## License
 
