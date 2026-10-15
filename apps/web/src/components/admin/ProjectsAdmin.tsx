@@ -178,7 +178,13 @@ export function ProjectsAdmin() {
       for (const file of list) {
         const body = new FormData();
         body.append('file', file);
-        const res = await fetch(`${API_URL}/api/files/upload?folder=projects`, { method: 'POST', body });
+        // Prefer /api/projects/images (ships with projects API); fall back to /api/files/upload
+        let res = await fetch(`${API_URL}/api/projects/images`, { method: 'POST', body });
+        if (res.status === 404) {
+          const retry = new FormData();
+          retry.append('file', file);
+          res = await fetch(`${API_URL}/api/files/upload?folder=projects`, { method: 'POST', body: retry });
+        }
         const data = await res.json().catch(() => ({}));
         if (!res.ok) {
           throw new Error(typeof data.message === 'string' ? data.message : 'Upload failed');
