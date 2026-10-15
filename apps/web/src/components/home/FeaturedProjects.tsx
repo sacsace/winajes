@@ -74,15 +74,17 @@ export function FeaturedProjects() {
               href={`/projects/${project.slug}`}
               className="group img-zoom overflow-hidden border border-border bg-surface"
             >
-              <div className="relative h-52">
-                <Image
-                  src={img}
-                  alt={project.name[locale]}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width:768px) 100vw, 33vw"
-                  unoptimized={isApiImage(img)}
-                />
+              <div className="relative h-52 bg-muted">
+                {img ? (
+                  <Image
+                    src={img}
+                    alt={project.name[locale]}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width:768px) 100vw, 33vw"
+                    unoptimized={isApiImage(img)}
+                  />
+                ) : null}
               </div>
               <div className="border-t border-border p-5">
                 <p className="text-[12px] font-medium text-muted-foreground">

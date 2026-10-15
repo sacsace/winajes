@@ -23,7 +23,11 @@ COPY --from=builder /app/next.config.ts ./next.config.ts
 COPY --from=builder /app/messages ./messages
 COPY --from=builder /app/src ./src
 
-RUN mkdir -p data/cms public/uploads
+RUN mkdir -p data/cms \
+  public/uploads/team \
+  public/uploads/projects \
+  public/uploads/clients \
+  public/uploads/news
 
 EXPOSE 3000
 CMD ["npm", "start"]

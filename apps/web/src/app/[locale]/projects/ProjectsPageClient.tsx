@@ -88,15 +88,17 @@ export default function ProjectsPageClient() {
                 href={`/projects/${project.slug}`}
                 className="group img-zoom overflow-hidden border border-border bg-surface"
               >
-                <div className="relative h-48">
-                  <Image
-                    src={img}
-                    alt={project.name[locale]}
-                    fill
-                    className="object-cover"
-                    sizes="33vw"
-                    unoptimized={isApiImage(img)}
-                  />
+                <div className="relative h-48 bg-muted">
+                  {img ? (
+                    <Image
+                      src={img}
+                      alt={project.name[locale]}
+                      fill
+                      className="object-cover"
+                      sizes="33vw"
+                      unoptimized={isApiImage(img)}
+                    />
+                  ) : null}
                 </div>
                 <div className="border-t border-border p-5">
                   <div className="flex items-center justify-between gap-2">

@@ -13,14 +13,21 @@ export function BrandLogo({ variant = 'onLight', className, showTagline = false 
 
   return (
     <div className={cn('flex items-center gap-3', className)}>
-      <Image
-        src="/images/brand/logo-icon.png"
-        alt="WINAJES"
-        width={40}
-        height={40}
-        className="h-9 w-9 object-contain sm:h-10 sm:w-10"
-        priority
-      />
+      <div
+        className={cn(
+          'flex h-9 w-9 shrink-0 items-center justify-center sm:h-10 sm:w-10',
+          onDark && 'bg-white p-1',
+        )}
+      >
+        <Image
+          src="/images/brand/logo-icon.png"
+          alt="WINAJES"
+          width={40}
+          height={40}
+          className="h-full w-full object-contain"
+          priority
+        />
+      </div>
       <div className="min-w-0 leading-none">
         <p
           className={cn(

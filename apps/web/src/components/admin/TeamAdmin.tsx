@@ -154,12 +154,15 @@ export function TeamAdmin() {
       const body = new FormData();
       body.append('file', file);
       const res = await fetch(`${API_URL}/api/uploads/team-photo`, { method: 'POST', body });
-      if (!res.ok) throw new Error('Upload failed');
-      const data = await res.json();
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(typeof data.message === 'string' ? data.message : 'Upload failed');
+      }
+      if (!data.url) throw new Error('Upload failed');
       setForm((f) => ({ ...f, photo: data.url }));
       if (fileRef.current) fileRef.current.value = '';
-    } catch {
-      setError(t('common.errorUpload'));
+    } catch (err) {
+      setError(err instanceof Error && err.message !== 'Upload failed' ? err.message : t('common.errorUpload'));
     } finally {
       setUploading(false);
     }

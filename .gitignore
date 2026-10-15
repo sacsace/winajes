@@ -7,6 +7,9 @@ dist/
 !.env.example
 *.log
 .DS_Store
-uploads/
+# Uploaded media only — keep API route/source folders tracked
+/uploads/
+apps/web/public/uploads/
+apps/api/uploads/
 apps/web/data/cms/*.json
 postgres_data/

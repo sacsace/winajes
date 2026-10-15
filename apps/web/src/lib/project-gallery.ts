@@ -1,5 +1,4 @@
 import type { ApiProject } from '@/lib/projects';
-import { resolveProjectImage } from '@/lib/projects';
 
 export type ProjectGalleryItem = {
   id: string;
@@ -15,13 +14,10 @@ export function collectProjectGalleryItems(projects: ApiProject[]): ProjectGalle
   const items: ProjectGalleryItem[] = [];
 
   for (const project of projects) {
-    const images =
-      project.images?.length > 0
-        ? project.images
-        : [resolveProjectImage(project)];
+    const images = project.images?.filter(Boolean) ?? [];
+    if (images.length === 0) continue;
 
     images.forEach((src, index) => {
-      if (!src) return;
       items.push({
         id: `${project.id}-${index}`,
         src,

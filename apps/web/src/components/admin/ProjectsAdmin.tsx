@@ -561,7 +561,9 @@ export function ProjectsAdmin() {
               </tr>
             </thead>
             <tbody>
-              {filtered.map((project, i) => (
+              {filtered.map((project, i) => {
+                const thumb = resolveProjectImage(project);
+                return (
                 <tr
                   key={project.id}
                   onClick={() => openDetail(project)}
@@ -570,13 +572,15 @@ export function ProjectsAdmin() {
                   <td className="px-4 py-2 text-[13px] font-medium text-[#1D1D1F]">
                     <div className="flex items-center gap-3">
                       <div className="relative h-8 w-11 shrink-0 overflow-hidden rounded-[6px] bg-black/[0.04]">
-                        <Image
-                          src={resolveProjectImage(project)}
-                          alt=""
-                          fill
-                          className="object-cover"
-                          unoptimized={isApiImage(resolveProjectImage(project))}
-                        />
+                        {thumb ? (
+                          <Image
+                            src={thumb}
+                            alt=""
+                            fill
+                            className="object-cover"
+                            unoptimized={isApiImage(thumb)}
+                          />
+                        ) : null}
                       </div>
                       <span>{project.name.ko}</span>
                     </div>
@@ -594,7 +598,8 @@ export function ProjectsAdmin() {
                     )}
                   </td>
                 </tr>
-              ))}
+              );
+              })}
               {!loading && filtered.length === 0 && (
                 <tr>
                   <td colSpan={5} className="px-4 py-10 text-center text-[13px] text-[#86868B]">

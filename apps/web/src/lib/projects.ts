@@ -1,5 +1,3 @@
-import { projectImages } from '@/lib/images';
-
 export type ApiProject = {
   id: string;
   slug: string;
@@ -16,12 +14,18 @@ export type ApiProject = {
   featured: boolean;
 };
 
-export function resolveProjectImage(project: Pick<ApiProject, 'slug' | 'images'>): string {
-  if (project.images?.[0]) return project.images[0];
-  if (project.slug && projectImages[project.slug]) return projectImages[project.slug];
-  return '/images/hero/hero-1.jpg';
+/** Neutral fallback only when CMS has no images — never re-inject seed photos after delete. */
+export const PROJECT_IMAGE_PLACEHOLDER = '/images/hero/hero-1.jpg';
+
+export function resolveProjectImage(project: Pick<ApiProject, 'images'>): string | null {
+  const first = project.images?.[0]?.trim();
+  return first || null;
+}
+
+export function projectImageOrPlaceholder(project: Pick<ApiProject, 'images'>): string {
+  return resolveProjectImage(project) ?? PROJECT_IMAGE_PLACEHOLDER;
 }
 
 export function isApiImage(url: string): boolean {
-  return url.startsWith('http://') || url.startsWith('https://');
+  return url.startsWith('http://') || url.startsWith('https://') || url.startsWith('/uploads/');
 }

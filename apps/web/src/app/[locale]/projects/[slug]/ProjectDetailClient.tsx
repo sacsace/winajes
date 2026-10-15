@@ -56,23 +56,22 @@ export default function ProjectDetailClient({ slug }: Props) {
   }
 
   const heroImage = resolveProjectImage(project);
-  const gallery =
-    project.images.length > 0
-      ? project.images
-      : [heroImage, '/images/gallery/hvac-1.jpg', '/images/gallery/mechanical-1.jpg'].filter(Boolean);
+  const gallery = project.images?.filter(Boolean) ?? [];
 
   return (
     <>
-      <section className="relative flex h-[42vh] min-h-[300px] items-end overflow-hidden pt-[72px]">
-        <Image
-          src={heroImage}
-          alt={project.name[locale]}
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-          unoptimized={isApiImage(heroImage)}
-        />
+      <section className="relative flex h-[42vh] min-h-[300px] items-end overflow-hidden pt-[72px] bg-primary">
+        {heroImage ? (
+          <Image
+            src={heroImage}
+            alt={project.name[locale]}
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+            unoptimized={isApiImage(heroImage)}
+          />
+        ) : null}
         <div className="absolute inset-0 bg-primary/75" />
         <Container className="relative z-10 py-16">
           <p className="mb-2 text-sm font-medium text-white/70">
@@ -93,23 +92,25 @@ export default function ProjectDetailClient({ slug }: Props) {
               <h2 className="mb-4 text-2xl font-extrabold text-primary">{t('technicalDetails')}</h2>
               <p className="leading-relaxed text-muted-foreground">{project.description[locale]}</p>
             </div>
-            <div>
-              <h2 className="mb-4 text-2xl font-extrabold text-primary">{t('photos')}</h2>
-              <div className="grid gap-4 sm:grid-cols-2">
-                {gallery.slice(0, 4).map((src, i) => (
-                  <div key={i} className="img-zoom relative aspect-[4/3] overflow-hidden rounded-xl">
-                    <Image
-                      src={src}
-                      alt={`Photo ${i + 1}`}
-                      fill
-                      className="object-cover"
-                      sizes="50vw"
-                      unoptimized={isApiImage(src)}
-                    />
-                  </div>
-                ))}
+            {gallery.length > 0 ? (
+              <div>
+                <h2 className="mb-4 text-2xl font-extrabold text-primary">{t('photos')}</h2>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {gallery.slice(0, 4).map((src, i) => (
+                    <div key={i} className="img-zoom relative aspect-[4/3] overflow-hidden rounded-xl">
+                      <Image
+                        src={src}
+                        alt={`Photo ${i + 1}`}
+                        fill
+                        className="object-cover"
+                        sizes="50vw"
+                        unoptimized={isApiImage(src)}
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            ) : null}
           </div>
 
           <Card className="h-fit lg:sticky lg:top-24">
