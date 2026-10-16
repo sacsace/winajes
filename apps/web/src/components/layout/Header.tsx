@@ -80,7 +80,8 @@ export function Header() {
           <Link
             href={pathname}
             locale={switchLocale}
-            className="px-1 text-xs font-bold tracking-widest text-muted-foreground transition-colors hover:text-primary"
+            aria-label={switchLocale === 'en' ? 'Switch to English' : '한국어로 전환'}
+            className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/25 text-[11px] font-bold tracking-wide text-primary transition-colors hover:border-primary hover:bg-primary hover:text-white"
           >
             {switchLocale.toUpperCase()}
           </Link>
