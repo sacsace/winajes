@@ -1,6 +1,5 @@
 /**
  * Downloads / refreshes page hero images.
- * Note: about.jpg uses local WINAJES gallery mechanical-2 (MEP piping).
  * Run: node scripts/fetch-page-heroes.mjs
  */
 import fs from 'fs/promises';
@@ -9,10 +8,13 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const outDir = path.join(__dirname, '..', 'public', 'images', 'page-heroes');
-const galleryDir = path.join(__dirname, '..', 'public', 'images', 'gallery');
-const heroDir = path.join(__dirname, '..', 'public', 'images', 'hero');
 
 const remote = [
+  {
+    file: 'about-hero.jpg',
+    url: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1920&q=85',
+    credit: 'Industrial welding / craftsmanship',
+  },
   {
     file: 'team.jpg',
     url: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=85',
@@ -33,15 +35,19 @@ const remote = [
     url: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=85',
     credit: 'Corporate partnership / skyline',
   },
+  {
+    file: 'gallery-site.jpg',
+    url: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=85',
+    credit: 'Site metalwork sparks / field gallery',
+  },
+  {
+    file: 'performance-hero.jpg',
+    url: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1920&q=85',
+    credit: 'High-rise construction / project performance',
+  },
 ];
 
 await fs.mkdir(outDir, { recursive: true });
-
-await fs.copyFile(path.join(galleryDir, 'mechanical-2.jpg'), path.join(outDir, 'about.jpg'));
-console.log('✓ about.jpg (local MEP piping)');
-
-await fs.copyFile(path.join(heroDir, 'hero-4.jpg'), path.join(outDir, 'performance.jpg'));
-console.log('✓ performance.jpg (local factory welding)');
 
 for (const image of remote) {
   const dest = path.join(outDir, image.file);

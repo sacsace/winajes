@@ -13,6 +13,7 @@ import {
   collectProjectGalleryItems,
   type ProjectGalleryItem,
 } from '@/lib/project-gallery';
+import { galleryHeroImage } from '@/lib/images';
 import { API_URL, cn } from '@/lib/utils';
 
 const CATEGORIES = [
@@ -63,7 +64,7 @@ export default function GalleryPageClient() {
         title={t('title')}
         subtitle={t('subtitle')}
         description={t('description')}
-        image="/images/hero/hero-3.jpg"
+        image={galleryHeroImage}
       />
 
       <Section>

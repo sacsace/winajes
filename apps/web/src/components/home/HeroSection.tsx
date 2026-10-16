@@ -63,7 +63,6 @@ export function HeroSection() {
       ))}
 
       <div className="pointer-events-none absolute inset-0 bg-primary/68" />
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-full max-w-3xl bg-gradient-to-r from-primary/88 to-transparent" />
 
       <Container className="hero-content relative z-10 flex min-h-0 flex-1 flex-col justify-center py-24 pb-24 md:py-28 md:pb-28">
         <div className="max-w-2xl translate-y-[12dvh] text-white [@media(max-height:640px)]:translate-y-[6dvh]">

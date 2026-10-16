@@ -31,7 +31,15 @@ export function PageHero({
         className,
       )}
     >
-      <Image src={image} alt={title} fill className="object-cover" priority sizes="100vw" />
+      <Image
+        src={image}
+        alt={title}
+        fill
+        className="object-cover"
+        priority
+        sizes="100vw"
+        key={image}
+      />
       <div className="absolute inset-0 bg-primary/78" />
 
       <Container className="relative z-10 px-4 py-8 sm:px-5 sm:py-10 md:py-12">
