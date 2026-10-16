@@ -1,29 +1,26 @@
 'use client';
 
 import Image from 'next/image';
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { Mail, Phone } from 'lucide-react';
 import { ceoPhoto } from '@/lib/images';
-import { ceoInfo, companyInfo } from '@/lib/data';
+import { ceoInfo } from '@/lib/data';
 import { Section } from '@/components/ui/Section';
 
 function splitParagraphs(text: string): string[] {
   return text
     .split(/\n\n+/)
-    .flatMap((block) => block.split(/(?<=[.!?])\s+/))
     .map((p) => p.trim())
     .filter(Boolean);
 }
 
 export function CeoMessage() {
   const t = useTranslations('about.ceoMessage');
-  const locale = useLocale() as 'ko' | 'en';
-  const tagline = companyInfo.tagline[locale];
   const paragraphs = splitParagraphs(t('message'));
 
   return (
-    <Section className="!py-16 md:!py-20">
-      <div className="grid gap-10 border-t border-border pt-10 lg:grid-cols-12 lg:gap-14">
+    <Section className="!py-10 md:!py-12">
+      <div className="grid gap-10 border-t border-border pt-8 lg:grid-cols-12 lg:gap-14 lg:pt-10">
         <div className="flex flex-col items-start lg:col-span-4">
           <div className="relative h-44 w-44 overflow-hidden rounded-full border border-border bg-muted sm:h-52 sm:w-52">
             <Image
@@ -48,12 +45,12 @@ export function CeoMessage() {
           </h2>
 
           <blockquote className="mt-6 border-l-2 border-secondary pl-4 md:mt-7">
-            <p className="text-[15px] leading-relaxed font-semibold tracking-[-0.02em] text-primary md:text-base">
-              {tagline}
+            <p className="text-base leading-relaxed font-semibold tracking-[-0.02em] text-primary md:text-[1.0625rem]">
+              {t('quote')}
             </p>
           </blockquote>
 
-          <div className="mt-6 space-y-3.5 text-[14px] leading-[1.85] text-muted-foreground md:mt-7 md:text-[15px] md:leading-[1.9]">
+          <div className="mt-6 space-y-5 text-base leading-[1.8] text-muted-foreground md:mt-7 md:text-[1.0625rem] md:leading-[1.85]">
             {paragraphs.map((paragraph) => (
               <p key={paragraph.slice(0, 32)}>{paragraph}</p>
             ))}

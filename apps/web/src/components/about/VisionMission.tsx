@@ -18,14 +18,14 @@ export function VisionMission() {
         <div className="border-t-2 border-primary pt-6">
           <h2 className="mb-3 text-[13px] font-semibold text-secondary">{t('visionTitle')}</h2>
           <p className="text-2xl leading-snug font-bold text-primary md:text-3xl">{t('vision')}</p>
-          <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground md:text-base md:leading-[1.75]">
+          <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-[1.0625rem] md:leading-[1.75]">
             {t('visionDescription')}
           </p>
         </div>
 
-        <div className="border-t-2 border-border pt-6">
+        <div className="border-t-2 border-primary pt-6">
           <h2 className="mb-3 text-[13px] font-semibold text-secondary">{t('missionTitle')}</h2>
-          <p className="mb-6 text-[14px] leading-relaxed text-muted-foreground md:text-[15px]">
+          <p className="mb-6 text-base leading-relaxed text-muted-foreground md:text-[1.0625rem] md:leading-[1.75]">
             {t('missionIntro')}
           </p>
           <ul className="space-y-5">
@@ -36,7 +36,7 @@ export function VisionMission() {
                 </span>
                 <div>
                   <p className="text-base font-semibold text-foreground">{item.title}</p>
-                  <p className="mt-1.5 text-[14px] leading-relaxed text-muted-foreground">
+                  <p className="mt-1.5 text-[15px] leading-relaxed text-muted-foreground md:text-base md:leading-[1.7]">
                     {item.description}
                   </p>
                 </div>

@@ -250,13 +250,25 @@
   },
   "about": {
     "title": "About Us",
-    "subtitle": "Founded 2014 · Comprehensive engineering partner in India",
-    "description": "With advanced technology and Korean quality management, we deliver MEP, utility, electrical, fire protection, and IT infrastructure works as a trusted partner for global companies including Samsung, Kia, and Hyosung across India.",
-    "intro": "Since our founding in 2014, we have been realizing our customers' dreams with advanced technology, relentless challenge, and responsible management in India.",
+    "subtitle": "Founded in 2014 — engineering and construction partner for industrial facilities in India",
+    "description": "WINAJES delivers design and construction across mechanical/piping, HVAC, electrical, fire protection, water treatment, and IT infrastructure. Through collaboration between Korean management and local Indian specialists, we support stable operations and growth for industrial facilities.",
+    "intro": "Since our founding in 2014, we have grown with customers as an engineering and construction partner for industrial facilities in India.",
+    "stats": {
+      "founded": "Founded",
+      "foundedValue": "2014",
+      "projects": "Projects completed",
+      "projectsValue": "100+ projects",
+      "clients": "Clients",
+      "clientsValue": "26+ companies",
+      "engineers": "Engineers & technical staff",
+      "engineersValue": "80+ people",
+      "asOf": "As of October 2026"
+    },
     "ceoMessage": {
       "label": "CEO Message",
-      "title": "CEO Statement",
-      "message": "WINAJES Construction, a leader in India's construction history, realizes our customers' dreams with the highest technology and quality through relentless challenge and passion, change and innovation, trust and cooperation. WINAJES has always been there during the rapid economic growth of Korean companies in India over the past decade. We have contributed to company stability through factory construction, achieved sustainable growth based on dozens of design and construction experiences, and led with integrity and superior technology. Going forward, WINAJES will thoroughly prepare to create environments and spaces of value beyond construction, for the highest corporate value and a better life.",
+      "title": "Message from the CEO",
+      "quote": "We will repay customer trust with better technology and quality than yesterday.",
+      "message": "Hello. I am Sungkwang Lee, CEO of WINAJES.\n\nSince our founding in 2014, WINAJES has built engineering and construction capability across industrial sites in India. Guided by technology and quality, we do our utmost so that our customers' production facilities can operate with stability.\n\nFrom design through completion, we manage safety, quality, and schedule systematically, with Korean management and local Indian specialists working as one team. Going forward, we will remain a partner that repays customer trust with better technology and quality than yesterday.",
       "name": "Sungkwang Lee",
       "role": "CEO"
     },
@@ -276,22 +288,22 @@
     },
     "visionMission": {
       "visionTitle": "Vision",
-      "vision": "A Company That Realizes Dreams",
-      "visionDescription": "Growing together with our clients, we strive to become a global engineering partner that creates value beyond construction through technological innovation and quality management at industrial sites across India.",
-      "missionTitle": "Mission",
-      "missionIntro": "WINAJES is guided by three core values in every project we deliver.",
+      "vision": "A company building the future together with customers",
+      "visionDescription": "Based on technology and quality, we support the stable operation and growth of industrial facilities in India and will grow into an engineering and construction partner that customers trust.",
+      "missionTitle": "Core Values",
+      "missionIntro": "WINAJES takes the following three core values as the criteria for judgment and execution in the field.",
       "missionItems": [
         {
           "title": "Challenge & Passion",
-          "description": "We pursue new possibilities through continuous technical development and field execution, bringing our best passion to every project."
+          "description": "We solve field challenges based on accumulated experience and continuous technical improvement, delivering better construction quality and technical services to customers."
         },
         {
           "title": "Autonomy & Responsibility",
-          "description": "Every team member works with ownership and autonomy, taking clear responsibility for safety, quality, and schedule."
+          "description": "Each member works autonomously with expertise and ownership, fulfilling roles and responsibilities for safety, quality, and schedule."
         },
         {
           "title": "Trust & Cooperation",
-          "description": "We build long-term trusted relationships through transparent communication and mutual respect with clients, partners, and local teams."
+          "description": "Through transparent communication and mutual respect among customers, partners, and members, we keep our promises and continue long-term cooperative relationships."
         }
       ]
     },

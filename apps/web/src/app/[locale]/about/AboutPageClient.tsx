@@ -21,14 +21,13 @@ type Props = { timeline: ApiTimelineEvent[] };
 
 export default function AboutPageClient({ timeline }: Props) {
   const t = useTranslations('about');
-  const tHome = useTranslations('home.stats');
   const locale = useLocale() as 'ko' | 'en';
 
   const stats = [
-    { label: tHome('years'), value: tHome('yearsValue') },
-    { label: tHome('projects'), value: tHome('projectsValue') },
-    { label: tHome('clients'), value: tHome('clientsValue') },
-    { label: tHome('engineers'), value: tHome('engineersValue') },
+    { label: t('stats.founded'), value: t('stats.foundedValue') },
+    { label: t('stats.projects'), value: t('stats.projectsValue') },
+    { label: t('stats.clients'), value: t('stats.clientsValue') },
+    { label: t('stats.engineers'), value: t('stats.engineersValue') },
   ];
 
   return (
@@ -42,8 +41,8 @@ export default function AboutPageClient({ timeline }: Props) {
       />
 
       {/* 핵심 수치 */}
-      <Section variant="muted" className="!py-12 md:!py-14">
-        <dl className="grid grid-cols-2 gap-8 border-y border-border py-8 sm:grid-cols-4">
+      <Section variant="muted" className="!py-8 md:!py-10">
+        <dl className="grid grid-cols-2 gap-8 border-y border-border py-7 sm:grid-cols-4">
           {stats.map((stat) => (
             <div key={stat.label}>
               <dt className="text-[12px] font-medium text-muted-foreground">{stat.label}</dt>
@@ -53,6 +52,7 @@ export default function AboutPageClient({ timeline }: Props) {
             </div>
           ))}
         </dl>
+        <p className="mt-4 text-right text-[12px] text-muted-foreground">{t('stats.asOf')}</p>
       </Section>
 
       <CeoMessage />
