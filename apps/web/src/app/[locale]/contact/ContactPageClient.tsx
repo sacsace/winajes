@@ -6,9 +6,8 @@ import { PageHero } from '@/components/ui/PageHero';
 import { Section } from '@/components/ui/Section';
 import { Card } from '@/components/ui/Card';
 import { OfficeLocationListItem } from '@/components/offices/OfficeLocationCard';
-import { googleMapsAllOfficesUrl } from '@/lib/maps';
+import { OfficesMap } from '@/components/offices/OfficesMap';
 import { offices, contactPersons } from '@/lib/data';
-import { MapPin, ExternalLink } from 'lucide-react';
 
 export default function ContactPageClient() {
   const t = useTranslations('contact');
@@ -31,21 +30,7 @@ export default function ContactPageClient() {
 
           <div>
             <h2 className="mb-6 text-2xl font-extrabold text-primary">{t('offices')}</h2>
-            <a
-              href={googleMapsAllOfficesUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mb-8 flex h-64 items-center justify-center rounded-xl border border-dashed border-border bg-muted transition-colors hover:border-secondary/40"
-            >
-              <div className="text-center">
-                <MapPin className="mx-auto mb-3 h-8 w-8 text-secondary/60" />
-                <p className="text-sm font-medium text-muted-foreground">Google Maps</p>
-                <p className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-secondary">
-                  {locale === 'ko' ? '지도에서 보기' : 'View on map'}
-                  <ExternalLink className="h-3 w-3" />
-                </p>
-              </div>
-            </a>
+            <OfficesMap offices={offices} locale={locale} className="mb-8" />
             <div className="space-y-4">
               {offices.map((office) => (
                 <OfficeLocationListItem key={office.id} office={office} locale={locale} />

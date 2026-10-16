@@ -13,12 +13,9 @@ import { VisionMission } from '@/components/about/VisionMission';
 import { CorporateIdentity } from '@/components/about/CorporateIdentity';
 import { CeoMessage } from '@/components/about/CeoMessage';
 import { OfficeLocationCard } from '@/components/offices/OfficeLocationCard';
-import { googleMapsAllOfficesUrl } from '@/lib/maps';
+import { OfficesMap } from '@/components/offices/OfficesMap';
 import { aboutHeroImage } from '@/lib/images';
 import { cn } from '@/lib/utils';
-import {
-  MapPin, ExternalLink,
-} from 'lucide-react';
 
 type Props = { timeline: ApiTimelineEvent[] };
 
@@ -114,25 +111,7 @@ export default function AboutPageClient({ timeline }: Props) {
       <Section variant="surface">
         <SectionHeader title={t('locations.title')} subtitle={t('locations.subtitle')} className="mb-10" />
 
-        <a
-          href={googleMapsAllOfficesUrl()}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mb-8 block overflow-hidden rounded-xl border border-border bg-muted transition-colors hover:border-secondary/40 hover:bg-muted/80"
-        >
-          <div className="flex h-56 items-center justify-center md:h-72">
-            <div className="text-center">
-              <MapPin className="mx-auto mb-3 h-8 w-8 text-secondary/60" />
-              <p className="text-sm font-medium text-muted-foreground">
-                {locale === 'ko' ? '한국 · 인도 거점 지도' : 'Korea & India Office Map'}
-              </p>
-              <p className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-secondary">
-                {locale === 'ko' ? 'Google Maps에서 보기' : 'Open in Google Maps'}
-                <ExternalLink className="h-3 w-3" />
-              </p>
-            </div>
-          </div>
-        </a>
+        <OfficesMap offices={offices} locale={locale} className="mb-8" />
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {offices.map((office) => (

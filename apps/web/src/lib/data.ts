@@ -122,7 +122,7 @@ export const timeline = [
 export const offices = [
   {
     id: '1',
-    name: { ko: '한국 본사', en: 'Korea Head Office' },
+    name: { ko: '한국 법인', en: 'Korea Corporation' },
     address: {
       ko: '경기도 화성시 동탄대로 643, 센터A IT타워 801호',
       en: '801-HO, Centera IT Tower, No.643, Dongtandae-ro, Hwasung-si, Gyeonggi-do, Republic of Korea',
@@ -142,8 +142,9 @@ export const offices = [
     },
     phone: '+91-9994857085',
     email: 'info@winajes.com',
-    lat: 12.9675,
-    lng: 79.9444,
+    // https://maps.app.goo.gl/Ji1MwnWTxMjzTNxj8 — WINAJES CONSTRUCTIONS INDIA PVT LTD
+    lat: 13.0233951,
+    lng: 80.0227636,
     isHeadquarters: false,
   },
   {
@@ -445,7 +446,7 @@ export const orgStructure = {
   ceo: { ko: '대표이사 이성광', en: 'CEO Sungkwang Lee' },
   directors: [
     { ko: '이민섭 이사', en: 'Director Minsub Lee' },
-    { ko: '이화영 이사 (한국 본사)', en: 'Director Hwayoung Lee (Korea HQ)' },
+    { ko: '이화영 이사 (한국 법인)', en: 'Director Hwayoung Lee (Korea Corporation)' },
     { ko: 'S. Subburaj 이사', en: 'Director S. Subburaj' },
   ],
 };

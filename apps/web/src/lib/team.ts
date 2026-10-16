@@ -36,9 +36,9 @@ export const DEFAULT_TEAM_SEED: Omit<ApiTeamMember, 'id'>[] = [
   },
   {
     name: 'Hwayoung Lee',
-    role: { ko: '이사 (한국 본사)', en: 'Director (Korea HQ)' },
-    department: { ko: '한국 본사', en: 'Korea HQ' },
-    bio: { ko: '한국 본사와 인도 현장 간 협력 및 경영 지원을 담당합니다.', en: 'Supports coordination between Korea HQ and India operations.' },
+    role: { ko: '이사 (한국 법인)', en: 'Director (Korea Corporation)' },
+    department: { ko: '한국 법인', en: 'Korea Corporation' },
+    bio: { ko: '한국 법인과 인도 현장 간 협력 및 경영 지원을 담당합니다.', en: 'Supports coordination between Korea Corporation and India operations.' },
     photo: '',
     phone: '',
     email: 'info@winajes.com',

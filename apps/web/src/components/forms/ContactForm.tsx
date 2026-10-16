@@ -12,7 +12,7 @@ interface ContactFormProps {
 export function ContactForm({ compact = false }: ContactFormProps) {
   const t = useTranslations('contact.form');
   const [form, setForm] = useState({
-    name: '', company: '', country: '', email: '', phone: '', projectType: '', message: '',
+    name: '', company: '', email: '', phone: '', message: '',
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
@@ -26,7 +26,7 @@ export function ContactForm({ compact = false }: ContactFormProps) {
         body: JSON.stringify(form),
       });
       setStatus(res.ok ? 'success' : 'error');
-      if (res.ok) setForm({ name: '', company: '', country: '', email: '', phone: '', projectType: '', message: '' });
+      if (res.ok) setForm({ name: '', company: '', email: '', phone: '', message: '' });
     } catch {
       setStatus('error');
     }
@@ -42,7 +42,7 @@ export function ContactForm({ compact = false }: ContactFormProps) {
 
   const fields = compact
     ? (['name', 'email', 'message'] as const)
-    : (['name', 'company', 'country', 'email', 'phone', 'projectType', 'message'] as const);
+    : (['name', 'company', 'email', 'phone', 'message'] as const);
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">

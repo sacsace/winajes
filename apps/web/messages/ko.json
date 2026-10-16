@@ -123,7 +123,7 @@
       "title": "회사 개요",
       "subtitle": "WINAJES Constructions India Pvt. Ltd.",
       "established": "2014년 창립",
-      "offices": "한국 본사 · 첸나이 · 페누콘다 · 푸네",
+      "offices": "한국 법인 · 첸나이 · 페누콘다 · 푸네",
       "specialist": "MEP·유틸리티·전기·소방·IT 인프라 전문",
       "team": "한국 경영 + 인도 현지 엔지니어링 팀"
     },
@@ -390,7 +390,8 @@
     "contact": "연락처",
     "downloadProfile": "회사 소개서 다운로드",
     "admin": "관리자",
-    "copyright": "© {year} WINAJES Constructions India Pvt. Ltd. All rights reserved."
+    "copyright": "© {year} WINAJES Constructions India Pvt. Ltd. All rights reserved.",
+    "developedBy": "개발"
   },
   "inquiry": {
     "title": "빠른 문의",

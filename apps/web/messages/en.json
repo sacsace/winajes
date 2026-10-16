@@ -123,7 +123,7 @@
       "title": "Company Overview",
       "subtitle": "WINAJES Constructions India Pvt. Ltd.",
       "established": "Founded 2014",
-      "offices": "Korea HQ · Chennai · Penukonda · Pune",
+      "offices": "Korea Corporation · Chennai · Penukonda · Pune",
       "specialist": "MEP · Utility · Electrical · Fire · IT Infrastructure",
       "team": "Korean Management + Local Indian Engineering Team"
     },
@@ -390,7 +390,8 @@
     "contact": "Contact",
     "downloadProfile": "Download Company Profile",
     "admin": "Admin",
-    "copyright": "© {year} WINAJES Constructions India Pvt. Ltd. All rights reserved."
+    "copyright": "© {year} WINAJES Constructions India Pvt. Ltd. All rights reserved.",
+    "developedBy": "Developed by"
   },
   "inquiry": {
     "title": "Quick Inquiry",
