@@ -54,13 +54,12 @@ export function SiteGallery() {
 
   return (
     <>
-      <Section variant="dark" className="relative overflow-hidden">
+      <Section variant="surface" className="relative overflow-hidden border-y border-border">
         <div className="relative">
           <SectionHeader
             label={locale === 'ko' ? '시공 사진' : 'Site Photos'}
             title={t('title')}
             subtitle={t('subtitle')}
-            light
             align="left"
             className="mb-10"
           />
@@ -71,7 +70,7 @@ export function SiteGallery() {
                   <div
                     key={i}
                     className={cn(
-                      'animate-pulse bg-white/10',
+                      'animate-pulse bg-muted',
                       i === 0 ? 'sm:col-span-2 sm:row-span-2 sm:min-h-[400px]' : 'aspect-[4/3]',
                     )}
                   />
@@ -82,7 +81,7 @@ export function SiteGallery() {
                     type="button"
                     onClick={() => openLightbox(item)}
                     className={cn(
-                      'img-zoom group relative overflow-hidden text-left',
+                      'img-zoom group relative overflow-hidden border border-border text-left',
                       i === 0 ? 'sm:col-span-2 sm:row-span-2' : '',
                     )}
                   >
@@ -116,8 +115,13 @@ export function SiteGallery() {
 
           {!loading && allItems.length > 0 && (
             <div className="mt-8 flex flex-col items-center gap-3">
-              <p className="text-center text-sm text-white/50">{t('viewAllHint')}</p>
-              <Button href="/gallery" variant="outline" size="sm">
+              <p className="text-center text-sm text-muted-foreground">{t('viewAllHint')}</p>
+              <Button
+                href="/gallery"
+                variant="ghost"
+                size="sm"
+                className="border border-border text-primary hover:bg-muted"
+              >
                 {t('viewAll')}
               </Button>
             </div>

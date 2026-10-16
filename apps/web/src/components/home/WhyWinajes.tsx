@@ -20,9 +20,14 @@ export function WhyWinajes() {
             <span className="w-7 shrink-0 text-[13px] font-semibold tabular-nums text-secondary">
               {String(i + 1).padStart(2, '0')}
             </span>
-            <p className="text-[15px] leading-snug font-medium text-foreground">
-              {t(`items.${key}`)}
-            </p>
+            <div className="min-w-0">
+              <p className="text-[15px] leading-snug font-semibold text-foreground">
+                {t(`items.${key}.title`)}
+              </p>
+              <p className="mt-1.5 text-[13px] leading-relaxed text-muted-foreground">
+                {t(`items.${key}.desc`)}
+              </p>
+            </div>
           </li>
         ))}
       </ol>

@@ -67,13 +67,13 @@ export const galleryImages = [
 
 export const projectImages: Record<string, string> = {
   'samsung-electronics-india': '/images/projects/project-1.jpg',
-  'hyosung-electric-india': '/images/hero/hero-2.jpg',
-  'kia-motors-india': '/images/hero/hero-3.jpg',
-  'schaeffler-india': '/images/gallery/mechanical-2.jpg',
-  'mcns-india': '/images/gallery/mechanical-3.jpg',
-  'hyundai-glovis-india': '/images/hero/hero-4.jpg',
-  'kolon-glotec-india': '/images/hero/hero-5.jpg',
-  'mando-automotive-india': '/images/hero/hero-6.jpg',
+  'hyosung-electric-india': '/images/projects/project-2.jpg',
+  'kia-motors-india': '/images/projects/project-3.jpg',
+  'schaeffler-india': '/images/projects/project-4.jpg',
+  'mcns-india': '/images/projects/project-5.jpg',
+  'hyundai-glovis-india': '/images/projects/project-6.jpg',
+  'kolon-glotec-india': '/images/projects/project-7.jpg',
+  'mando-automotive-india': '/images/projects/project-8.jpg',
 };
 
 export const ceoPhoto = '/images/about/ceo.png';

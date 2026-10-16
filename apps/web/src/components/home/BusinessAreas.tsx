@@ -12,6 +12,7 @@ import { cn } from '@/lib/utils';
 export function BusinessAreas() {
   const t = useTranslations('home.businessAreas');
   const [active, setActive] = useState(0);
+  const activeKey = businessAreaKeys[active];
 
   return (
     <Section variant="muted">
@@ -30,7 +31,12 @@ export function BusinessAreas() {
                   : 'text-muted-foreground hover:text-foreground',
               )}
             >
-              <span className={cn('mr-3 tabular-nums', active === i ? 'text-secondary' : 'text-border')}>
+              <span
+                className={cn(
+                  'mr-3 tabular-nums font-bold',
+                  active === i ? 'text-secondary' : 'text-primary/45',
+                )}
+              >
                 {String(i + 1).padStart(2, '0')}
               </span>
               {t(`${key}.title`)}
@@ -38,22 +44,26 @@ export function BusinessAreas() {
           ))}
         </div>
 
-        <div className="relative min-h-[340px] overflow-hidden border border-border lg:col-span-8">
+        <div className="relative min-h-[360px] overflow-hidden border border-border lg:col-span-8">
           <Image
             src={businessAreaImages[active]}
-            alt={t(`${businessAreaKeys[active]}.title`)}
+            alt={t(`${activeKey}.title`)}
             fill
             className="object-cover"
             sizes="(max-width:1024px) 100vw, 66vw"
+            key={businessAreaImages[active]}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/25 to-transparent" />
-          <div className="absolute right-0 bottom-0 left-0 p-6 text-white md:p-8">
-            <h3 className="mb-3 text-xl font-bold text-white md:text-2xl">
-              {t(`${businessAreaKeys[active]}.title`)}
+          <div className="absolute inset-0 bg-primary/72" />
+          <div className="absolute inset-0 flex flex-col justify-end p-6 text-white md:p-8">
+            <h3 className="mb-2 text-2xl font-bold tracking-tight text-white md:text-[1.75rem]">
+              {t(`${activeKey}.title`)}
             </h3>
-            <ul className="space-y-1.5">
-              {(t.raw(`${businessAreaKeys[active]}.items`) as string[]).map((item) => (
-                <li key={item} className="text-sm text-white/80">
+            <p className="mb-5 max-w-xl text-[15px] leading-relaxed text-white/90 md:text-base">
+              {t(`${activeKey}.description`)}
+            </p>
+            <ul className="space-y-2">
+              {(t.raw(`${activeKey}.items`) as string[]).map((item) => (
+                <li key={item} className="text-[15px] leading-snug text-white/88 md:text-base">
                   {item}
                 </li>
               ))}

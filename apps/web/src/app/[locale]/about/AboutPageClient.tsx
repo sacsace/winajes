@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
-import { offices, companyStats } from '@/lib/data';
+import { offices } from '@/lib/data';
 import type { ApiTimelineEvent } from '@/lib/timeline';
 import { PageHero } from '@/components/ui/PageHero';
 import { SectionHeader } from '@/components/ui/SectionHeader';
@@ -25,10 +25,10 @@ export default function AboutPageClient({ timeline }: Props) {
   const locale = useLocale() as 'ko' | 'en';
 
   const stats = [
-    { value: companyStats.yearsExperience, suffix: '+', label: tHome('years') },
-    { value: companyStats.projectsCompleted, suffix: '+', label: tHome('projects') },
-    { value: companyStats.clientsServed, suffix: '+', label: tHome('clients') },
-    { value: companyStats.engineers, suffix: '+', label: tHome('engineers') },
+    { label: tHome('years'), value: tHome('yearsValue') },
+    { label: tHome('projects'), value: tHome('projectsValue') },
+    { label: tHome('clients'), value: tHome('clientsValue') },
+    { label: tHome('engineers'), value: tHome('engineersValue') },
   ];
 
   return (
@@ -47,9 +47,8 @@ export default function AboutPageClient({ timeline }: Props) {
           {stats.map((stat) => (
             <div key={stat.label}>
               <dt className="text-[12px] font-medium text-muted-foreground">{stat.label}</dt>
-              <dd className="mt-1 text-3xl font-bold tracking-tight text-primary md:text-4xl">
+              <dd className="mt-1 text-xl font-bold tracking-tight text-primary sm:text-2xl md:text-[1.65rem]">
                 {stat.value}
-                {stat.suffix}
               </dd>
             </div>
           ))}

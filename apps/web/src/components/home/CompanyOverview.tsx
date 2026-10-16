@@ -3,7 +3,6 @@
 import { useTranslations } from 'next-intl';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { Section } from '@/components/ui/Section';
-import { companyStats } from '@/lib/data';
 
 export function CompanyOverview() {
   const t = useTranslations('home');
@@ -15,11 +14,30 @@ export function CompanyOverview() {
     t('overview.team'),
   ];
 
+  const capabilities = [
+    {
+      label: t('overview.capabilities.facilitiesLabel'),
+      value: t('overview.capabilities.facilitiesValue'),
+    },
+    {
+      label: t('overview.capabilities.scopeLabel'),
+      value: t('overview.capabilities.scopeValue'),
+    },
+    {
+      label: t('overview.capabilities.aftercareLabel'),
+      value: t('overview.capabilities.aftercareValue'),
+    },
+    {
+      label: t('overview.capabilities.managementLabel'),
+      value: t('overview.capabilities.managementValue'),
+    },
+  ];
+
   const stats = [
-    { value: companyStats.yearsExperience, suffix: '+', label: t('stats.years') },
-    { value: companyStats.projectsCompleted, suffix: '+', label: t('stats.projects') },
-    { value: companyStats.clientsServed, suffix: '+', label: t('stats.clients') },
-    { value: companyStats.engineers, suffix: '+', label: t('stats.engineers') },
+    { label: t('stats.years'), value: t('stats.yearsValue') },
+    { label: t('stats.projects'), value: t('stats.projectsValue') },
+    { label: t('stats.clients'), value: t('stats.clientsValue') },
+    { label: t('stats.engineers'), value: t('stats.engineersValue') },
   ];
 
   return (
@@ -33,6 +51,9 @@ export function CompanyOverview() {
             align="left"
             className="mb-0"
           />
+          <p className="mt-5 max-w-xl pl-4 text-[15px] leading-relaxed tracking-[-0.015em] text-muted-foreground md:text-[1.0625rem] md:leading-[1.65]">
+            {t('overview.description')}
+          </p>
         </div>
 
         <div className="lg:col-span-7">
@@ -47,13 +68,26 @@ export function CompanyOverview() {
             ))}
           </ul>
 
+          <dl className="mt-8 border-t border-border">
+            {capabilities.map((item) => (
+              <div
+                key={item.label}
+                className="grid gap-1 border-b border-border py-3.5 sm:grid-cols-[11rem_1fr] sm:gap-6 sm:items-baseline"
+              >
+                <dt className="text-[13px] font-semibold text-primary">{item.label}</dt>
+                <dd className="text-[14px] leading-relaxed text-foreground sm:text-[15px]">
+                  {item.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+
           <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.label}>
                 <dt className="text-[12px] font-medium text-muted-foreground">{stat.label}</dt>
-                <dd className="mt-1 text-3xl font-bold tracking-tight text-primary md:text-4xl">
+                <dd className="mt-1 text-xl font-bold tracking-tight text-primary sm:text-2xl md:text-[1.65rem]">
                   {stat.value}
-                  {stat.suffix}
                 </dd>
               </div>
             ))}

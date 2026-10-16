@@ -51,10 +51,10 @@ export default async function HomePage({ params }: Props) {
       <HeroSection />
       <CompanyOverview />
       <BusinessAreas />
-      <SiteGallery />
-      <FeaturedProjects />
-      <ClientCarousel />
       <WhyWinajes />
+      <FeaturedProjects />
+      <SiteGallery />
+      <ClientCarousel />
     </>
   );
 }

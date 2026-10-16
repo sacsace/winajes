@@ -9,7 +9,7 @@ import { Section } from '@/components/ui/Section';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { TeamMemberCard } from '@/components/team/TeamMemberCard';
 import { teamHeroImage } from '@/lib/images';
-import { API_URL } from '@/lib/utils';
+import { API_URL, cn } from '@/lib/utils';
 
 function fallbackTeam(): ApiTeamMember[] {
   return DEFAULT_TEAM_SEED.map((member, i) => ({
@@ -27,7 +27,13 @@ export default function TeamPageClient() {
   useEffect(() => {
     fetch(`${API_URL}/api/team`, { cache: 'no-store' })
       .then((r) => (r.ok ? r.json() : Promise.reject()))
-      .then(setMembers)
+      .then((data: ApiTeamMember[]) => {
+        if (!Array.isArray(data) || data.length === 0) {
+          setMembers(fallbackTeam());
+          return;
+        }
+        setMembers(data);
+      })
       .catch(() => setMembers(fallbackTeam()))
       .finally(() => setLoading(false));
   }, []);
@@ -48,30 +54,32 @@ export default function TeamPageClient() {
       />
 
       <Section>
-        <div className="mb-10 flex items-end justify-between gap-4 border-b border-border pb-6">
-          <SectionHeader
-            align="left"
-            label="Team"
-            title={t('gridTitle')}
-            subtitle={t('gridSubtitle')}
-            className="mb-0"
-          />
-          <p className="shrink-0 text-[13px] font-medium text-muted-foreground">
-            {t('totalLabel')}{' '}
-            <span className="text-lg font-bold text-primary">{loading ? '—' : sorted.length}</span>
-          </p>
-        </div>
+        <SectionHeader
+          align="left"
+          label="Team"
+          title={t('gridTitle')}
+          subtitle={t('gridSubtitle')}
+          className="mb-10"
+        />
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-6">
           {loading
-            ? Array.from({ length: 4 }).map((_, i) => (
+            ? Array.from({ length: 5 }).map((_, i) => (
                 <div
                   key={i}
-                  className="min-h-[360px] animate-pulse border border-border bg-muted/50"
+                  className={cn(
+                    'min-h-[360px] animate-pulse border border-border bg-muted/50',
+                    i < 2 ? 'lg:col-span-3' : 'lg:col-span-2',
+                  )}
                 />
               ))
-            : sorted.map((member) => (
-                <TeamMemberCard key={member.id} member={member} locale={locale} />
+            : sorted.map((member, i) => (
+                <div
+                  key={member.id}
+                  className={cn(i < 2 ? 'lg:col-span-3' : 'lg:col-span-2')}
+                >
+                  <TeamMemberCard member={member} locale={locale} />
+                </div>
               ))}
         </div>
       </Section>

@@ -15,14 +15,14 @@
       "keywords": "WINAJES 회사소개, 인도 건설, MEP 시공, 엔지니어링 파트너"
     },
     "team": {
-      "title": "직원 소개 | WINAJES Constructions India",
-      "description": "한국 경영과 인도 현지 엔지니어링 팀. WINAJES 경영진 및 각 부서 전문가 소개.",
-      "keywords": "WINAJES 팀, 인도 엔지니어, MEP 전문가"
+      "title": "경영진 및 주요 인력 | WINAJES Constructions India",
+      "description": "한국과 인도를 연결하는 경영·기술 전문인력. WINAJES 경영과 현장 운영을 이끄는 주요 인력을 소개합니다.",
+      "keywords": "WINAJES 경영진, 주요 인력, 인도 엔지니어, MEP 전문가"
     },
     "services": {
-      "title": "서비스 | MEP·HVAC·전기·소방·IT 인프라",
-      "description": "기계·배관, HVAC, 전기, 소방, 수처리, IT 네트워크, 도면·설계까지 End-to-End 산업 시설 솔루션.",
-      "keywords": "MEP 서비스, HVAC, 기계배관, 전기공사, 소방설비, 수처리, IT 인프라, 설계"
+      "title": "사업 영역 | MEP·HVAC·전기·소방·IT 인프라",
+      "description": "기계·배관, 공조, 전기, 소방, 수처리 및 IT 인프라까지. 설계부터 시공·시운전·준공 인계까지 통합 서비스를 제공합니다.",
+      "keywords": "사업 영역, MEP, HVAC, 기계배관, 전기설비, 소방설비, 수처리, IT 인프라, 설계"
     },
     "projects": {
       "title": "프로젝트 | 인도 산업 건설 포트폴리오",
@@ -58,8 +58,8 @@
   "nav": {
     "home": "홈",
     "about": "회사소개",
-    "team": "직원 소개",
-    "services": "서비스",
+    "team": "경영진",
+    "services": "사업 영역",
     "projects": "프로젝트",
     "gallery": "갤러리",
     "performance": "공사 실적",
@@ -122,46 +122,74 @@
     "overview": {
       "title": "회사 개요",
       "subtitle": "WINAJES Constructions India Pvt. Ltd.",
-      "established": "2014년 창립",
-      "offices": "한국 법인 · 첸나이 · 페누콘다 · 푸네",
+      "description": "WINAJES는 인도 산업시설의 설비 및 인프라 구축을 지원하는 엔지니어링·시공 전문기업입니다. 한국인 경영진과 인도 현지 엔지니어링 팀의 협업을 바탕으로 MEP, 유틸리티, 전기, 소방 및 IT 인프라 분야의 프로젝트를 수행합니다.",
+      "established": "2014년 설립",
+      "offices": "한국 법인 및 인도 주요 거점(첸나이·페누콘다·푸네)",
       "specialist": "MEP·유틸리티·전기·소방·IT 인프라 전문",
-      "team": "한국 경영 + 인도 현지 엔지니어링 팀"
+      "team": "한국인 경영진과 인도 현지 전문인력의 협업",
+      "capabilities": {
+        "facilitiesLabel": "주요 대상 시설",
+        "facilitiesValue": "제조공장·산업시설·물류시설",
+        "scopeLabel": "프로젝트 수행 범위",
+        "scopeValue": "설계·조달·시공·시운전",
+        "aftercareLabel": "사후관리",
+        "aftercareValue": "준공 후 유지보수 및 기술 지원",
+        "managementLabel": "프로젝트 관리",
+        "managementValue": "공정·품질·안전 통합 관리"
+      }
     },
     "stats": {
-      "years": "년 경험",
+      "years": "시공 경험",
+      "yearsValue": "12년 이상",
       "projects": "완료 프로젝트",
+      "projectsValue": "100건 이상",
       "clients": "고객사",
-      "engineers": "엔지니어 & 기술 인력"
+      "clientsValue": "26개사 이상",
+      "engineers": "엔지니어 및 기술 인력",
+      "engineersValue": "80명 이상"
     },
     "businessAreas": {
       "title": "사업 영역",
-      "subtitle": "종합 산업 건설 및 엔지니어링 솔루션",
+      "subtitle": "산업시설 설비·인프라 구축을 위한 통합 엔지니어링 솔루션",
       "mechanical": {
-        "title": "기계 설비",
-        "items": ["기계·배관 공사", "쿨런트·압축공기·스팀 배관", "LPG/N2/아르곤/CO2 가스 라인", "하수·칠러 라인", "급수·냉각수 시스템"]
+        "title": "기계·배관 설비",
+        "description": "산업시설 운영에 필요한 기계 설비와 유틸리티 배관 시스템을 구축합니다.",
+        "items": [
+          "기계 설비 설치 및 배관 공사",
+          "쿨런트·압축공기·스팀 배관",
+          "LPG·N2·아르곤·CO2 공급 배관",
+          "급수·냉각수 공급 시스템",
+          "하수·오수 이송 배관"
+        ]
       },
       "hvac": {
-        "title": "공조·냉동 (HVAC)",
+        "title": "공조·냉난방 설비 (HVAC)",
+        "description": "산업·업무 시설의 공조와 냉난방 설비를 설계·시공합니다.",
         "items": ["칠러·보일러", "AHU·FCU·MAU", "덕트워크 (SUS·아연·플라스틱)", "환기·급기 팬", "VRF 멀티형 에어컨"]
       },
       "electrical": {
-        "title": "전기 공사",
+        "title": "전기 설비",
+        "description": "안정적인 전력 공급과 현장 전기 인프라를 구축합니다.",
         "items": ["전력 공급·케이블 트레이", "배전반·MCC·버스덕트", "변압기 설치", "접지·낙뢰 보호", "비상전력·발전기"]
       },
       "fire": {
         "title": "소방 설비",
+        "description": "소방 설계부터 시공·인증까지 현장 안전을 지원합니다.",
         "items": ["소방 설계·시공", "옥내·옥외 소화전", "스프링클러", "화재경보·소화설비", "검사·인증"]
       },
       "water": {
-        "title": "수처리",
+        "title": "수처리 설비",
+        "description": "정수·하수·폐수 처리 설비를 구축하고 운영을 지원합니다.",
         "items": ["WTP (정수)", "STP (하수)", "ETP (폐수)"]
       },
       "it": {
-        "title": "IT·네트워크",
+        "title": "IT·네트워크 인프라",
+        "description": "서버룸·네트워크·보안 인프라를 설계하고 구축합니다.",
         "items": ["서버룸 구축", "LAN·인트라넷", "NAS·파일 서버", "CCTV 설계·설치·유지보수", "화상회의 시스템"]
       },
       "design": {
-        "title": "도면·설계",
+        "title": "설계·엔지니어링",
+        "description": "기계·전기·소방·IT 분야의 설계와 시공 도면을 제공합니다.",
         "items": ["기계·전기 설계", "소방·배관 설계", "IT/CCTV 설계", "BOQ·시공 도면"]
       }
     },
@@ -183,15 +211,40 @@
     },
     "whyWinajes": {
       "title": "WINAJES를 선택하는 이유",
-      "subtitle": "최고의 기술력과 품질로 고객의 꿈을 가치있게 실현합니다",
+      "subtitle": "축적된 시공 경험과 체계적인 품질·안전관리로 고객의 프로젝트를 성공적인 준공으로 이끕니다.",
       "items": {
-        "qualityManagement": "품질경영시스템 (QMS)",
-        "challengePassion": "도전과 열정",
-        "trustCooperation": "신뢰와 협력",
-        "autonomyResponsibility": "자율과 책임",
-        "koreanManagement": "한국식 경영·품질관리",
-        "industrialExpertise": "10년+ MEP 시공 경험",
-        "endToEnd": "설계·시공·시운전·인도 End-to-End"
+        "systematicQuality": {
+          "title": "체계적인 품질관리",
+          "desc": "시공 단계별 품질 점검과 인수인계 관리"
+        },
+        "fieldSafety": {
+          "title": "현장 중심의 안전관리",
+          "desc": "안전 수칙 준수와 현장 위험요소 관리"
+        },
+        "transparentCommunication": {
+          "title": "투명한 소통과 협력",
+          "desc": "진행 상황 공유와 고객 요청 대응"
+        },
+        "scheduleDelivery": {
+          "title": "철저한 공정·납기 관리",
+          "desc": "공정별 일정 관리와 지연 요인 사전 점검"
+        },
+        "koreanLocalTeam": {
+          "title": "한국인 경영진과 현지 전문인력",
+          "desc": "원활한 커뮤니케이션과 인도 현장 대응력"
+        },
+        "mepExperience": {
+          "title": "10년 이상의 MEP 시공 경험",
+          "desc": "축적된 시공 경험과 기술 역량"
+        },
+        "integratedDelivery": {
+          "title": "설계부터 준공까지 통합 수행",
+          "desc": "설계·시공·시운전·인계의 일괄 관리"
+        },
+        "aftercareSupport": {
+          "title": "준공 후 유지보수 지원",
+          "desc": "하자 대응과 설비 운영 기술 지원"
+        }
       }
     }
   },
@@ -261,15 +314,19 @@
     }
   },
   "services": {
-    "title": "서비스",
-    "subtitle": "종합 산업 건설 및 MEP 솔루션",
-    "description": "기계·배관, HVAC, 전기, 소방, 수처리, IT 네트워크, 도면·설계까지 공장 및 산업 시설의 설계·시공·시운전·인도를 End-to-End로 제공합니다.",
+    "title": "사업 영역",
+    "subtitle": "산업시설 설비·인프라 통합 솔루션",
+    "description": "기계·배관, 공조, 전기, 소방, 수처리 및 IT 인프라까지. 공장과 산업시설에 필요한 설비의 설계부터 시공·시운전·준공 인계까지 통합 서비스를 제공합니다.",
     "overview": "개요",
     "process": "프로세스",
     "capabilities": "역량",
     "gallery": "갤러리",
     "relatedProjects": "관련 프로젝트",
-    "inquiry": "서비스 문의"
+    "inquiry": "서비스 문의",
+    "ctaTitle": "프로젝트 상담이 필요하신가요?",
+    "ctaDescription": "설비·인프라 범위와 일정에 맞는 실행 방안을 함께 검토합니다.",
+    "ctaButton": "프로젝트 상담하기",
+    "viewCases": "공사 실적 보기"
   },
   "gallery": {
     "title": "갤러리",
@@ -282,20 +339,29 @@
     "empty": "등록된 시공 사진이 없습니다."
   },
   "projects": {
-    "title": "프로젝트",
-    "subtitle": "인도 전역의 산업 건설 포트폴리오",
-    "description": "자동차·전자·화학·철강 등 다양한 산업 분야에서 MEP 및 유틸리티 공사를 수행한 대표 프로젝트를 소개합니다. 발주처, 공사 범위, 시공 사진을 확인할 수 있습니다.",
+    "title": "주요 프로젝트",
+    "subtitle": "현장에서 쌓아온 기술과 경험",
+    "description": "자동차·전자·화학·철강 등 다양한 산업시설에서 수행한 MEP 및 유틸리티 프로젝트를 소개합니다. 프로젝트별 주요 공사 범위와 시공 사례를 확인해 보세요.",
     "performanceLink": {
-      "title": "공사 실적 조회",
-      "subtitle": "2014년부터의 공사일자·발주처·공사내용·금액 전체 목록",
-      "cta": "공사 실적 보기"
+      "title": "전체 공사 실적",
+      "subtitle": "연도·발주처·공사내용 전체 목록",
+      "cta": "전체 실적 보기"
     },
     "filters": {
-      "year": "연도",
+      "all": "전체",
+      "year": "준공 연도",
+      "completionYear": "준공",
       "industry": "산업",
-      "category": "서비스 분류",
-      "location": "위치"
+      "category": "공사 분야",
+      "location": "위치",
+      "search": "프로젝트·발주처 검색"
     },
+    "status": {
+      "completed": "준공 완료",
+      "ongoing": "진행 중"
+    },
+    "photoPending": "현장 사진 준비 중",
+    "empty": "조건에 맞는 프로젝트가 없습니다.",
     "categories": {
       "mechanical": "기계",
       "electrical": "전기",
@@ -321,12 +387,11 @@
     "gridSubtitle": "삼성, 기아, 효성, POSCO 등 글로벌 기업 및 인도 현지 거래처와 협력합니다"
   },
   "team": {
-    "title": "직원 소개",
-    "subtitle": "한국 경영과 인도 현지 엔지니어링 팀",
-    "description": "WINAJES를 이끄는 경영진과 각 부서 전문가를 소개합니다. 한국 본사와 인도 현장이 하나의 팀으로 협력하여 프로젝트 품질과 일정을 책임집니다.",
-    "totalLabel": "총 인원",
-    "gridTitle": "Our Team",
-    "gridSubtitle": "경영·기술·현장 운영을 담당하는 WINAJES 핵심 멤버"
+    "title": "경영진 및 주요 인력",
+    "subtitle": "한국과 인도를 연결하는 경영·기술 전문인력",
+    "description": "WINAJES의 경영과 현장 운영을 이끄는 주요 인력을 소개합니다. 각 분야의 경험과 전문성을 바탕으로 긴밀히 협력하며, 프로젝트의 품질과 일정, 안전을 체계적으로 관리합니다.",
+    "gridTitle": "WINAJES를 이끄는 사람들",
+    "gridSubtitle": "경영·기술·현장 운영을 담당하는 주요 인력"
   },
   "performance": {
     "title": "공사 실적",
@@ -386,7 +451,7 @@
   "footer": {
     "description": "2014년 창립. 인도 MEP·유틸리티·전기·소방·IT 인프라 전문 시공사. www.winajes.com",
     "quickLinks": "바로가기",
-    "services": "서비스",
+    "services": "사업 영역",
     "contact": "연락처",
     "downloadProfile": "회사 소개서 다운로드",
     "admin": "관리자",
