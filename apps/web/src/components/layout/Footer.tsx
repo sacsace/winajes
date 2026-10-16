@@ -15,7 +15,7 @@ export function Footer() {
   const links = ['about', 'team', 'services', 'projects', 'gallery', 'performance', 'clients', 'news', 'contact'] as const;
 
   return (
-    <footer className="relative border-t border-border bg-[#e8eef4] text-foreground">
+    <footer className="relative border-t border-border bg-surface text-foreground">
       <Container className="py-14 md:py-16">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
