@@ -33,7 +33,7 @@ export function TeamMemberCard({ member, locale, className }: Props) {
       )}
     >
       <div className="flex flex-col items-center bg-muted/50 px-6 pb-6 pt-8">
-        <div className="relative h-28 w-28 overflow-hidden border border-border bg-surface sm:h-32 sm:w-32">
+        <div className="relative h-28 w-28 overflow-hidden rounded-full border border-border bg-surface sm:h-32 sm:w-32">
           {member.photo ? (
             <Image
               src={member.photo}

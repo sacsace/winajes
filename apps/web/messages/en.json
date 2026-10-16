@@ -29,6 +29,11 @@
       "description": "Representative MEP and utility projects for Samsung, Kia, Hyosung, Schaeffler and global manufacturers in India.",
       "keywords": "WINAJES projects, India factory construction, MEP projects"
     },
+    "gallery": {
+      "title": "Gallery | Site Construction Photos",
+      "description": "Construction photos from MEP, utility, electrical and fire protection sites across India. Browse by project and category.",
+      "keywords": "WINAJES gallery, construction photos, MEP site photos, India construction"
+    },
     "performance": {
       "title": "Performance Records | WINAJES Constructions India",
       "description": "MEP, utility, electrical and fire protection construction records in India since 2014. Search by year and client.",
@@ -56,6 +61,7 @@
     "team": "Our Team",
     "services": "Services",
     "projects": "Projects",
+    "gallery": "Gallery",
     "performance": "Performance",
     "clients": "Clients",
     "news": "News",
@@ -170,7 +176,8 @@
     "gallery": {
       "title": "Construction Site Photos",
       "subtitle": "Real project documentation across India — MEP, utility, electrical and fire protection",
-      "viewAllHint": "Click any photo to browse all project construction images",
+      "viewAllHint": "Click any photo to open the lightbox",
+      "viewAll": "View full gallery",
       "viewProject": "View project details",
       "close": "Close"
     },
@@ -203,6 +210,16 @@
     "history": {
       "title": "Company History",
       "subtitle": "2014 — 2025"
+    },
+    "ci": {
+      "title": "CI · Corporate Identity",
+      "subtitle": "WINAJES brand logo and color system",
+      "symbol": "Symbol mark",
+      "symbolDesc": "A circular mark combining W and G, representing global site presence and engineering capability.",
+      "logo": "Wordmark logo",
+      "logoDesc": "Official logo with English WINAJES, Constructions India Pvt. Ltd., and Korean 위너지스.",
+      "colors": "Brand colors",
+      "note": "Official CI follows the Adobe Illustrator master (2015). Symbol and logo are shown on white; colors are Navy (#182060) and Blue (#1868A8)."
     },
     "visionMission": {
       "visionTitle": "Vision",
@@ -253,6 +270,16 @@
     "gallery": "Gallery",
     "relatedProjects": "Related Projects",
     "inquiry": "Service Inquiry"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Construction site photos",
+    "description": "Browse construction photos from MEP, utility, electrical and fire protection sites across India. Filter by category and click any photo to enlarge.",
+    "filters": {
+      "all": "All"
+    },
+    "count": "{count} photos",
+    "empty": "No construction photos available."
   },
   "projects": {
     "title": "Projects",

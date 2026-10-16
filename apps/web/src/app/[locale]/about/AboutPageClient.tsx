@@ -10,6 +10,7 @@ import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { OrgChart } from '@/components/about/OrgChart';
 import { VisionMission } from '@/components/about/VisionMission';
+import { CorporateIdentity } from '@/components/about/CorporateIdentity';
 import { CeoMessage } from '@/components/about/CeoMessage';
 import { OfficeLocationCard } from '@/components/offices/OfficeLocationCard';
 import { googleMapsAllOfficesUrl } from '@/lib/maps';
@@ -59,6 +60,8 @@ export default function AboutPageClient({ timeline }: Props) {
       </Section>
 
       <CeoMessage />
+
+      <CorporateIdentity />
 
       {/* 연혁 */}
       <Section variant="muted">

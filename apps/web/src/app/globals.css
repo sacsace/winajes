@@ -44,58 +44,60 @@
   --leading-relaxed: 1.64706;
 }
 
-html {
-  scroll-behavior: smooth;
-  text-size-adjust: 100%;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    text-size-adjust: 100%;
+  }
 
-body {
-  background:
-    linear-gradient(180deg, rgb(255 255 255 / 0.7), transparent 240px),
-    radial-gradient(ellipse 100% 50% at 100% 0%, rgb(11 45 94 / 0.035), transparent 50%),
-    var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
-  font-size: 1.0625rem;
-  line-height: var(--leading-body);
-  letter-spacing: var(--tracking-normal);
-  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
-  font-optical-sizing: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
+  body {
+    background:
+      linear-gradient(180deg, rgb(255 255 255 / 0.7), transparent 240px),
+      radial-gradient(ellipse 100% 50% at 100% 0%, rgb(11 45 94 / 0.035), transparent 50%),
+      var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-normal);
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
 
-html:lang(ko) body {
-  letter-spacing: -0.022em;
-  word-break: keep-all;
-  overflow-wrap: break-word;
-}
+  html:lang(ko) body {
+    letter-spacing: -0.022em;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
 
-html:lang(en) body {
-  letter-spacing: -0.011em;
-}
+  html:lang(en) body {
+    letter-spacing: -0.011em;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  letter-spacing: -0.028em;
-  line-height: 1.125;
-  font-weight: 700;
-  color: var(--primary);
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: -0.028em;
+    line-height: 1.125;
+    font-weight: 700;
+    color: var(--primary);
+  }
 
-html:lang(ko) h1,
-html:lang(ko) h2,
-html:lang(ko) h3 {
-  letter-spacing: -0.032em;
-}
+  html:lang(ko) h1,
+  html:lang(ko) h2,
+  html:lang(ko) h3 {
+    letter-spacing: -0.032em;
+  }
 
-p {
-  line-height: var(--leading-relaxed);
+  p {
+    line-height: var(--leading-relaxed);
+  }
 }
 
 ::selection {

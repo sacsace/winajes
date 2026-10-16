@@ -62,26 +62,26 @@ export function HeroSection() {
         </div>
       ))}
 
-      <div className="pointer-events-none absolute inset-0 bg-primary/55" />
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-full max-w-3xl bg-gradient-to-r from-primary/80 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-primary/68" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-full max-w-3xl bg-gradient-to-r from-primary/88 to-transparent" />
 
       <Container className="hero-content relative z-10 flex min-h-0 flex-1 flex-col justify-center py-24 pb-24 md:py-28 md:pb-28">
-        <div className="max-w-2xl translate-y-[12dvh] [@media(max-height:640px)]:translate-y-[6dvh]">
-          <p className="mb-3 text-[13px] font-medium text-white/70">{slide.label}</p>
+        <div className="max-w-2xl translate-y-[12dvh] text-white [@media(max-height:640px)]:translate-y-[6dvh]">
+          <p className="mb-3 text-[13px] font-medium text-white/85">{slide.label}</p>
 
-          <h1 className="mb-4 text-3xl leading-[1.08] font-bold tracking-[-0.035em] whitespace-pre-line text-white sm:mb-5 sm:text-4xl md:text-5xl lg:text-[3.25rem]">
+          <h1 className="mb-4 text-3xl leading-[1.08] font-bold tracking-[-0.035em] whitespace-pre-line text-white drop-shadow-sm sm:mb-5 sm:text-4xl md:text-5xl lg:text-[3.25rem]">
             {slide.headline}
           </h1>
 
-          <p className="mb-5 max-w-lg text-[1.0625rem] leading-[1.647] tracking-[-0.022em] text-white/78 sm:mb-6 md:text-lg">
+          <p className="mb-5 max-w-lg text-[1.0625rem] leading-[1.647] tracking-[-0.022em] text-white/90 sm:mb-6 md:text-lg">
             {slide.subheadline}
           </p>
 
-          <blockquote className="mb-8 max-w-md border-l-2 border-secondary pl-4">
-            <p className="text-[15px] leading-relaxed text-white/90 md:text-base">
+          <blockquote className="mb-8 max-w-md border-l-2 border-white/70 pl-4">
+            <p className="text-[15px] leading-relaxed text-white md:text-base">
               &ldquo;{slide.quote}&rdquo;
             </p>
-            <cite className="mt-2 block text-[12px] font-medium not-italic text-white/55">
+            <cite className="mt-2 block text-[12px] font-medium not-italic text-white/75">
               — {slide.quoteBy}
             </cite>
           </blockquote>

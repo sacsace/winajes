@@ -8,6 +8,7 @@ import { PageHero } from '@/components/ui/PageHero';
 import { Section } from '@/components/ui/Section';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { ClientBox } from '@/components/clients/ClientBox';
+import { pageHeroImages } from '@/lib/images';
 import { API_URL } from '@/lib/utils';
 
 function fallbackClients(): Client[] {
@@ -52,7 +53,7 @@ export default function ClientsPageClient() {
         title={t('title')}
         subtitle={t('subtitle')}
         description={t('description')}
-        image="/images/hero/hero-4.jpg"
+        image={pageHeroImages.clients}
       />
 
       <Section>

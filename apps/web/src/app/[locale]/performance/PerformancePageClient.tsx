@@ -7,6 +7,7 @@ import { PageHero } from '@/components/ui/PageHero';
 import { Section } from '@/components/ui/Section';
 import { Select } from '@/components/ui/Input';
 import { formatInr } from '@/lib/format';
+import { pageHeroImages } from '@/lib/images';
 import { API_URL } from '@/lib/utils';
 
 export default function PerformancePageClient() {
@@ -58,7 +59,7 @@ export default function PerformancePageClient() {
         title={t('title')}
         subtitle={t('subtitle')}
         description={t('description')}
-        image="/images/hero/hero-3.jpg"
+        image={pageHeroImages.performance}
       />
 
       <Section>

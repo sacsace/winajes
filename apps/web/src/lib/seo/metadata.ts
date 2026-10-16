@@ -79,6 +79,7 @@ export const STATIC_SEO_PATHS = [
   '/team',
   '/services',
   '/projects',
+  '/gallery',
   '/performance',
   '/clients',
   '/news',
@@ -91,6 +92,7 @@ export type SeoPageKey =
   | 'team'
   | 'services'
   | 'projects'
+  | 'gallery'
   | 'performance'
   | 'clients'
   | 'news'

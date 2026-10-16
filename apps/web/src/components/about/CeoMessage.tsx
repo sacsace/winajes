@@ -25,13 +25,13 @@ export function CeoMessage() {
     <Section className="!py-16 md:!py-20">
       <div className="grid gap-10 border-t border-border pt-10 lg:grid-cols-12 lg:gap-14">
         <div className="flex flex-col items-start lg:col-span-4">
-          <div className="relative h-52 w-40 overflow-hidden border border-border sm:h-60 sm:w-48">
+          <div className="relative h-44 w-44 overflow-hidden rounded-full border border-border bg-muted sm:h-52 sm:w-52">
             <Image
               src={ceoPhoto}
               alt={t('name')}
               fill
               className="object-cover"
-              sizes="192px"
+              sizes="208px"
               priority
             />
           </div>

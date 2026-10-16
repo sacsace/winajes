@@ -21,9 +21,18 @@ export const heroImages = {
   alt: '/images/gallery/hvac-1.jpg',
 };
 
-export const aboutHeroImage = '/images/about/about-hero.jpg';
+export const aboutHeroImage = '/images/page-heroes/about.jpg';
 
-export const teamHeroImage = '/images/team/team-hero.jpg';
+export const teamHeroImage = '/images/page-heroes/team.jpg';
+
+export const pageHeroImages = {
+  about: '/images/page-heroes/about.jpg',
+  team: '/images/page-heroes/team.jpg',
+  services: '/images/page-heroes/services.jpg',
+  projects: '/images/page-heroes/projects.jpg',
+  performance: '/images/page-heroes/performance.jpg',
+  clients: '/images/page-heroes/clients.jpg',
+} as const;
 
 export const galleryImages = [
   {

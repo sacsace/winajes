@@ -12,7 +12,7 @@ export function Footer() {
   const tNav = useTranslations('nav');
   const year = new Date().getFullYear();
 
-  const links = ['about', 'team', 'services', 'projects', 'performance', 'clients', 'news', 'contact'] as const;
+  const links = ['about', 'team', 'services', 'projects', 'gallery', 'performance', 'clients', 'news', 'contact'] as const;
 
   return (
     <footer className="relative bg-primary text-white">

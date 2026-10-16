@@ -3,10 +3,9 @@
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { BrandLogo } from '@/components/brand/BrandLogo';
-import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 
 const navItems = [
@@ -14,6 +13,7 @@ const navItems = [
   { key: 'team', href: '/team' },
   { key: 'services', href: '/services' },
   { key: 'projects', href: '/projects' },
+  { key: 'gallery', href: '/gallery' },
   { key: 'performance', href: '/performance' },
   { key: 'clients', href: '/clients' },
   { key: 'news', href: '/news' },
@@ -25,8 +25,6 @@ export function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  const isHome = pathname === '/';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -42,75 +40,62 @@ export function Header() {
 
   const switchLocale = locale === 'ko' ? 'en' : 'ko';
   const isSolid = scrolled || mobileOpen;
-  const isHeroHeader = isHome && !isSolid;
 
   const isActive = (href: string) =>
     pathname === href || pathname.startsWith(`${href}/`);
 
   const linkClass = (href: string) =>
     cn(
-      'relative rounded-md px-2.5 py-1.5 text-[13px] font-semibold tracking-wide transition-all duration-200',
+      'relative px-2.5 py-1.5 text-[13px] font-semibold tracking-wide transition-colors duration-200',
       isActive(href)
-        ? isSolid
-          ? 'bg-primary/8 text-primary'
-          : 'bg-white/15 text-white'
-        : isSolid
-          ? 'text-muted-foreground hover:bg-muted hover:text-primary'
-          : 'text-white/80 hover:bg-white/10 hover:text-white',
+        ? 'text-primary'
+        : 'text-muted-foreground hover:text-primary',
+      isActive(href) && 'after:absolute after:right-2.5 after:bottom-0 after:left-2.5 after:h-0.5 after:bg-secondary',
     );
 
   return (
     <header
       className={cn(
-        'fixed top-0 right-0 left-0 z-50 transition-colors duration-300',
+        'fixed top-0 right-0 left-0 z-50 border-b transition-colors duration-300',
         'pt-[env(safe-area-inset-top)]',
-        isSolid && 'border-b border-border bg-surface',
-        isHeroHeader && 'border-b border-white/10 bg-primary/50',
-        !isSolid && !isHeroHeader && 'bg-transparent',
+        isSolid
+          ? 'border-border bg-surface'
+          : 'border-black/6 bg-white/92 backdrop-blur-md',
       )}
     >
-      <Container className="flex h-14 items-center justify-between sm:h-[72px]">
+      <Container className="flex h-12 items-center justify-between gap-4 sm:h-14">
         <Link href="/" className="shrink-0" onClick={() => setMobileOpen(false)}>
-          <BrandLogo variant={isSolid ? 'onLight' : 'onDark'} showTagline />
+          <BrandLogo variant="onLight" showTagline />
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex">
-          {navItems.map((item) => (
-            <Link key={item.key} href={item.href} className={linkClass(item.href)}>
-              {t(item.key)}
-            </Link>
-          ))}
-        </nav>
+        <div className="flex min-w-0 flex-1 items-center justify-end gap-2 sm:gap-3">
+          <nav className="hidden items-center justify-end gap-0.5 lg:flex">
+            {navItems.map((item) => (
+              <Link key={item.key} href={item.href} className={linkClass(item.href)}>
+                {t(item.key)}
+              </Link>
+            ))}
+          </nav>
 
-        <div className="flex items-center gap-3">
           <Link
             href={pathname}
             locale={switchLocale}
-            className={cn(
-              'rounded-md px-2 py-1 text-xs font-bold tracking-widest transition-colors',
-              isSolid
-                ? 'text-muted-foreground hover:text-primary'
-                : 'text-white/65 hover:text-white',
-            )}
+            className="px-1 text-xs font-bold tracking-widest text-muted-foreground transition-colors hover:text-primary"
           >
             {switchLocale.toUpperCase()}
           </Link>
 
-          <Button
+          <Link
             href="/contact"
-            variant={isSolid ? 'primary' : 'white'}
-            size="sm"
-            className="hidden sm:inline-flex"
+            className="group hidden items-center gap-1.5 rounded-full border border-primary bg-primary px-4 py-1.5 text-[12px] font-bold tracking-wide text-white transition-colors hover:border-secondary hover:bg-secondary sm:inline-flex"
           >
             {t('contact')}
-          </Button>
+            <ArrowUpRight className="h-3.5 w-3.5 opacity-80 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </Link>
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className={cn(
-              'rounded-lg p-2 transition-colors lg:hidden',
-              isSolid ? 'text-primary hover:bg-muted' : 'text-white hover:bg-white/10',
-            )}
+            className="p-2 text-primary transition-colors hover:bg-muted lg:hidden"
             aria-label="Menu"
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -119,7 +104,7 @@ export function Header() {
       </Container>
 
       {mobileOpen && (
-        <div className="border-t border-border bg-surface lg:hidden max-h-[calc(100dvh-3.5rem-env(safe-area-inset-top))] overflow-y-auto">
+        <div className="max-h-[calc(100dvh-3rem-env(safe-area-inset-top))] overflow-y-auto border-t border-border bg-surface lg:hidden">
           <nav className="flex flex-col px-4 py-3 sm:px-5">
             {navItems.map((item) => (
               <Link
@@ -127,10 +112,8 @@ export function Header() {
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
                 className={cn(
-                  'min-h-[44px] rounded-lg px-3 py-3 text-sm font-semibold transition-colors flex items-center',
-                  isActive(item.href)
-                    ? 'bg-primary/8 text-primary'
-                    : 'text-muted-foreground hover:bg-muted',
+                  'flex min-h-[44px] items-center border-b border-border/70 px-1 py-3 text-sm font-semibold transition-colors',
+                  isActive(item.href) ? 'text-primary' : 'text-muted-foreground hover:text-primary',
                 )}
               >
                 {t(item.key)}
@@ -139,9 +122,10 @@ export function Header() {
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
-              className="mt-2 flex min-h-[44px] items-center justify-center rounded-lg bg-primary px-3 py-3 text-center text-sm font-semibold text-white"
+              className="mt-4 inline-flex min-h-[44px] items-center justify-center gap-1.5 border border-primary bg-primary px-3 py-3 text-sm font-bold text-white"
             >
               {t('contact')}
+              <ArrowUpRight className="h-4 w-4" />
             </Link>
           </nav>
         </div>

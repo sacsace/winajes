@@ -5,6 +5,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { Section } from '@/components/ui/Section';
+import { Button } from '@/components/ui/Button';
 import { GalleryLightbox } from '@/components/gallery/GalleryLightbox';
 import { projects as staticProjects } from '@/lib/data';
 import type { ApiProject } from '@/lib/projects';
@@ -14,8 +15,7 @@ import {
   pickRandomItems,
   type ProjectGalleryItem,
 } from '@/lib/project-gallery';
-import { API_URL } from '@/lib/utils';
-import { cn } from '@/lib/utils';
+import { API_URL, cn } from '@/lib/utils';
 
 const PREVIEW_COUNT = 5;
 
@@ -114,8 +114,13 @@ export function SiteGallery() {
                 ))}
           </div>
 
-          {!loading && allItems.length > PREVIEW_COUNT && (
-            <p className="mt-6 text-center text-sm text-white/50">{t('viewAllHint')}</p>
+          {!loading && allItems.length > 0 && (
+            <div className="mt-8 flex flex-col items-center gap-3">
+              <p className="text-center text-sm text-white/50">{t('viewAllHint')}</p>
+              <Button href="/gallery" variant="outline" size="sm">
+                {t('viewAll')}
+              </Button>
+            </div>
           )}
         </div>
       </Section>

@@ -103,7 +103,7 @@ export default function NewsDetailClient({ slug }: Props) {
 
   return (
     <>
-      <section className="relative flex min-h-[280px] items-end overflow-hidden pt-[72px] md:min-h-[320px]">
+      <section className="relative flex min-h-[280px] items-end overflow-hidden pt-12 sm:pt-14 md:min-h-[320px]">
         {article.image ? (
           <Image
             src={article.image}

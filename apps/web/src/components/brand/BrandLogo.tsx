@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 interface BrandLogoProps {
-  /** `onDark` = dark/navy backgrounds. `onLight` = white/light backgrounds. */
+  /** `onDark` = dark backgrounds. `onLight` = white/light backgrounds. */
   variant?: 'onDark' | 'onLight';
   className?: string;
   showTagline?: boolean;
@@ -12,15 +12,10 @@ export function BrandLogo({ variant = 'onLight', className, showTagline = false 
   const onDark = variant === 'onDark';
 
   return (
-    <div className={cn('flex items-center gap-3', className)}>
-      <div
-        className={cn(
-          'flex h-9 w-9 shrink-0 items-center justify-center sm:h-10 sm:w-10',
-          onDark && 'bg-white p-1',
-        )}
-      >
+    <div className={cn('flex items-center gap-2.5 sm:gap-3', className)}>
+      <div className="relative h-9 w-9 shrink-0 sm:h-10 sm:w-10">
         <Image
-          src="/images/brand/logo-icon.png"
+          src={onDark ? '/images/brand/logo-icon-original.png' : '/images/brand/logo-mark-transparent.png'}
           alt="WINAJES"
           width={40}
           height={40}
@@ -31,7 +26,7 @@ export function BrandLogo({ variant = 'onLight', className, showTagline = false 
       <div className="min-w-0 leading-none">
         <p
           className={cn(
-            'text-[15px] font-bold tracking-[0.02em] sm:text-base',
+            'text-[15px] leading-none font-bold tracking-[0.02em] sm:text-base',
             onDark ? 'text-white' : 'text-primary',
           )}
         >
@@ -40,8 +35,8 @@ export function BrandLogo({ variant = 'onLight', className, showTagline = false 
         {showTagline && (
           <p
             className={cn(
-              'mt-1 hidden text-[11px] font-normal sm:block',
-              onDark ? 'text-white/65' : 'text-muted-foreground',
+              'mt-0.5 hidden text-[11px] leading-none font-normal sm:block',
+              onDark ? 'text-white/70' : 'text-muted-foreground',
             )}
           >
             Constructions India

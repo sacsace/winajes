@@ -26,7 +26,7 @@ export function PageHero({
   return (
     <section
       className={cn(
-        'relative flex items-end overflow-hidden pt-14 sm:pt-[72px]',
+        'relative flex items-end overflow-hidden pt-12 sm:pt-14',
         size === 'default' ? 'min-h-[220px] sm:min-h-[260px] md:min-h-[32vh]' : 'min-h-[200px] sm:min-h-[220px] md:min-h-[24vh]',
         className,
       )}

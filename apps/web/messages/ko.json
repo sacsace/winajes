@@ -29,6 +29,11 @@
       "description": "삼성·기아·효성·샤에플러 등 글로벌 제조 플랜트 MEP·유틸리티 공사 대표 프로젝트.",
       "keywords": "WINAJES 프로젝트, 인도 공장 건설, MEP 프로젝트, 삼성 인도, 기아 인도"
     },
+    "gallery": {
+      "title": "갤러리 | 현장 시공 사진",
+      "description": "인도 전역 MEP·유틸리티·전기·소방 현장의 시공 사진. 프로젝트별·분류별 현장 기록.",
+      "keywords": "WINAJES 갤러리, 시공 사진, MEP 현장, 인도 건설 사진"
+    },
     "performance": {
       "title": "공사 실적 | WINAJES Constructions India",
       "description": "2014년부터 인도 현장 MEP·유틸리티·전기·소방 공사 실적. 연도·발주처별 조회.",
@@ -56,6 +61,7 @@
     "team": "직원 소개",
     "services": "서비스",
     "projects": "프로젝트",
+    "gallery": "갤러리",
     "performance": "공사 실적",
     "clients": "고객사",
     "news": "소식",
@@ -170,7 +176,8 @@
     "gallery": {
       "title": "현장 시공 사진",
       "subtitle": "인도 전역 MEP·유틸리티·전기·소방 현장의 생생한 기록",
-      "viewAllHint": "사진을 클릭하면 프로젝트 시공 사진 전체를 볼 수 있습니다",
+      "viewAllHint": "사진을 클릭하면 확대 보기가 가능합니다",
+      "viewAll": "갤러리 전체 보기",
       "viewProject": "프로젝트 상세 보기",
       "close": "닫기"
     },
@@ -203,6 +210,16 @@
     "history": {
       "title": "회사 연혁",
       "subtitle": "2014 — 2025"
+    },
+    "ci": {
+      "title": "CI · 기업 아이덴티티",
+      "subtitle": "WINAJES 브랜드 로고와 컬러 시스템",
+      "symbol": "심볼 마크",
+      "symbolDesc": "W와 G를 결합한 원형 심볼로, 글로벌 현장과 엔지니어링 역량을 상징합니다.",
+      "logo": "로고 타입",
+      "logoDesc": "영문 WINAJES, Constructions India Pvt. Ltd., 한글 위너지스로 구성된 공식 로고입니다.",
+      "colors": "브랜드 컬러",
+      "note": "공식 CI는 Adobe Illustrator 원본(2015) 기준입니다. 심볼·로고는 흰 배경에서 확인하며, 네이비(#182060)·블루(#1868A8)를 사용합니다."
     },
     "visionMission": {
       "visionTitle": "비전",
@@ -253,6 +270,16 @@
     "gallery": "갤러리",
     "relatedProjects": "관련 프로젝트",
     "inquiry": "서비스 문의"
+  },
+  "gallery": {
+    "title": "갤러리",
+    "subtitle": "현장 시공 사진",
+    "description": "인도 전역 MEP·유틸리티·전기·소방 현장의 시공 사진을 모았습니다. 분류별로 살펴보고, 사진을 클릭하면 확대 보기로 확인할 수 있습니다.",
+    "filters": {
+      "all": "전체"
+    },
+    "count": "총 {count}장",
+    "empty": "등록된 시공 사진이 없습니다."
   },
   "projects": {
     "title": "프로젝트",

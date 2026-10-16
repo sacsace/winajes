@@ -10,6 +10,7 @@ import { Card } from '@/components/ui/Card';
 import { ArrowRight } from 'lucide-react';
 import type { ApiService } from '@/lib/services';
 import { DEFAULT_SERVICE_CAPABILITIES, DEFAULT_SERVICE_PROCESS } from '@/lib/services';
+import { pageHeroImages } from '@/lib/images';
 import { API_URL } from '@/lib/utils';
 
 export default function ServicesPageClient() {
@@ -44,7 +45,7 @@ export default function ServicesPageClient() {
         title={t('title')}
         subtitle={t('subtitle')}
         description={t('description')}
-        image="/images/gallery/hvac-1.jpg"
+        image={pageHeroImages.services}
       />
       <Section>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

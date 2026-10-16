@@ -60,7 +60,7 @@ export default function ProjectDetailClient({ slug }: Props) {
 
   return (
     <>
-      <section className="relative flex h-[42vh] min-h-[300px] items-end overflow-hidden pt-[72px] bg-primary">
+      <section className="relative flex h-[42vh] min-h-[300px] items-end overflow-hidden bg-primary pt-12 sm:pt-14">
         {heroImage ? (
           <Image
             src={heroImage}

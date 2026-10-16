@@ -13,6 +13,7 @@ import { Select } from '@/components/ui/Input';
 import { API_URL } from '@/lib/utils';
 import type { ApiProject } from '@/lib/projects';
 import { isApiImage, resolveProjectImage } from '@/lib/projects';
+import { pageHeroImages } from '@/lib/images';
 
 export default function ProjectsPageClient() {
   const t = useTranslations('projects');
@@ -52,7 +53,7 @@ export default function ProjectsPageClient() {
         title={t('title')}
         subtitle={t('subtitle')}
         description={t('description')}
-        image="/images/hero/hero-3.jpg"
+        image={pageHeroImages.projects}
       />
 
       <Section>
