@@ -15,9 +15,9 @@
       "keywords": "WINAJES 회사소개, 인도 건설, MEP 시공, 엔지니어링 파트너"
     },
     "team": {
-      "title": "경영진 및 주요 인력 | WINAJES Constructions India",
+      "title": "팀원 소개 | WINAJES Constructions India",
       "description": "한국과 인도를 연결하는 경영·기술 전문인력. WINAJES 경영과 현장 운영을 이끄는 주요 인력을 소개합니다.",
-      "keywords": "WINAJES 경영진, 주요 인력, 인도 엔지니어, MEP 전문가"
+      "keywords": "WINAJES 팀원 소개, 주요 인력, 인도 엔지니어, MEP 전문가"
     },
     "services": {
       "title": "사업 영역 | MEP·HVAC·전기·소방·IT 인프라",
@@ -58,7 +58,7 @@
   "nav": {
     "home": "홈",
     "about": "회사소개",
-    "team": "경영진",
+    "team": "팀원 소개",
     "services": "사업 영역",
     "projects": "프로젝트",
     "gallery": "갤러리",
@@ -399,11 +399,16 @@
     "gridSubtitle": "삼성, 기아, 효성, POSCO 등 글로벌 기업 및 인도 현지 거래처와 협력합니다"
   },
   "team": {
-    "title": "경영진 및 주요 인력",
+    "title": "팀원 소개",
     "subtitle": "한국과 인도를 연결하는 경영·기술 전문인력",
     "description": "WINAJES의 경영과 현장 운영을 이끄는 주요 인력을 소개합니다. 각 분야의 경험과 전문성을 바탕으로 긴밀히 협력하며, 프로젝트의 품질과 일정, 안전을 체계적으로 관리합니다.",
     "gridTitle": "WINAJES를 이끄는 사람들",
-    "gridSubtitle": "경영·기술·현장 운영을 담당하는 주요 인력"
+    "gridSubtitle": "경영·기술·현장 운영을 이끄는 주요 인력을 소개합니다",
+    "leaderAside": {
+      "label": "One Team",
+      "title": "한국과 인도를 잇는 하나의 팀",
+      "body": "대표이사를 중심으로 경영진과 기술·현장 인력이 긴밀하게 협력합니다. 명확한 의사결정과 신속한 현장 대응을 바탕으로 품질·공정·안전을 체계적으로 관리하며, 고객의 안정적인 시설 운영과 성공적인 프로젝트 수행을 지원합니다."
+    }
   },
   "performance": {
     "title": "공사 실적",

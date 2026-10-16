@@ -15,9 +15,9 @@
       "keywords": "WINAJES about, India construction, MEP contractor"
     },
     "team": {
-      "title": "Leadership & Key Personnel | WINAJES Constructions India",
+      "title": "Our Team | WINAJES Constructions India",
       "description": "Meet the management and technical experts connecting Korea and India who lead WINAJES operations and project delivery.",
-      "keywords": "WINAJES leadership, key personnel, India engineers, MEP specialists"
+      "keywords": "WINAJES team, key personnel, India engineers, MEP specialists"
     },
     "services": {
       "title": "Business Areas | MEP, HVAC, Electrical & Fire Protection",
@@ -58,7 +58,7 @@
   "nav": {
     "home": "Home",
     "about": "About Us",
-    "team": "Leadership",
+    "team": "Our Team",
     "services": "Business Areas",
     "projects": "Projects",
     "gallery": "Gallery",
@@ -399,11 +399,16 @@
     "gridSubtitle": "Global manufacturers and India-based partners including Samsung, Kia, Hyosung, and POSCO"
   },
   "team": {
-    "title": "Leadership & Key Personnel",
+    "title": "Our Team",
     "subtitle": "Management and technical experts connecting Korea and India",
     "description": "Meet the key people who lead WINAJES management and site operations. Drawing on experience in each field, they work closely together to manage project quality, schedule, and safety systematically.",
     "gridTitle": "People Leading WINAJES",
-    "gridSubtitle": "Key personnel across management, engineering, and site operations"
+    "gridSubtitle": "Meet the key people who lead management, engineering, and site operations",
+    "leaderAside": {
+      "label": "One Team",
+      "title": "One team connecting Korea and India",
+      "body": "Centered on the CEO, our management works closely with engineering and site teams. Through clear decisions and rapid on-site response, we manage quality, schedule, and safety systematically—supporting stable facility operations and successful project delivery for our customers."
+    }
   },
   "performance": {
     "title": "Construction Performance",
