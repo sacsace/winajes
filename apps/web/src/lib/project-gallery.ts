@@ -1,4 +1,5 @@
 import type { ApiProject } from '@/lib/projects';
+import { projectGalleryImages } from '@/lib/projects';
 
 export type ProjectGalleryItem = {
   id: string;
@@ -10,11 +11,12 @@ export type ProjectGalleryItem = {
   client: string;
 };
 
+/** Only real uploaded photos — never inject stock/default images. */
 export function collectProjectGalleryItems(projects: ApiProject[]): ProjectGalleryItem[] {
   const items: ProjectGalleryItem[] = [];
 
   for (const project of projects) {
-    const images = project.images?.filter(Boolean) ?? [];
+    const images = projectGalleryImages(project);
     if (images.length === 0) continue;
 
     images.forEach((src, index) => {

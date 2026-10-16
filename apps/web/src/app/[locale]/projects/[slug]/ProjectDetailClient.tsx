@@ -11,7 +11,7 @@ import { Badge } from '@/components/ui/Badge';
 import { Container } from '@/components/ui/Container';
 import { API_URL } from '@/lib/utils';
 import type { ApiProject } from '@/lib/projects';
-import { isApiImage, resolveProjectImage } from '@/lib/projects';
+import { isApiImage, projectGalleryImages, resolveProjectImage } from '@/lib/projects';
 
 interface Props {
   slug: string;
@@ -56,7 +56,7 @@ export default function ProjectDetailClient({ slug }: Props) {
   }
 
   const heroImage = resolveProjectImage(project);
-  const gallery = project.images?.filter(Boolean) ?? [];
+  const gallery = projectGalleryImages(project);
 
   return (
     <>

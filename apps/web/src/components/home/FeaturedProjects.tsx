@@ -19,6 +19,7 @@ const categories = [
 
 export function FeaturedProjects() {
   const t = useTranslations('home.featuredProjects');
+  const tProjects = useTranslations('projects');
   const tCat = useTranslations('projects.categories');
   const tCommon = useTranslations('common');
   const locale = useLocale() as 'ko' | 'en';
@@ -28,13 +29,20 @@ export function FeaturedProjects() {
   useEffect(() => {
     fetch(`${API_URL}/api/projects`, { cache: 'no-store' })
       .then((r) => (r.ok ? r.json() : Promise.reject()))
-      .then(setProjects)
+      .then((data: ApiProject[]) => {
+        if (!Array.isArray(data) || data.length === 0) {
+          setProjects(staticProjects as ApiProject[]);
+          return;
+        }
+        setProjects(data);
+      })
       .catch(() => setProjects(staticProjects as ApiProject[]));
   }, []);
 
-  const filtered = filter === 'all'
-    ? projects.filter((p) => p.featured)
-    : projects.filter((p) => p.category === filter);
+  const filtered =
+    filter === 'all'
+      ? projects.filter((p) => p.featured)
+      : projects.filter((p) => p.featured && p.category === filter);
 
   return (
     <Section variant="muted">
@@ -84,7 +92,11 @@ export function FeaturedProjects() {
                     sizes="(max-width:768px) 100vw, 33vw"
                     unoptimized={isApiImage(img)}
                   />
-                ) : null}
+                ) : (
+                  <div className="flex h-full items-center justify-center px-6 text-center text-[13px] font-medium text-muted-foreground">
+                    {tProjects('photoPending')}
+                  </div>
+                )}
               </div>
               <div className="border-t border-border p-5">
                 <p className="text-[12px] font-medium text-muted-foreground">

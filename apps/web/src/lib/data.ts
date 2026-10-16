@@ -264,7 +264,7 @@ export const projects = [
     },
     industry: 'Electronics',
     status: 'completed' as const,
-    images: ['/images/projects/project-1.jpg'],
+    images: [],
     featured: true,
   },
   {
@@ -282,7 +282,7 @@ export const projects = [
     },
     industry: 'Electronics',
     status: 'completed' as const,
-    images: ['/images/projects/project-2.jpg'],
+    images: [],
     featured: true,
   },
   {
@@ -300,7 +300,7 @@ export const projects = [
     },
     industry: 'Automotive',
     status: 'completed' as const,
-    images: ['/images/projects/project-3.jpg'],
+    images: [],
     featured: true,
   },
   {
@@ -318,7 +318,7 @@ export const projects = [
     },
     industry: 'Manufacturing',
     status: 'completed' as const,
-    images: ['/images/projects/project-4.jpg'],
+    images: [],
     featured: true,
   },
   {
@@ -336,7 +336,7 @@ export const projects = [
     },
     industry: 'Chemical',
     status: 'completed' as const,
-    images: ['/images/projects/project-5.jpg'],
+    images: [],
     featured: true,
   },
   {
@@ -354,7 +354,7 @@ export const projects = [
     },
     industry: 'Logistics',
     status: 'completed' as const,
-    images: ['/images/projects/project-6.jpg'],
+    images: [],
     featured: false,
   },
   {
@@ -372,7 +372,7 @@ export const projects = [
     },
     industry: 'Manufacturing',
     status: 'completed' as const,
-    images: ['/images/projects/project-7.jpg'],
+    images: [],
     featured: false,
   },
   {
@@ -390,7 +390,7 @@ export const projects = [
     },
     industry: 'Automotive',
     status: 'completed' as const,
-    images: ['/images/projects/project-8.jpg'],
+    images: [],
     featured: false,
   },
 ];

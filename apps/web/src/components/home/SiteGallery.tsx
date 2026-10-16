@@ -30,18 +30,22 @@ export function SiteGallery() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   useEffect(() => {
+    const apply = (projects: ApiProject[]) => {
+      const items = collectProjectGalleryItems(projects);
+      setAllItems(items);
+      setPreviewItems(pickRandomItems(items, PREVIEW_COUNT));
+    };
+
     fetch(`${API_URL}/api/projects`, { cache: 'no-store' })
       .then((r) => (r.ok ? r.json() : Promise.reject()))
       .then((projects: ApiProject[]) => {
-        const items = collectProjectGalleryItems(projects);
-        setAllItems(items);
-        setPreviewItems(pickRandomItems(items, PREVIEW_COUNT));
+        if (!Array.isArray(projects) || projects.length === 0) {
+          apply(staticProjects as ApiProject[]);
+          return;
+        }
+        apply(projects);
       })
-      .catch(() => {
-        const items = collectProjectGalleryItems(staticProjects as ApiProject[]);
-        setAllItems(items);
-        setPreviewItems(pickRandomItems(items, PREVIEW_COUNT));
-      })
+      .catch(() => apply(staticProjects as ApiProject[]))
       .finally(() => setLoading(false));
   }, []);
 
@@ -64,54 +68,62 @@ export function SiteGallery() {
             className="mb-10"
           />
 
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {loading
-              ? Array.from({ length: PREVIEW_COUNT }).map((_, i) => (
-                  <div
-                    key={i}
-                    className={cn(
-                      'animate-pulse bg-muted',
-                      i === 0 ? 'sm:col-span-2 sm:row-span-2 sm:min-h-[400px]' : 'aspect-[4/3]',
-                    )}
-                  />
-                ))
-              : previewItems.map((item, i) => (
-                  <button
-                    key={item.id}
-                    type="button"
-                    onClick={() => openLightbox(item)}
-                    className={cn(
-                      'img-zoom group relative overflow-hidden border border-border text-left',
-                      i === 0 ? 'sm:col-span-2 sm:row-span-2' : '',
-                    )}
-                  >
+          {loading || previewItems.length > 0 ? (
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {loading
+                ? Array.from({ length: PREVIEW_COUNT }).map((_, i) => (
                     <div
+                      key={i}
                       className={cn(
-                        'relative',
-                        i === 0 ? 'aspect-[4/3] sm:aspect-auto sm:h-full sm:min-h-[400px]' : 'aspect-[4/3]',
+                        'animate-pulse bg-muted',
+                        i === 0 ? 'sm:col-span-2 sm:row-span-2 sm:min-h-[400px]' : 'aspect-[4/3]',
+                      )}
+                    />
+                  ))
+                : previewItems.map((item, i) => (
+                    <button
+                      key={item.id}
+                      type="button"
+                      onClick={() => openLightbox(item)}
+                      className={cn(
+                        'img-zoom group relative overflow-hidden border border-border text-left',
+                        i === 0 ? 'sm:col-span-2 sm:row-span-2' : '',
                       )}
                     >
-                      <Image
-                        src={item.src}
-                        alt={item.projectName[locale]}
-                        fill
-                        className="object-cover"
-                        sizes={i === 0 ? '(max-width: 640px) 100vw, 50vw' : '25vw'}
-                        unoptimized={isApiImage(item.src)}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
-                      <div className="absolute right-0 bottom-0 left-0 p-4">
-                        <p className="text-[12px] font-medium text-white/65">
-                          {categoryLabel(item.category)}
-                        </p>
-                        <p className="mt-1 truncate text-sm font-medium text-white">
-                          {item.projectName[locale]}
-                        </p>
+                      <div
+                        className={cn(
+                          'relative',
+                          i === 0
+                            ? 'aspect-[4/3] sm:aspect-auto sm:h-full sm:min-h-[400px]'
+                            : 'aspect-[4/3]',
+                        )}
+                      >
+                        <Image
+                          src={item.src}
+                          alt={item.projectName[locale]}
+                          fill
+                          className="object-cover"
+                          sizes={i === 0 ? '(max-width: 640px) 100vw, 50vw' : '25vw'}
+                          unoptimized={isApiImage(item.src)}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
+                        <div className="absolute right-0 bottom-0 left-0 p-4">
+                          <p className="text-[12px] font-medium text-white/65">
+                            {categoryLabel(item.category)}
+                          </p>
+                          <p className="mt-1 truncate text-sm font-medium text-white">
+                            {item.projectName[locale]}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </button>
-                ))}
-          </div>
+                    </button>
+                  ))}
+            </div>
+          ) : (
+            <p className="border border-dashed border-border bg-muted/40 px-6 py-16 text-center text-sm text-muted-foreground">
+              {tProjects('photoPending')}
+            </p>
+          )}
 
           {!loading && allItems.length > 0 && (
             <div className="mt-8 flex flex-col items-center gap-3">

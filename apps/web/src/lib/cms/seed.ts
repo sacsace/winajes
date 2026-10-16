@@ -1,5 +1,4 @@
 import { clientEntities, clientLogos, newsArticles, projects, services, timeline } from '@/lib/data';
-import { projectImages } from '@/lib/images';
 import { CONSTRUCTION_RECORDS_SEED } from '@/lib/cms/seeds/construction-records';
 import { initDb, isDbEnabled } from '@/lib/cms/db';
 import { migrateJsonToDbIfNeeded } from '@/lib/cms/migrate-json-to-db';
@@ -81,7 +80,7 @@ async function seedProjectsIfEmpty() {
     description: p.description,
     industry: p.industry,
     status: p.status,
-    images: [projectImages[p.slug] || '/images/hero/hero-1.jpg'],
+    images: [],
     featured: p.featured,
     createdAt: nowIso(),
     updatedAt: nowIso(),

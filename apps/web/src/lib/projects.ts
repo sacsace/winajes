@@ -1,5 +1,3 @@
-import { projectImages } from '@/lib/images';
-
 export type ApiProject = {
   id: string;
   slug: string;
@@ -16,31 +14,29 @@ export type ApiProject = {
   featured: boolean;
 };
 
-/** Neutral fallback only when CMS has no images — never re-inject seed photos after delete. */
-export const PROJECT_IMAGE_PLACEHOLDER = '/images/projects/project-1.jpg';
-
-function isBrokenProjectImage(url: string): boolean {
-  // Legacy incorrect public path (file never existed under /projects)
+/** Seed / marketing stock paths — never show these as project photos. */
+function isStockOrBrokenProjectImage(url: string): boolean {
   if (url.startsWith('/projects/')) return true;
+  if (url.startsWith('/images/projects/')) return true;
+  if (url.startsWith('/images/hero/')) return true;
+  if (url.startsWith('/images/gallery/')) return true;
+  if (url.startsWith('/images/page-heroes/')) return true;
   return false;
 }
 
+export function projectGalleryImages(
+  project: Pick<ApiProject, 'images'>,
+): string[] {
+  return (project.images ?? [])
+    .map((url) => url?.trim())
+    .filter((url): url is string => Boolean(url) && !isStockOrBrokenProjectImage(url));
+}
+
+/** Real project photo only — no slug defaults, no stock placeholders. */
 export function resolveProjectImage(
   project: Pick<ApiProject, 'images' | 'slug'>,
 ): string | null {
-  const mapped = project.slug ? projectImages[project.slug] : undefined;
-  // Prefer curated site photos for known portfolio slugs (avoids bad CMS uploads)
-  if (mapped) return mapped;
-
-  const first = project.images?.[0]?.trim();
-  if (first && !isBrokenProjectImage(first)) return first;
-  return null;
-}
-
-export function projectImageOrPlaceholder(
-  project: Pick<ApiProject, 'images' | 'slug'>,
-): string {
-  return resolveProjectImage(project) ?? PROJECT_IMAGE_PLACEHOLDER;
+  return projectGalleryImages(project)[0] ?? null;
 }
 
 export function isApiImage(url: string): boolean {
