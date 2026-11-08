@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     'Established 2014. MEP, utility, electrical, fire protection and IT infrastructure specialist in India.',
   applicationName: 'WINAJES Constructions India',
   formatDetection: { telephone: true, email: true },
+  verification: {
+    google: 'Ap9frz7BPawxVZ63lgz_IYqbetspzXkhjyODIX6D3uY',
+  },
 };
 
 export const viewport: Viewport = {
